@@ -1,0 +1,19 @@
+<!--pages/reads/list/index.wxml-->
+
+<view class="article-wrapper">
+	<view class="a-item flex flex-just" wx:for="{{articleList}}" wx:key="index" >
+		<view class="img">
+			<image class="w100" mode="widthFix" src="https://gdhflw.com/public/partime/coffeeImg/cp-icon.png"></image>
+		</view>
+		<view class="con ">
+			<view class="icon-img">
+			<image class="tea-img w100" src="https://gdhflw.com/public/partime/coffeeImg/icon-cup.png" mode="widthFix"></image>
+			</view>
+			<view class="con-desc">
+				<view class="fon26">安溪茶农冲泡铁观</view>
+				<view class="color9 fon24">日期：2020-1-21  12:20</view>
+			</view>
+		</view>
+	  
+	</view>
+</view>

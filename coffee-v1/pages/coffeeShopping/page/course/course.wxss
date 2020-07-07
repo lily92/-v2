@@ -1,0 +1,8 @@
+/* pages/coffeeShopping/page/course/course.wxss */
+page{ background: #f7f7f7;}
+.swiper-height{ height: 200rpx;}
+.item-img{ border-radius: 20rpx 20rpx 0 0; display: block;}
+.list-item{ margin-bottom: 30rpx;}
+.course-list{ padding-top: 30rpx;}
+.desc{ padding: 10rpx 0;}
+.right{ background: url('https://gdhflw.com/public/partime/coffeeImg/icon-baoming.png') no-repeat 10rpx center #000; background-size: 30rpx; padding-left: 45rpx; border-radius: 30rpx; color: #fff; width: 150rpx; height: 50rpx;   line-height: 50rpx; box-sizing: border-box;}

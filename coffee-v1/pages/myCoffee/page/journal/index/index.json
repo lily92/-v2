@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+	  "my-swiper": "./swiper/index",
+	  "my-list":"./list/index",
+	  "van-loading": "../../../vant-weapp/dist/loading/index",
+	  "screen":"../../../components/screen/screen"
+  },
+  "navigationBarTitleText": "评鉴日志"
+}

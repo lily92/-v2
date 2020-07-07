@@ -1,0 +1,39 @@
+<!--pages/goods/ratings/index.wxml-->
+<view class="ratings" wx:if="{{ratings.length>0}}">
+      <view class="ratings-title">
+        <view class="title-left">
+          <text>评论</text>
+          <text>{{eavcout}}</text>
+        </view>
+        <view class="title-right" bindtap="openAllRatings">
+          <text>好评度{{eavnumber}}%</text>
+          <text> > </text>
+        </view>
+      </view>
+      <view class="ratings-content">
+        <view class="rating-item" wx:for="{{ratings}}" wx:key="{{index}}">
+          <view class="user-avatar">
+            <view class="img-wrapper">
+              <image src="{{item.user.avatarUrl}}"></image>
+            </view>
+            <view class="rate-star">
+              <view class="username">{{item.user.nickName}}</view>
+              <!-- <van-rate value="{{item.score}}" color="#f44" void-color="transparent" /> -->
+              <van-rate   color="#ee0a24"
+ value="{{ item.score }}" count="{{ item.score}}" bind:change="onChange" />
+            </view>
+          </view>
+          <view class="rate-content">
+            <view class="content-text">
+              {{item.content}}
+            </view>
+            <view class="content-img">
+              <view class="rate-img-item" wx:for="{{item.img}}" wx:for-item="url" wx:key="{{index}}">
+                <image src="{{url.url}}"></image>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view  class="more-ratings" bindtap="openAllRatings">查看全部评价</view>
+    </view>

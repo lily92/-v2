@@ -1,0 +1,83 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="locate-item"  data-id="{{avatarList[0].id}}" bindtap="tomap">
+    <van-icon name="location-o" class="locate-icon"/>
+    <view class="shop-name">
+      <text>{{dist}}</text>
+      <view class="distance">
+        <text>距离你{{avatarList[0].km}}km</text>
+      </view>
+    </view>
+    <view class="link-icon">
+    <van-icon name="arrow" class="arrow-icon" />
+    </view>
+    
+  </view>
+
+  <view class="mask">
+    <view style="position:relative;">
+      <view class="shop-avatar" wx:for="{{avatarList}}" wx:key="item.id" style="left:{{item.xRadius}}rpx;top:{{item.yRadius}}rpx;" >
+        <view class="info-item {{index===curIndex ? 'show-text' :''}}">
+          <image src="{{item.logo}}" catchtap="toggleText" data-id="{{item.id}}" data-index="{{index}}">
+          </image>
+          <view class="info-text" wx:if="{{index===curIndex}}" bindtap="tomap" data-id="{{item.id}}">
+            <!-- 如果地图上不显示商家店铺地址，就使用 .no-locate-name -->
+            <!-- <text class="{{item.shop_locate_name==='' ?'no-locate-name':''}}">{{item.name}} </text> -->
+            <view class="locate-name">{{item.km}}km</view>
+          </view>
+
+        </view>
+        <!-- <view class="shop-distance">
+          <text>{{item.km}}km</text>
+        </view> -->
+      </view>
+    </view>
+  </view>
+
+
+  <view class="locate-area">
+    <view class="bg-circle">
+      <view class="md-circle">
+        <view class="sm-circle">
+          <view class="avatar">
+            <image src="{{userInfo.avatarUrl}}" ></image>
+            <text class="username">{{userInfo.nickName}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+
+
+<!-- bindtap="tomap" -->
+<view class="lo" >
+  <view class="zb">
+  <!-- <image src="../../static/images/jt.png"></image> -->
+ 开启您的本地咖啡探索之旅</view>
+</view>
+
+<!-- icon-right -->
+<view class="icon-right"  bindtap="showHaoguan" data-isshow="true">
+ <image src="/static/images/item/map-icon.png" class="w100" mode="widthFix"  ></image>
+</view>
+<!-- end  icon-right-->
+
+
+<!-- view 好馆  -->
+<view class="{{IsshowHaoguan?'haoguan-master active':'haoguan-master'}}"  bindtap="showHaoguan" data-isshow="false"></view>
+<view class="{{IsshowHaoguan?'haoguan active':'haoguan-master'}}"   >
+	  <view class="huaguan-item bgf">
+		  <view class="choice-title fon28 color9 item-link broder-top0" bindtap="showHaoguan" data-isshow="true">选择操作功能</view>
+		  <view>
+		  		 <view bindtap='goLink' data-url="/pages/indexPack/page/about/about" class="item-link">关于我们</view>
+		  		 <view bindtap='goLink'  data-url="/pages/indexPack/page/recommendStore/recommendStore" class="item-link">推荐好馆</view>
+		  		 <view  bindtap='goLink' data-url="/pages/indexPack/page/message/message" class="item-link">留言</view>
+		  </view>
+	  </view>
+	 
+	 <view class="huaguan-item bgf item-link"  bindtap="showHaoguan" data-isshow="false">取消</view>
+	
+</view>
+
+<!-- end view好馆 -->

@@ -1,0 +1,287 @@
+/* pages/reads/swiper/index.wxss */
+page{ background: #f7f7f7;}
+.read-container {
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+}
+
+.locate-item {
+  display: inline-flex;
+  position: absolute;
+  top: 0;
+  z-index: 99;
+  right: 30rpx;
+}
+
+.locate-item .locate-icon {
+  font-size: 36rpx;
+  margin: 28rpx 0rpx 0 0;
+  color: #333;
+}
+
+.locate-item .shop-name {
+  color: #646464;
+  font-size: 28rpx;
+  font-weight: 400;
+  margin: 8rpx 0;
+  line-height: 75rpx;
+}
+
+.locate-item .distance {
+  color: #999;
+  font-size: 24rpx;
+  font-weight: 400;
+  letter-spacing: 2rpx;
+}
+
+.arrow-icon {
+  color: #777;
+  font-size: 32rpx;
+  margin: 28rpx 0 0 10rpx;
+  font-weight: 300;
+}
+
+
+/* logo */
+
+.logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30%;
+  height: 9%;
+  z-index: 40;
+  text-align: center;
+}
+
+.logo image {
+   width: 80rpx;
+   height: 80rpx;
+}
+
+/* 轮播图 */
+
+
+.read-swiper  swiper {
+  height: 480rpx;
+  background: #e5e5e5;
+}
+
+.slide-image {
+  width: 100%;
+}
+
+swiper .wx-swiper-dots.wx-swiper-dots-horizontal {
+  position: absolute;
+  bottom: 50rpx;
+}
+
+/* 设置点点的样式 */
+
+swiper .wx-swiper-dot {
+  width: 16rpx;
+  height: 16rpx;
+  border-radius: 50%;
+  display: inline-flex;
+  /* 这里设置点点之间的距离 */
+  margin-left: 10rpx;
+  justify-content: space-between;
+}
+
+swiper .wx-swiper-dot::before {
+  content: '';
+  flex-grow: 1;
+  background: #fff;
+  border-radius: 50%;
+}
+
+/* 当前点点的样式 */
+
+swiper .wx-swiper-dot-active::before {
+  background: #e45265;
+  border-radius: 50%;
+}
+
+/* mask */
+
+.bg-mask-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: -webkit-linear-gradient(-2deg, transparent 30rpx, #fff 33rpx);
+  background: linear-gradient(-2deg, transparent 30rpx, #fff 33rpx);
+  height: 86rpx;
+  z-index: 30;
+}
+
+.bg-mask-bottom {
+  position: absolute;
+  bottom: -1rpx;
+  left: 0;
+  right: 0;
+  background: -webkit-linear-gradient(-2deg, transparent 30rpx, #fff 33rpx);
+  background: linear-gradient(-2deg, transparent 30rpx, #fff 33rpx);
+  height: 36rpx;
+  -webkit-transform:rotate(180deg);
+  transform:rotate(180deg);
+  z-index: 30;
+}
+
+/* 文章列表 */
+.num{ font-size: 12px; }
+.article-wrapper {
+ 
+}
+
+.article-item {
+  background: #fff;
+  margin-bottom: 20rpx;
+  position: relative;
+  padding-bottom: 20rpx;
+}
+
+/* 商家logo */
+
+.article-logo {
+  width: 100rpx;
+  height: 100rpx;
+  max-width: 100rpx;
+  max-height: 100rpx;
+  border-radius: 50%;
+  background: #fff;
+  position: absolute;
+  right: 40rpx;
+  top: 55%;
+  z-index: 9;
+}
+
+.article-logo image {
+  width: 100%;
+  height: 100%;
+}
+.article-top{ padding: 20rpx 0 20rpx 20rpx;}
+.article-des{ width: calc(100% - 200rpx);}
+.more-dot{ width: 80rpx; height: 6rpx;}
+/* 文章图片 */
+
+.article-item .article-img {
+  width: 100%;
+  /* height: 480rpx; */
+}
+
+/* 视频->显示播放按钮 */
+
+.img-mask {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: #00000030;
+}
+
+.article-item .article-img image {
+  width: 100%;
+  height: 100%;
+}
+
+.article-item .article-img  .img-mask image {
+  width: 20%;
+  height: 30%;
+  margin: 20% 38%;
+}
+
+/* 文章标题 */
+
+.article-text {
+  padding: 10rpx 16rpx;
+}
+
+.article-text .article-title {
+  color: #000;
+  font-size: 32rpx;
+  font-weight: 400;
+  padding: 10rpx 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* 文章描述 */
+
+.article-text .article-desc {
+  color: #777;
+  font-size: 26rpx;
+  font-weight: 400;
+  line-height: 36rpx;
+  overflow: hidden;
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+/* 日期、点击量、点赞量 */
+
+.article-detail {
+  display: flex;
+  flex-direction: row;
+  padding: 20rpx 0;
+  color: #5c5c5c;
+  font-size: 28rpx;
+}
+
+.article-detail .detail-left {
+  width: 60%;
+  text-align: left;
+  flex: 1;
+}
+
+.article-detail .detail-right {
+  width: 34%;
+  flex: 1;
+  margin-right: 10rpx;
+  display: flex;
+  text-align: right;
+}
+
+.num {
+  margin-left: 6rpx;
+}
+
+.click-num {
+  width: 60%;
+  margin-right: 20rpx;
+  position: relative;
+}
+
+.click-num .num {
+  position: absolute;
+  left: 115rpx;
+}
+
+.icon-eyes {
+  position: absolute;
+  left: 80rpx;
+  top: 2rpx;
+}
+
+.click-good {
+  width: 36%;
+  position: relative;
+}
+
+.icon-good {
+  position: absolute;
+  left: 10rpx;
+  top: 2rpx;
+}
+
+.click-good .num {
+  position: absolute;
+  left: 44rpx;
+}
+
+.list-btn{ padding-top: 10rpx;}

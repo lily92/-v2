@@ -1,0 +1,17 @@
+<!--pages/myCoffee/page/myDevice/bindingDevice/bindingDevice.wxml-->
+<view class="padding20">
+	<view class="bgf box">
+		<image class="add-img" src="https://gdhflw.com/public/partime/coffeeImg/icon-banding.png"  mode="widthFix"></image>
+		<view class="btn  fon28">扫描产品二维码</view>
+		
+		<form class="form">
+			<view>
+				<input type="text" placeholder="" class="txt" placeholder="请输入产品序列号" />
+			</view>
+			<view>
+				<input type="text" placeholder="" class="txt" placeholder="请选择购买日期" />
+			</view>
+			<view class="btn  fon28">确定</view>
+		</form>
+	</view>
+</view>

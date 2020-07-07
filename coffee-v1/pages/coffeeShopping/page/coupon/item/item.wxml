@@ -1,0 +1,26 @@
+<!--pages/coffeeShopping/page/coupon/item/item.wxml-->
+<view class="list-item w100 positionr" wx:for="{{couponList}}" wx:for-index="idx" wx:for-item="item" wx:key='idx'
+ >
+	<image src="https://gdhflw.com/public/partime/coffeeImg/cart-bg.png"  mode="widthFix" class="item-img-bg"></image>
+	<view class="positionb">
+		<view class="item-top  flex flex-al-center">
+			<view class="item-left colorf op5">
+				<view>
+					<text class="fon80 ">50</text>
+					<text>元</text>
+				</view>
+				<view>满2万立减</view>
+			</view>
+			<view class="item-right fon28">
+				<view>满2万减50元</view>
+				<view>仅限店铺内使用</view>
+			</view>
+		</view>
+		<view class="item-bottom flex flex-just">
+			<text class="date">有效期至2018-12-30</text>
+			<view  class="lq-btn" bindtap="btnBuy" data-id='105'   wx:if="{{active == 0}}"  data-type='0' >立即领取</view>
+			<view  class="lq-btn" bindtap="btnBuy" data-id='105'   wx:if="{{active == 1}}" data-type='1' >立即使用</view>
+		</view>
+	</view>
+     <view class="outdate">2天后到期</view>
+</view>

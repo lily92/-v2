@@ -1,0 +1,20 @@
+<!--pages/myCoffee/page/brewing/scanBrewing/findMachine/findMachine.wxml-->
+  <view class="locate-area">
+    <view class="bg-circle">
+		 <view class="md-circle1">
+      <view class="md-circle">
+        <view class="sm-circle">
+			<view class="xs-circle">
+				<view class="avatar flex flex-center">
+							  
+				  <image class="w105" src="https://gdhflw.com/public/partime/coffeeImg/icon-doudou.png" mode="widthFix"></image>
+				 
+				</view>
+				</view>
+          
+        </view>
+      </view>
+	 </view>
+    </view>
+  </view>
+  <view class="text-center fon32">查找附近的机器</view>

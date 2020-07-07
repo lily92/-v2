@@ -1,0 +1,22 @@
+<!--pages/myCoffee/components/screen/screen.wxml-->
+	<van-popup custom-class='popup' show="{{ show }}" bind:close="onClose" position='right'>
+
+		<scroll-view class="view-select" scroll-y='ture'>
+			<view class="item-s" wx:for='{{shaixuanList}}' wx:key='index' wx:for-index="idx">
+				<view>
+					{{item.name}}
+				</view>
+				<view class=" flex tab-list">
+					<view class="tab-s  {{item.checkId == item1.id?'actives':''}}" bindtap='select' data-index='{{index}}' data-idx='{{idx}}'
+					 data-id='{{item1.id}}' wx:for='{{item.data}}' wx:key='index' wx:for-item="item1">
+						{{item1.txt}}
+					</view>
+				</view>
+			</view>
+
+		</scroll-view>
+		<view class="btn-groups">
+			<button class="btn" hover-class="op5">重置</button>
+			<button class="btn" hover-class="op5">确认</button>
+		</view>
+	</van-popup>

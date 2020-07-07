@@ -1,0 +1,85 @@
+<!--pages/coffeeShopping/page/activity/auction/detail/detail.wxml-->
+<import src="../../../../../../wxParse/wxParse.wxml" />
+<view>
+	<cust-swiper height='750rpx' swiperImg='{{swiperImg}}'></cust-swiper>
+	<!-- 众筹详情 -->
+
+
+	<view class="padding30 ">
+		<view class="padding30 desc margin-b20">
+			一只用咖啡渣做到咖啡杯
+			一只用咖啡渣做的水杯，喜咖啡，就要随身而行
+		</view>
+		<view class="fon24  color9">已筹金额</view>
+		<view>
+			<text class="fon42 margin-r20">￥12563.25</text>
+			<text class="fon24 color9">支持人数：1253</text>
+		</view>
+		<view class="progresss">
+			<van-progress percentage="80" color="#000" stroke-width="10" />
+		</view>
+	</view>
+	<!-- 档位回报 -->
+	<view class="dangwei-hb">
+		<van-cell value="去支持" is-link bind:click='showPopup'>
+			<view slot="title">
+				<view class="van-cell-text">档位回报 ￥1000.00起</view>
+			</view>
+		</van-cell>
+	</view>
+
+	<!-- end 档位回报 -->
+
+	<!--end  众筹详情 -->
+	<view class="product-detail">
+		<view class="fon32 padding30">众筹故事</view>
+
+		<view>
+			<template is="wxParse" data="{{wxParseData:article.nodes}}" wx:key='about' />
+		</view>
+	</view>
+	<!-- end 产品详情 -->
+
+	<view class="lj-btn btn-fix" hover-class="lj-hover" bindtap="showPopup">去支持</view>
+
+
+	<!-- 规格 -->
+	<van-popup show="{{ showGuige }}" bind:close="onClose" position="bottom" custom-style="height:720rpx;">
+		<view class="padding30">
+			<view class="flex flex-just flex-al-center">
+				<view class="fon36">规格</view>
+				<view class="close-btn color0" bindtap="onClose">×</view>
+			</view>
+			<view class="flex flex-just">
+				<view class="pro-img">
+					<image src="https://gdhflw.com/public/partime/coffeeImg/product-detail.jpg" mode="widthFix" class="w100"></image>
+				</view>
+				<view class="pro-con flex">
+					<view>
+						<view class="fon28 line2">感谢您对我们的支持，您将以众筹
+							1000元获得格米莱CRM3200C咖啡机</view>
+						<view class="color9 fon24 choice">
+							颜色：
+							<text class="tag-type">银色</text>
+						</view>
+					</view>
+					<view>￥1000.00</view>
+				</view>
+			</view>
+			<view class="stepper flex flex-al-center flex-just">
+				<view>数量</view>
+				<van-stepper input-class='input-class' input-width="100rpx" button-size="32px" value="{{ num }}" bind:change="onChangeChujia"
+				 step="2" plus-class='plus-class' minus-class='minus-class' />
+			</view>
+			<view class="detail-con">
+				<view>预计发货时间：众筹成功后</view>
+				<view>配送运费：免运费</view>
+			</view>
+			<view class="lj-btn" bindtap='givePrice'>提交</view>
+		</view>
+	</van-popup>
+	<!-- end 规格 -->
+
+
+	<!-- end 拍卖详情 -->
+</view>

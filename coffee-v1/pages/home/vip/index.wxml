@@ -1,0 +1,22 @@
+<!--pages/home/vip/index.wxml-->
+
+<view class="vip-container">
+  <view class="vip-title-bar">
+    <view>会员等级</view>
+    <view>特权</view>
+  </view>
+  <view class="vip-content">
+    <view class="vip-wrapper" wx:for="{{vipList}}" wx:key="{{index}}">
+      <view class="vip-item">
+        <image src="{{item.vip_url}}"></image>
+      </view>
+      <view class="vip-detail">
+        <view class="detail">
+          <view class="v-item">
+            <text>{{item.vip_text}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

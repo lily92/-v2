@@ -1,0 +1,34 @@
+/* pages/coffeeShopping/page/activity/auction/detail/detail.wxss */
+.left{ width: 230rpx; line-height: 85rpx; background: #000; color: #fff; text-align: center;}
+.right{ line-height: 85rpx; width: calc(100% - 230rpx); background: #e9e9e9; padding-left: 20rpx; box-sizing: border-box;}
+.product-desc{ border-bottom: 10rpx solid #f7f7f7;}
+
+.w50{ width: 50%; padding: 10rpx 0;}
+.title{ width: 120rpx; margin-right: 20rpx;}
+.btn-fix{position: fixed; left: 0; bottom: 0;z-index: 99;}
+.lj-btn{ line-height: 98rpx; text-align: center; color: #fff; background: #000; width: 100%; }
+
+.product-detail{ padding-bottom: 200rpx;}
+.lj-hover{ background: #333;}
+
+.bgf7{ background: #f7f7f7;}
+.link{ color: #00a4f1;}
+.content-height{ height: 350rpx; overflow-y: auto; box-sizing: border-box;  }
+.padding-tb8{ padding: 8rpx 0;}
+.w150{ width: 150rpx; display: inline-block;}
+.close-btn{ font-size: 40px;}
+.input-class{background: none !important; margin: 0 40rpx; font-size: 40rpx !important;}
+.plus-class,.minus-class{ background: none !important; border: 1px solid #000 !important; border-radius: 50% !important;}
+.stepper{ padding: 30rpx 30rpx; border-bottom: 1px solid #e4e4e4; margin-bottom: 30rpx;}
+
+
+.desc{ border-left: 10rpx solid #000; background: #f7f7f7;}
+.progresss{ padding: 30rpx 0;}
+.van-progress__pivot{ font-size: 14px !important;}
+.dangwei-hb{ border-bottom: 10rpx solid #f7f7f7;}
+.detail-con{ padding-bottom: 30rpx; line-height: 2;}
+
+.pro-img{ width: 200rpx; height: 200rpx;}
+.pro-con{ align-content: space-between; width: calc(100% - 220rpx);}
+.choice{ padding: 30rpx 0;}
+.tag-type{ border: 1px solid #333; border-radius: 10rpx; padding: 5rpx 10rpx; margin-right: 10rpx;}

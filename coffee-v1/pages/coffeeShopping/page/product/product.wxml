@@ -1,0 +1,18 @@
+<!--pages/coffeeShopping/page/product/product.wxml-->
+<view>
+	<!-- banner -->
+	<view>
+		<image src="../../resource/images/cBanner.jpg" class="w100" mode="widthFix"></image>
+	</view>
+	<!-- end banner -->
+	<van-tabs  class='bgf' active="{{ active }}" bind:change="onChange" tab-active-class='active' >
+		  <van-tab title="{{item.name}}" wx:for='{{tabList}}' wx:for-index="idx" wx:for-item="item" >
+			  <view class="padding20">
+					<view >
+						<list-item active="{{ active }}" ></list-item>
+					</view>
+			  </view>
+		  </van-tab>
+	 
+	</van-tabs>
+</view>

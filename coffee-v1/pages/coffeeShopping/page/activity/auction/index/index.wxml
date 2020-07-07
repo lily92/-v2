@@ -1,0 +1,15 @@
+<!--pages/coffeeShopping/page/activity/crowdFunding/index/index.wxml-->
+<view >
+	<view class="pm-banner">
+		<image src="https://gdhflw.com/public/partime/coffeeImg/pm-banner.jpg" class="w100" mode="widthFix"></image>
+	</view>
+	<!--star 拍卖 -->
+	<view class="pm-list">
+		<list-item list='{{list}}' ></list-item>
+	</view>
+	<view class="flex flex-center loading-txt" >
+		<van-loading size="5" wx:if='{{isloadding}}' >加载中...</van-loading>
+		<view wx:if='{{!isloadding}}' class="color9 fon24">—— 我是有底线的 ——</view>
+	</view>
+	<!--end  拍卖 -->
+</view>

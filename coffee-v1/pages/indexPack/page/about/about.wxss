@@ -1,0 +1,5 @@
+/* pages/indexPack/about/about.wxss */
+
+page{ background: #f7f7f7;}
+.about-con{ padding: 40rpx 25rpx;}
+.title{ padding-bottom: 20rpx;}

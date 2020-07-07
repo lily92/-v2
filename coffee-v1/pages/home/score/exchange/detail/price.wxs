@@ -1,0 +1,29 @@
+var filter = {
+  priceSum: function (price, num) {
+    //不能使用 new Date()
+    return price * num
+  },
+  statusText: function (str) {
+    if (str === 1) {
+      return '待付款';
+    }
+    if (str === 2) {
+      return '待发货';
+    }
+    if (str === 3) {
+      return '待收货';
+    }
+    if (str === 4) {
+      return '交易完成';
+    }
+    if (str === 5) {
+      return '取消订单';
+    }
+
+  }
+}
+// 导出对外暴露的属性
+module.exports = {
+  priceSum: filter.priceSum,
+  statusText: filter.statusText
+}

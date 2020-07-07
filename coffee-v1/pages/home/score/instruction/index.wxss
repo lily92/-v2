@@ -1,0 +1,16 @@
+/* pages/home/score/instruction/index.wxss */
+
+.instruction-title {
+
+  padding: 20rpx 30rpx;
+  font-weight: 800;
+  font-size: 16px;
+}
+
+.instruction-content,.tip {
+  font-size: 28rpx;
+  color: #333;
+  font-weight: 400;
+  padding: 20rpx 30rpx;
+  line-height: 50rpx;
+}

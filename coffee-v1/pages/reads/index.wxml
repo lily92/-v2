@@ -1,0 +1,12 @@
+<!--pages/reads/index.wxml-->
+
+<view class="read-container" >
+  <!-- 轮播图 -->
+  <!-- <my-swiper swiper-img="{{imgUrls}}" logo="{{logo}}"></my-swiper> -->
+  <!-- 文章列表 -->
+  <my-list articleList="{{articleList}}" imgUrls="{{imgUrls}}" ></my-list>
+  <view class="flex flex-center loading-txt" >
+  	<van-loading size="5" wx:if='{{isloadding}}' >加载中...</van-loading>
+  	<view wx:if='{{!isloadding}}' class="color9 fon24">—— 我是有底线的 ——</view>
+  </view>
+</view> 

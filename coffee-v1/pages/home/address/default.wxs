@@ -1,0 +1,14 @@
+var filter = {
+  getDefailt: function (value) {
+    console.log(value)
+    if(value===1){
+      return true;
+    }else{
+      return false
+    }
+  }
+}
+// 导出对外暴露的属性
+module.exports = {
+  getDefailt: filter.getDefailt
+}

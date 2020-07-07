@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+     "van-popup": "/vant-weapp/dist/popup/index",
+     "my-top":"/components/myTop/myTop"
+  },
+  "navigationBarTitleText": "我的设备"
+} 

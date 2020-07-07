@@ -1,0 +1,13 @@
+<!--pages/coffeeShopping/page/activity/auction/auctionOrder/auctionOrder.wxml-->
+<!--pages/home/order/index.wxml-->
+
+
+<view class="order-container">
+	<van-tabs nav-class='bg0' tab-class='colorf' active="{{ active }}" swipeable sticky animated bind:change="onChange"
+	 color='#fff'>
+		<van-tab title="{{item.name}}" wx:for='{{statusList}}' wx:key="index">
+			<component-order-name bind:traCheckedNum="clickToPay" bind:clickToCancel="clickToCancel" bind:clickToConfirm="clickToConfirm"
+			 list="{{orderList}}"></component-order-name>
+		</van-tab>
+	</van-tabs>
+</view>

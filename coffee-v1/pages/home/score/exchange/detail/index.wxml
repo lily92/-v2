@@ -1,0 +1,100 @@
+<!--pages/home/order/detail/index.wxml-->
+
+<wxs module="dateUtil" src="./price.wxs"></wxs>
+<view class="tocode" wx:if="{{details.isadd===2}}">
+  取货码<text> {{details.claim_code}}</text>
+</view>
+
+<view class="oreder-detail-container">
+  <view class="order-status">
+    <view class="status-text">{{dateUtil.statusText(details.status)}}</view>
+  </view>
+  <!-- 订单收件人信息 -->
+  <view class="deliver-owner">
+    <view class="locate-icon-wrapper" wx:if="{{details.isadd==2}}">
+      <van-icon name="location" class="location-o-icon" />
+    </view>
+    <view class="owner-info-wrapper">
+      <view class="owner-name-phone" wx:if="{{details.isadd==1}}">
+        <text>{{details.address.userName}}</text>
+        <text>{{details.address.phone}}</text>
+      </view>
+       <view class="owner-name-phone" wx:if="{{details.isadd==2}}">
+        <text>{{details.shop.name}}</text>
+        <text>{{details.shop.phone}}</text>
+      </view>
+      <view class="owner-addr" wx:if="{{details.isadd==1}}">
+      {{details.address.areaMsg}}-  {{details.address.posterAddr}}
+      </view>
+
+<view class="owner-addr" wx:if="{{details.isadd==2}}">{{details.shop.location}}</view>
+    </view>
+  </view>
+  <!-- 订单物品 -->
+  <view class="order-info">
+    <view class="order-item" wx:for="{{details.get_goods}}">
+      <view class="img-item">
+        <image src="{{item.images_url}}"></image>
+      </view>
+      <view class="detail-item">
+        <view class="detail-name">{{item.name}} {{item.suk_name}}</view>
+        <view class="detail-amount">X 1件</view>
+        <view class="detail-price">¥ 
+        {{item.integral}}
+        <!-- {{item.price}}*{}} -->
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 订单编号及下单时间 -->
+  <view class="order-number-time">
+    <view class="order-number">
+      <text>订单编码：</text>
+      <text>{{details.order_no}}</text>
+    </view>
+    <view class="order-time">
+      <text>下单时间：</text>
+      <text>{{details.create_time}}</text>
+    </view>
+  </view>
+  <!-- 支付方式 -->
+  <view class="pay-way-time">
+    <view class="pay-way">
+      <text>支付方式：</text>
+      <text>积分兑换</text>
+    </view>
+    <view class="pay-time">
+      <text>支付时间：</text>
+      <text>{{details.create_time}}</text>
+    </view>
+  </view>
+  <!-- 发票详情 -->
+  <view class="invoice" wx:if="{{details.isinvoice===1}}">
+    <view class="invoice-type">
+      <text>发票类型：</text>
+      <text>电子普通发票</text>
+    </view>
+    <view class="invoice-title">
+      <text>发票抬头：</text>
+      <text wx:if="{{details.invoice.isinv==1}}">个人</text>
+      <text wx:else>单位</text>
+    </view>
+    <view class="invoice-content">
+      <text>发票内容：</text>
+      <text>商品明细</text>
+    </view>
+    <view class="invoice-tips">
+      <van-icon name="info-o" class="info-o-icon" />电子发票将在订单完成之后1-2内开具
+    </view>
+  </view>
+  
+</view>
+
+<!-- 底部 -->
+  <view class="footer-btn">
+    <view class="del-btn" bindtap="OnDelete">删除订单</view>
+    <view class="right-btn">
+      <view class="refund">申请退款</view>
+      <view class="rate">评价晒单</view>
+    </view>
+  </view>

@@ -1,0 +1,14 @@
+<!--pages/goods/swiper/index.wxml-->
+<view class="swiper-wrapper">
+    <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" 
+    circular interval="{{interval}}" duration="{{duration}}">
+      <block wx:for="{{swiperImg}}" wx:key="{{index}}">
+        <swiper-item>
+          <!-- 显示当前页开始 -->
+          <view class="show-page"> {{index+1}} / {{swiperImg.length}}</view>
+          <!-- 显示当前页结束 -->
+            <image  src="{{item.url}}" class="slide-image" />
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>

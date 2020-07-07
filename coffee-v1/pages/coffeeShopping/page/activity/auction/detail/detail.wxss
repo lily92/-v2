@@ -1,0 +1,27 @@
+/* pages/coffeeShopping/page/activity/auction/detail/detail.wxss */
+.left{ width: 230rpx; line-height: 85rpx; background: #000; color: #fff; text-align: center;}
+.right{ line-height: 85rpx; width: calc(100% - 230rpx); background: #e9e9e9; padding-left: 20rpx; box-sizing: border-box;}
+.product-desc{ border-bottom: 10rpx solid #f7f7f7;}
+
+.w50{ width: 50%; padding: 10rpx 0;}
+.title{ width: 120rpx; margin-right: 20rpx;}
+.btn-fix{position: fixed; left: 0; bottom: 0;z-index: 99;}
+.lj-btn{ line-height: 98rpx; text-align: center; color: #fff; background: #000; width: 100%; }
+
+.product-detail{ margin-bottom: 200rpx;}
+.lj-hover{ background: #333;}
+
+.bgf7{ background: #f7f7f7;}
+.link{ color: #00a4f1;}
+.content-height{ height: 350rpx; overflow-y: auto; box-sizing: border-box;  }
+.padding-tb8{ padding: 8rpx 0;}
+.w150{ width: 150rpx; display: inline-block;}
+.close-btn{ font-size: 40px;}
+.input-class{background: none !important; margin: 0 40rpx; font-size: 40rpx !important;}
+.plus-class,.minus-class{ background: none !important; border: 1px solid #000 !important; border-radius: 50% !important;}
+.stepper{ padding: 60rpx 30rpx;}
+
+.van-radio{ display: flex;  background: #fff; padding:  30rpx; margin-bottom: 20rpx;}
+.content-height .van-radio__icon{ margin-top: 10rpx;}
+
+.yiwen{ padding: 5rpx 30rpx 5rpx 0; background: url('https://gdhflw.com/public/partime/coffeeImg/icon-yiwen.png') no-repeat right center; background-size: 22rpx;}

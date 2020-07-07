@@ -1,0 +1,39 @@
+<!--pages/home/address/index.wxml-->
+<wxs module="dateUtil" src="default.wxs"></wxs>
+
+<view class="address-container">
+  <van-toast id="van-toast" />
+  <van-dialog id="van-dialog" />
+  <view class="address-wrapper">
+  
+      <van-cell-group border="{{ false }}">
+        <van-cell data-name="{{item.id}}" wx:for="{{addrList}}" wx:key="{{index}}">
+          <view class="address-item">
+            <view class="user-name-addr">
+              <view class="user-name">{{item.userName}}</view>
+              <view class="user-addr">{{item.areaMsg}} {{item.posterAddr}}</view>
+            </view>
+            <view class="user-phone">{{item.phone}}</view>
+          </view>
+          <view class="addr-btn-item">
+            <view class="default-btn">
+                 <van-checkbox value="{{ dateUtil.getDefailt(item.is_default)}}"  name="is_default" checked-color="#000" class="default-icon" data-id="{{item.id}}" bind:change="onChangeDefault">默认地址
+                  
+                  </van-checkbox>
+            </view>
+            <view class="edit-delete-btn">
+              <view class="edit-btn" data-id="{{item.id}}" bindtap="onEdit">
+                <van-icon name="edit" class="edit-icon" />编辑
+              </view>
+              <view class="delete-btn" data-id="{{item.id}}" bindtap="onDel">
+                <van-icon name="delete" class="delete-icon" />删除
+              </view>
+            </view>
+          </view>
+        </van-cell>
+      </van-cell-group>
+  </view>
+  <view class="add-more-address" bindtap="addMoreAddress">
+    <view class="add-more"><van-icon name="plus" class="plus-icon" />新建地址</view>
+  </view>
+</view>

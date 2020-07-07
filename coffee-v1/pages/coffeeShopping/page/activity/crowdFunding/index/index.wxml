@@ -1,0 +1,11 @@
+<!--pages/coffeeShopping/page/activity/crowdFunding/index/index.wxml-->
+<view >
+	<view class="zc-banner">
+		<image src="https://gdhflw.com/public/partime/coffeeImg/zc-banner.jpg" class="w100" mode="widthFix"></image>
+	</view>
+	<!--star 众筹 -->
+	<view class="zc-list">
+		<list-item list='{{list}}' ></list-item>
+	</view>
+	<!--end  众筹 -->
+</view>

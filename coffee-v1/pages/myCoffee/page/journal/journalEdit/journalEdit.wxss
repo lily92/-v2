@@ -1,0 +1,24 @@
+/* pages/myCoffee/page/journal/journalEdit/journalEdit.wxss */
+page{ background: #f7f7f7;}
+.box{ padding: 26rpx; border-radius: 10rpx; margin-bottom: 20rpx;}
+.van-uploader__upload{ width:640rpx !important;  margin-bottom: 0 !important; height: 250rpx !important;}
+.txt{ padding: 20rpx 0;}
+.arrow{ transition: .3s linear all; padding: 0 20rpx; margin-right: -20rpx; }
+.arrow.active{ transform: rotate(45deg);}
+
+
+.edit-height,.edit{ height: 120rpx;}
+.edit{ position: fixed; left: 0; bottom: 0; width: 100%; padding: 15rpx 20rpx; box-sizing: border-box; z-index: 99;}
+.edit-btn{ height: 90rpx; width: 45%; line-height: 90rpx; background-image: linear-gradient(-75deg, 
+		#2d2d2d 0%, 
+		#111111 100%), 
+	linear-gradient(
+		#ffffff, 
+		#ffffff);
+	background-blend-mode: normal, 
+		normal;
+	border-radius: 41rpx;}
+	.colorf{ color: #fff;}
+	.icon{ background: url('https://gdhflw.com/public/partime/coffeeImg/edit-icon-save.png') no-repeat right center; padding-right:35rpx ; background-size: 26rpx;}
+	.icon-send{ background: url('https://gdhflw.com/public/partime/coffeeImg/edit-icon-send.png') no-repeat right center; padding-right:35rpx ; background-size: 26rpx;}
+	.edit-btn{ text-align: center;}

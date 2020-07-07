@@ -1,0 +1,19 @@
+
+
+<!-- 当前不是分销商 -->
+<view class="container b-f" >
+  <view class="no-dealer">
+    <view class="no-icon dis-flex flex-x-center">
+      <image src="/static/images/not-dealer.png"></image>
+    </view>
+    <view wx:if="{{!show}}" class="no-msg dis-flex flex-x-center f-30" style="">你还不是分销商,请先提交申请</view>
+
+ <view wx:else class="no-msg dis-flex flex-x-center f-30" style="">信息已提交,审核中</view>
+    <!-- 立即申请 -->
+    <view wx:if="{{!show}}" class="no-submit form-submit dis-flex flex-x-center">
+      <form bindsubmit="triggerApply" report-submit="true">
+        <button formType="submit">立即加入</button>
+      </form>
+    </view>
+  </view>
+</view>

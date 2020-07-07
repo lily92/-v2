@@ -1,0 +1,4 @@
+/* pages/coffeeShopping/page/activity/crowdFunding/index/index.wxss */
+page{ background: #f7f7f7;}
+.zc-banner{}
+.zc-list{ padding: 30rpx;}

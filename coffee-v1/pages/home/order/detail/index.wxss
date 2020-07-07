@@ -1,0 +1,203 @@
+/* pages/home/order/detail/index.wxss */
+
+.order-status {
+  background: #000;
+  padding: 40rpx;
+  color: #fff;
+}
+
+.status-text {
+  line-height: 10rpx;
+  font-size: 24rpx;
+  display: inline-block;
+  letter-spacing: 2rpx;
+}
+.order-status-top{ border-bottom: 1px solid rgba(255,255,255,.2); padding-bottom: 20rpx; margin-bottom: 20rpx;}
+.date-last{ font-size: 20rpx;}
+.zhongchou{ padding-top: 20rpx;}
+.padding-tb5{ padding: 5rpx 0;}
+.color-org{ color: #ffa14f;}
+.deliver-owner {
+  padding: 30rpx 40rpx;
+  display: flex;
+ 
+}
+.deliver-owner-after{ display: block; content: ''; width: 100%; height:10rpx; background: url('https://gdhflw.com/public/partime/coffeeImg/line-bg.png') repeat-x;  }
+.wc-icon{ padding: 60rpx 0 60rpx 80rpx;background: url('https://gdhflw.com/public/partime/coffeeImg/icon-wancheng.png') no-repeat left center ; background-size: 55rpx;}
+
+.locate-icon-wrapper {
+  position: relative;
+}
+
+.location-o-icon {
+  font-size: 50rpx;
+  position: absolute;
+  top: 20rpx;
+  left: 0;
+  color: #313131;
+}
+
+.owner-info-wrapper {
+  font-size: 32rpx;
+  color: #333;
+  padding-left: 70rpx;
+  background: url('https://gdhflw.com/public/partime/coffeeImg/icon-kd.png') no-repeat left center;
+  background-size: 52rpx;
+}
+.w29{ width: 29rpx;}
+
+.owner-name-phone text {
+  margin: 0 30rpx 0 0;
+}
+
+.owner-addr {
+  font-size: 28rpx;
+  color: #333;
+}
+
+.order-item {
+  display: flex;
+  padding: 20rpx 30rpx;
+  flex-wrap: wrap;
+}
+
+.img-item {
+  width: 25%;
+}
+
+.img-item image {
+  width: 150rpx;
+  height: 150rpx;
+  max-width: 150rpx;
+  max-height: 150rpx;
+  margin: 0 10rpx;
+}
+
+.detail-item {
+  width: 75%;
+  font-size: 28rpx;
+  color: #333;
+  font-weight: 400;
+  align-content: space-between;
+}
+
+.detail-name {
+  line-height: 36rpx;
+  margin: 10rpx 0;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.detail-amount, .detail-price {
+  color: #666;
+  font-size: 24rpx;
+  margin: 2rpx 0;
+}
+.describe{ border-top: 1px solid #f7f7f7;  text-align: right; padding: 20rpx 30rpx; box-sizing: border-box; border-bottom: 10rpx solid #f7f7f7;}
+
+.order-infos{ padding: 20rpx 30rpx; background: #f7f7f7;}
+
+.order-number-time, .pay-way-time, .invoice {
+  border-bottom: 1px solid #f5f5f5;
+  padding: 40rpx 30rpx;
+  font-size: 24rpx;
+}
+
+.order-number-time text:first-child, .pay-way-time text:first-child,
+.invoice text:first-child {
+  color: #666;
+  margin: 6rpx 0;
+  display: inline-block;
+}
+
+.order-number-time text:last-child, .pay-way-time text:last-child,
+.invoice text:last-child {
+  color: #333;
+}
+
+.invoice .invoice-tips {
+  position: relative;
+  color: #c5c3c1;
+  padding-left: 24rpx;
+}
+
+.info-o-icon {
+  position: absolute;
+  top: 4rpx;
+  left: 0;
+}
+
+.footer-btn {
+  display: flex;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 35rpx 0;
+  background: #fff;
+  border-top: 10rpx solid #f5f5f5;
+  color: #333;
+  
+}
+
+.del-btn {
+  width: 20%;
+  margin-left: 30rpx;
+  font-size: 28rpx;
+}
+
+.right-btn {
+  width: 80%;
+  text-align: right;
+}
+
+.right-btn .refund, .right-btn .rate {
+  display: inline-block;
+  border: 1px solid #666;
+  padding: 6rpx 20rpx;
+  color: #555;
+  font-size: 26rpx;
+  margin: 0 30rpx 0 0;
+  border-radius: 10rpx;
+}
+.oreder-detail-container{
+  margin-bottom: 150rpx;
+}
+
+.tocode{
+  position: absolute;
+  top: 3.5%;
+  left: 30%;
+  
+}
+
+
+.middle-lv-btn {
+  color: #a5a5a5;
+  border-color: #dbdbdb;
+}
+
+.right-btn .super-lv-btn {
+  background: #313131;
+  border-color: #313131;
+  color: #fff;
+}
+.tk{
+  width: 300px;
+  height: 110px;
+  display: flex;
+  flex-direction: column;
+}
+
+.tk van-button{
+  text-align: center;
+}
+.tk .van-button{
+line-height: 35px;
+height: 35px;
+margin-top: 30rpx;
+}

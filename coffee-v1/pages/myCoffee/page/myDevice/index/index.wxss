@@ -1,0 +1,36 @@
+/* pages/myCoffee/page/myDevice/index/index.wxss */
+page{ background: #f7f7f7;}
+
+/* top */
+.top{  width: 100%;  height: 288rpx; background: url('https://gdhflw.com/public/partime/coffeeImg/d-bg.png') no-repeat center; background-size: 100%; color: #fff;}
+.icon{ display: block; width: 90rpx; height: 90rpx; border-radius: 50%; background: #ccc;}
+.scan{ width: 40rpx; height: 40rpx;  background: url('https://gdhflw.com/public/partime/coffeeImg/icon-saomiao.png') no-repeat center; background-size: 27rpx;}
+.top-desc{ width: calc(100% - 160rpx);}
+.top-con{ padding:50rpx 30rpx; border-bottom: 1px solid #6b6b6b ;}
+.nav{ width: 100%; line-height: 60rpx; padding-top: 15rpx;}
+.flex-1{ flex: 1;}
+.border{ border-left: 1px solid #bfbfbf; border-right: 1px solid #bfbfbf;}
+.active{ color: #ff9b44;}
+/* end top */
+
+
+.add-btn{ width: 193rpx; line-height: 52rpx;border-radius: 26px; margin: 0 auto;
+	border: solid 2rpx #7d7d7d ;text-align: center;}
+.add-item{ padding:54rpx;}
+.no-data{ padding: 50rpx 0;}
+.no-data-img{ width: 82rpx; display: block; margin:0 auto 0;}
+.tip{ color: #eaeaea; font-size: 20rpx;}
+.device-img{ width: 96rpx; height: 96rpx; background: #ccc;}
+.device-item{ width: 50%; box-sizing: border-box;  padding:0 15rpx; margin-top: 30rpx;}
+.device-con{ width: calc(100% - 120rpx);}
+.box{ padding: 20rpx;}
+.device-list{ margin-left: -15rpx; margin-right: -15rpx; margin-bottom: 30rpx;}
+.btn-edit{ width: 22px; height: 20px; background: url('https://gdhflw.com/public/partime/coffeeImg/icon-edit.png') no-repeat center; background-size: 22rpx; right: 0; bottom: 0; position: absolute; z-index: 99;}
+.kou-ling{ width: 600rpx; padding: 60rpx 0 0 0;  overflow: hidden;}
+.van-popup{border-radius: 20rpx !important;}
+.edit-box{ padding: 60rpx 30rpx;}
+.txt{ width: 70rpx;  line-height: 70rpx; height: 70rpx; border-radius: 20rpx;
+	border: solid 1px #000000; text-align: center;  box-sizing: border-box; display: block;}
+	.btn{ line-height: 70rpx; width: 49%; text-align: center;}
+	.btn-cancel{ border-right: 1px solid #afafaf; }
+	.btn-group{ border-top: 1px solid #afafaf;}

@@ -1,0 +1,104 @@
+<!--pages/pay/index.wxml-->
+<wxs module="dateUtil" src="./../../../../wxs/timeUtil.wxs"></wxs>
+<van-dialog id="van-dialog" />
+
+<view class="pay-container">
+  <van-toast id="van-toast" />
+  <view class="order-wrapper">
+    <!-- 新增收货地址按钮 -->
+    <view class="post-address" bindtap="onToggleAddress" wx:if="{{addressRadio===99999999 &&selfRadio ===99999999}}">
+      <view class="address-item">
+        <van-icon name="plus" class="plus-icon" />选择收货地址
+      </view>
+    </view>
+    <!-- 选择地址后，显示为已选地址 -->
+    <view class="show-addr post-address" wx:if="{{addressRadio<99999999 ||selfRadio <99999999}}">
+      <view class="self-address" bindtap="onToggleAddress">
+        <van-icon name="location-o" class="addr-locate-item" />
+        <view class="shop-item-wrapper">
+          <view class="shop-addr">{{selfRadioList[selfRadio-1].name ||addressRadioList[addressRadio].areaMsg }}</view>
+          <view class="shop-distance" wx:if="{{selfRadio}}">距离你{{selfRadioList[selfRadio-1].km}}里</view>
+<view class="shop-distance" wx:else="{{selfRadio}}">{{addressRadioList[addressRadio].userName}}-{{addressRadioList[addressRadio].phone}} </view>
+        </view>
+      </view>
+      <view class="self-icon-item">
+        <text wx:if="{{selfRadio}}">到店自取</text>
+        <text wx:if="{{addressRadio}}">送货上门
+        </text>
+      </view>
+
+    </view>
+
+  
+    <!-- 费用清单 -->
+    <view class="fee-list">
+      <view class="good-fee">
+        <text class="fee-left">商品</text>
+        <text class="fee-right">{{goodsinfo.name}}</text>
+      </view>
+       
+      <view class="all-fee">
+        <text class="fee-left">合计</text>
+        <text class="fee-right"> {{goodsinfo.integral}}积分</text>
+      </view>
+    </view>
+
+    
+    <view class="go-pay">
+      <view class="pay-left">
+        <text>应付金额:</text>
+        <text>¥ {{goodsinfo.integral}}</text>
+      </view>
+      <view class="pay-right" bindtap="onPay">立即兑换</view>
+    </view>
+  </view>
+
+  <!-- 收货地址弹出层 -->
+  <van-popup show="{{ showAddress }}" position="bottom" bind:close="onToggleAddress">
+    <view class="pop-header">
+      配送方式
+      <van-icon name="close" class="pop-close" bindtap="onToggleAddress" />
+    </view>
+    <view class="pick-address">
+      <van-tabs animated active="{{active}}">
+        <van-tab title="门店自取">
+          <view class="self-list">
+            <van-radio-group value="{{ selfRadio }}" bind:change="onSelfChange">
+              <van-cell-group>
+                <van-cell wx:for="{{selfRadioList}}" value-class="value-class" class="nearby-shop-cell" clickable data-index="{{index}}" data-name="{{item.id}}" bind:click="onSelfClick"  wx:key="{{index}}">
+                  <view class="nearby-shop-list">
+                    <view class="nearby-shop-detail">
+                      <view class="shop-detail-name">{{item.name}}</view>
+                      <view class="shop-on-sale">
+                        <van-icon name="clock-o" class="on-sale-icon" />
+                        <text>{{item.lat}}-{{item.lng}}</text>
+                      </view>
+                      <view class="shop-detail-locate">
+                        <van-icon name="location-o" class="detail-locate-icon" />
+                        <text>{{item.location}}</text>
+                      </view>
+                    </view>
+                    <view class="nearby-shop-distance">距离你{{item.km}}m</view>
+                  </view>
+                  <van-radio name="{{item.id}}" class="nearby-shop-radio-item" />
+                </van-cell>
+              </van-cell-group>
+            </van-radio-group>
+          </view>
+        </van-tab>
+        <van-tab title="送货上门">
+          <view class="address-list">
+            <view class="list-title">我的收货地址</view>
+            <view class="list-wrapper">
+              <van-radio-group value="{{ addressRadio }}" bind:change="onChoiseAddress">
+                <van-radio name="{{item.id}}" wx:for="{{addressRadioList}}" wx:key="{{index}}" class="choise-addr-item">{{item.areaMsg}} {{item.posterAddr}}</van-radio>
+              </van-radio-group>
+            </view>
+          </view>
+        </van-tab>
+      </van-tabs>
+    </view>
+  </van-popup>
+
+
+</view>

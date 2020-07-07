@@ -1,0 +1,22 @@
+<!--pages/home/score/component/header/index.wxml-->
+<view class="integral-header">
+  <van-toast id="van-toast" />
+  <view class="header-bg">
+    <image src="./../../../../../static/images/bg-1.png"></image>
+  </view>
+  <view class="integral-wrapper">
+    <view class="my-integral">我的积分
+      <van-icon name="question-o" bindtap="clickToInstruction" class="ques-icon" />
+    </view>
+    
+    <view class="integral-num">{{integral}}</view>
+    <view class="integral-category">
+      <view class="exchange" bindtap="clickToExchange">
+        <van-icon name="point-gift-o" class="exchange-icon" />我的兑换
+      </view>
+      <view class="exchange" bindtap="clickToDetail">
+        <van-icon name="balance-o" class="exchange-icon" />积分明细
+      </view>
+    </view>
+  </view>
+</view>

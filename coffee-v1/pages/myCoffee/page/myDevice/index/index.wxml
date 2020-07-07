@@ -1,0 +1,50 @@
+<!--pages/myCoffee/page/myDevice/index/index.wxml-->
+<view class="padding20">
+ <my-top userinfo='{{userinfo}}' active='1'></my-top>
+	<view class="list ">
+		<!-- 没有数据 -->
+		<view class="no-data bgf" wx:if='{{deviceList.length <=0}}' >
+			<image class="no-data-img" src="https://gdhflw.com/public/partime/coffeeImg/c-icon.png" mode="widthFix"></image>
+			<view class="fon20 tip text-center ">暂无绑定设备</view>
+		</view>
+		<!-- end 没有数据 -->
+		
+		<!-- 有数据 -->
+		<view class="device-list flex"  wx:if='{{deviceList.length >0}}'>
+			<view wx:for='{{deviceList}}' class="device-item ">
+				<view class="flex  flex-al-center flex-just box bgf positionr">
+					<image class="device-img" mode="aspectFill"></image>
+					<view class="device-con">
+						<view class="fon24">格米莱 CRM3018</view>
+						<view class="fon20">口令：998541</view>
+					</view>
+					<view class="btn-edit" bindtap="showPopup"></view>
+				</view>
+			</view>
+		</view>
+		<!-- end 有数据 -->
+
+		<view class="bgf add-item">
+			<navigator url="/pages/myCoffee/page/myDevice/bindingDevice/bindingDevice" class="add-btn">添加设备</navigator>
+			
+		</view>
+	</view>
+
+</view>
+
+<van-popup show="{{ showKl }}" bind:close="onClose" 
+  closeable  round custom-class='kou-ling'>
+	<view class="fon28 color9 txt-center">修改口令</view>
+	<view class="flex flex-just edit-box">
+		<input  type="number" class="txt" />
+		<input  type="number" class="txt" />
+		<input  type="number" class="txt" />
+		<input  type="number" class="txt" />
+		<input  type="number" class="txt" />
+		<input  type="number" class="txt" />
+	</view>
+	<view class="flex btn-group flex-just">
+		<view class="btn btn-cancel color9"  bindtap="onClose" >取消</view>
+		<view class="btn">确定</view>
+	</view>
+</van-popup>

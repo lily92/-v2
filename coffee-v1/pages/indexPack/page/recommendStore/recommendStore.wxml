@@ -1,0 +1,35 @@
+<!--pages/indexPack/page/recommendStore/recommendStore.wxml-->
+<view>
+ <view class="form padding20">
+	 <view class="margin-b20">
+		<view class="section">
+		  <picker bindchange="bindPickerChange" value="{{index}}" range="{{identity}}">
+		    <!-- <view class="picker fon28 ">
+		      {{itxt}}{{identity[index]}}
+		    </view> -->
+			<van-cell title="{{itxt}}" is-link value="选择您的身份" />
+		  </picker>
+		</view>
+		 <!-- <van-cell  title="选择您的身份"  is-link value="" arrow-direction="down" border='{{false}}' /> -->
+	 </view>
+    <view>
+      <input placeholder="请填您的姓名" class="txt" />
+    </view>
+	<view>
+	  <input placeholder="请填写门店名称" class="txt" />
+	</view>
+	<view>
+	  <input placeholder="请填您的手机号" class="txt" />
+	</view>
+	<view>
+	  <input placeholder="请填门店地址" class="txt" />
+	</view>
+	<view class="bgf" >
+		<textarea class="w100 box-sizing-border-box txt" placeholder="请写下您的推荐理由和店铺简介，添加至少一张门店照片"></textarea>
+		<view class="padding20">
+			<view class="upload-btn" bindtap="uploadImg">+</view>
+		</view>
+	</view>
+ </view>
+ <button class="btn-submit  margin-b60">提交</button>
+</view>

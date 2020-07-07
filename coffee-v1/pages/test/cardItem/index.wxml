@@ -1,0 +1,40 @@
+<!--pages/card/index.wxml-->
+
+<view class="card-item">
+  <view class="card-wrapper">
+
+    <view class="btn-group">
+      <van-icon name="close" class="close-btn" catchtap="toggleShowCard" />
+    </view>
+    <view class="container">
+      <view class="img-item">
+        <image src="{{list[0].imgUrl}}"></image>
+      </view>
+      <view class="goods-title">{{list[0].title}}</view>
+
+      <view class="goods-desc">
+        <view class="desc-title">产品描述</view>
+        <view class="desc-content">{{list[0].desc}}</view>
+      </view>
+      <view class="goods-temper">
+        <view class="temper-title">温度</view>
+        <view class="temper-choise">
+          <view wx:for="{{list[0].temper}}" wx:key="{{item.id}}" class="choise-item {{currentIdx === index ? 'active' : ''}}" catchtap="chooseItem" data-index="{{index}}" data-type="{{item.type}}">{{item.type}}</view>
+        </view>
+      </view>
+      <view class="pick-up">
+        <view class="price-amount-wrapper">
+          <view class="left-item">
+            <view class="price-item">
+              <text>¥</text>{{price}}</view>
+            <view class="temper-item">{{temper_type}}</view>
+          </view>
+          <view class="right-item">
+            <van-stepper value="{{ amount }}" bind:change="onChangeNum" />
+          </view>
+        </view>
+        <view class="purchase-btn" catchtap="clickToAdd">加入购物袋</view>
+      </view>
+    </view>
+  </view>
+</view>

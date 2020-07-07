@@ -1,0 +1,203 @@
+/* pages/home/distributor/index.wxss */
+.van-popup{
+  top: 40% !important;
+}
+.bg{
+  width: 300px;
+  height: 450px;
+}
+.banner-item {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #00000090;
+  z-index: 4;
+}
+
+.banner-item image {
+  position: absolute;
+  top: 200rpx;
+  left: 180rpx;
+  width: 215px;
+  height: 340px;
+  z-index: 9;
+}
+
+.img-wrapper {
+  width: 100%;
+  margin-top: 80rpx;
+}
+
+.img-wrapper image {
+  width: 600rpx;
+  height: 380rpx;
+  max-height: 380rpx;
+  max-width: 600rpx;
+  margin: 0 75rpx;
+}
+
+.distrib-warning {
+  text-align: center;
+  color: #333;
+  font-size: 32rpx;
+}
+
+.distrib-btn {
+  padding: 20rpx 40rpx;
+  color: #f5f5f5;
+  background: #000;
+  border: 1px solid #333;
+  border-radius: 50rpx;
+  text-align: center;
+  width: 50%;
+  margin: 50rpx auto;
+}
+
+.is-distrib {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #f7f7f7;
+}
+
+.apply-bg {
+  height: 0;
+  padding-bottom: 39%;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.distrib-top-card {
+  padding: 20rpx 20rpx;
+  background: #fff;
+  position: absolute;
+  top: 180rpx;
+  left: 8%;
+  width: 80%;
+  border-radius: 20rpx;
+  box-shadow: 0 0 10rpx 2rpx #b6b6b6;
+}
+
+.avatar {
+  position: absolute;
+  top: -50rpx;
+  right: 40rpx;
+  border-radius: 50%;
+  display: block;
+  border: 1px solid #d1d1d1;
+  width: 92rpx;
+  height: 92rpx;
+}
+
+.avatar image {
+  width: 88rpx;
+  height: 88rpx;
+  max-width: 88rpx;
+  max-height: 88rpx;
+  border-radius: 50%;
+  margin: 1rpx;
+}
+
+.card-title {
+  border-bottom: 1px solid #f5f5f5;
+  padding: 16rpx 10rpx;
+  color: #333;
+  font-size: 28rpx;
+}
+
+.invitor {
+  font-size: 24rpx;
+  color: #666;
+}
+
+.deposit-wrapper {
+  overflow: hidden;
+  margin-top: 20rpx;
+}
+
+.deposit-item {
+  display: flex;
+  padding: 40rpx 10rpx;
+  background: #000;
+  color: #fff;
+  margin: 20rpx 0;
+  border-radius: 30rpx;
+}
+
+.deposit-left {
+  font-size: 24rpx;
+  padding: 0 20rpx;
+  width: 70%;
+}
+
+.deposit-right {
+  width: 30%;
+}
+
+.go-deposit {
+  border: 1px solid #fff;
+  display: inline-block;
+  padding: 2rpx 30rpx;
+  border-radius: 60rpx;
+  font-size: 24rpx;
+  margin-top: 16rpx;
+  background: #fff;
+  color: #333;
+}
+
+.already-deposit {
+  display: flex;
+}
+
+.already-deposit text {
+  flex: 1;
+  font-size: 24rpx;
+  line-height: 40rpx;
+  color: #333;
+}
+
+.already-deposit text:first-child {
+  text-align: left;
+  padding-left: 10rpx;
+}
+
+.already-deposit text:last-child {
+  text-align: right;
+  padding-right: 10rpx;
+}
+
+.distrib-bottom-card {
+  position: absolute;
+  width: 84%;
+  border: 1px solid #fff;
+  top: 650rpx;
+  margin: 0 8%;
+  background: #fff;
+  border-radius: 30rpx;
+  font-size: 28rpx;
+  box-shadow: 0 0 10rpx 4rpx #d1d1d1;
+}
+
+.category-item {
+  display: inline-block;
+  width: 33.33%;
+  text-align: center;
+  margin: 50rpx 0 30rpx;
+}
+
+.icon-img image {
+  width: 70rpx;
+  height: 70rpx;
+  max-width: 70rpx;
+  max-height: 70rpx;
+}
+
+.category-title {
+  color: #666;
+}

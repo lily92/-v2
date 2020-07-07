@@ -1,0 +1,37 @@
+<!--pages/home/score/instruction/index.wxml-->
+<view class="score-containet">
+  <van-toast id="van-toast" />
+  <my-header userInfo="{{userinfo}}" integral="{{integral}}" />
+  <view class="sign-in" bindtap="signIn" wx:if="{{signIn===false}}">立即签到赚积分</view>
+  <view class="sign-in {{signIn?'had-sign-in':''}}" wx:if="{{signIn===true}}">已签到</view>
+
+  <!-- 积分商城 -->
+  <view class="stuff-wrapper">
+    <view class="mall-header">
+      <image src="./../../../static/images/coin.png"></image>
+      <text>积分商城</text>
+    </view>
+    <view class="mall-container">
+      <view class="no-goods-item" wx:if="{{mall.length===0}}">
+        商品暂时全部售罄，敬请期待上新。
+      </view>
+      <scroll-view scroll-y="true" class="mall-scroll" wx:if="{{mall.length!==0}}">
+        <view class="scroll-item" wx:for="{{mall}}" wx:key="index"  data-info="{{item}}" bindtap="handelDe">
+          <view class="img-wrapper">
+            <image src="{{item.images_url}}"></image>
+          </view>
+          <view class="item-info">
+            <view class="name">{{item.name}}</view>
+            <view class="condition">{{item.integral}}积分</view>
+            <view class="rate">
+              <text wx:if="{{item.rate !==''}}">赞无评论</text>
+              <text wx:else>{{item.rate}}条评论</text>
+              <text wx:if="{{item.good_per}}">好评率{{item.good_per}}</text>
+              <text wx:else>好评率 - -</text>
+            </view>
+          </view>
+        </view>
+      </scroll-view>
+    </view>
+  </view>
+</view>

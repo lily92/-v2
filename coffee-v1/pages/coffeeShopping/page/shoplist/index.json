@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "my-swiper": "./Swiper/index",
+    "my-shop-card": "./item/index",
+	"shop-item":"./itemShop/item",
+    "van-tab": "./../../../vant-weapp/dist/tab/index",
+    "van-tabs": "./../../../vant-weapp/dist/tabs/index"
+  },
+  "navigationBarTitleText": "好品"
+}

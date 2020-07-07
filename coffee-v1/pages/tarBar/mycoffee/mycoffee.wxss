@@ -1,0 +1,7 @@
+/* pages/tarBar/mycoffee/mycoffee.wxss */
+.content{ width: 100%; margin: 0 auto;}
+.icon-link{ position: absolute; width: 120rpx; height: 120rpx; border-radius: 50%; font-size: 0;}
+.icon-rigzhi{  left: 185rpx; top: 240rpx; }
+.icon-fangan{  left: 185rpx; top: 420rpx; }
+.icon-jinbei{  left:420rpx; top: 240rpx; }
+.icon-cp{  left: 420rpx; top: 420rpx; }

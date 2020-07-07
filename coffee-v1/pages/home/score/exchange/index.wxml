@@ -1,0 +1,29 @@
+<!--pages/home/score/exchange/index.wxml-->
+
+<view class="exchange-container">
+  <van-toast id="van-toast" />
+  <my-header userInfo="{{userinfo}}" integral="{{integral}}" />
+  <view class="sign-in" bindtap="signIn" wx:if="{{signIn===false}}">立即签到赚积分</view>
+  <view  class="sign-in {{signIn?'had-sign-in':''}}" wx:if="{{signIn===true}}">已签到</view>
+
+  <van-tabs active="{{ active }}" swipeable sticky animated bind:change="onChange">
+    <van-tab title="全部">
+        <component-order-name bind:traCheckedNum="clickToPay" bind:clickToCancel="clickToCancel"  bind:clickToConfirm="clickToConfirm" list="{{orderList}}" ></component-order-name>
+    </van-tab>
+
+       <van-tab title="待发货">
+     <component-order-name bind:traCheckedNum="clickToPay" bind:clickToCancel="clickToCancel"  bind:clickToConfirm="clickToConfirm" list="{{orderList}}" ></component-order-name>
+    </van-tab>
+    <van-tab title="待收货">
+     <component-order-name bind:traCheckedNum="clickToPay" bind:clickToCancel="clickToCancel"  bind:clickToConfirm="clickToConfirm" list="{{orderList}}" ></component-order-name>
+    </van-tab>
+    <van-tab title="已完成">
+     <component-order-name bind:traCheckedNum="clickToPay" bind:clickToCancel="clickToCancel"  bind:clickToConfirm="clickToConfirm" list="{{orderList}}" ></component-order-name>
+    </van-tab>
+    <van-tab title="已取消">
+    
+     <component-order-name bind:traCheckedNum="clickToPay" bind:clickToCancel="clickToCancel"  bind:clickToConfirm="clickToConfirm" list="{{orderList}}" ></component-order-name>
+    </van-tab>
+  </van-tabs>
+
+</view>

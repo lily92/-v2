@@ -1,0 +1,144 @@
+<!--pages/home/order/detail/index.wxml-->
+
+
+<van-popup show="{{ refundShow }}" bind:close="onClose">
+	<view class="tk">
+		<van-field value="{{ message }}" type="textarea" placeholder="请输入退款原因" autosize="{{true}}" bind:input="inputrefund"
+		 adjust-position label="退款原因" border="{{ true }}" />
+		<van-button bind:click="onrefund" type="info">提交退款</van-button>
+
+	</view>
+
+</van-popup>
+
+<wxs module="dateUtil" src="./price.wxs"></wxs>
+<view class="tocode" wx:if="{{details.isadd===2}}">
+	取货码
+	<text> {{details.claim_code}}</text>
+</view>
+
+<view class="oreder-detail-container">
+	<view class="order-status">
+		<!-- 众筹订单详情 -->
+		<view>
+			<view class="flex flex-just flex-al-center order-status-top">
+				<view class="status-text">{{dateUtil.statusText(details.status)}}</view>
+				<view class="fon24">查看项目最新动态 ></view>
+			</view>
+			<view class="date-last">剩余06天05小时自动关闭订单</view>
+			<view class="zhongchou">
+				<view class="padding-tb5">
+					<text class="fon38 color-org">80%</text>
+					<text class="fon28">项目筹款进度</text>
+				</view>
+				<view class="padding-tb5">
+					<text class="color-org fon24">20051</text>
+					<text class="fon28"> 人与你志同道合，支持了此项目</text>
+				</view>
+			</view>
+				
+		</view>
+		<!-- end 众筹订单详情 -->
+		
+		<!-- 订单已完成 -->
+		<view>
+			<view class="wc-icon fon28">交易完成</view>
+		</view>
+		<!-- end 订单已完成 -->
+		
+	
+	
+	</view>
+	<!-- 订单收件人信息 -->
+	<view class="deliver-owner flex  flex-just flex-al-center">
+		<view class="locate-icon-wrapper" wx:if="{{details.isadd==2}}">
+			<van-icon name="location" class="location-o-icon" />
+		</view>
+		<view class="owner-info-wrapper">
+			<view class="owner-name-phone padding-tb8" wx:if="{{details.isadd==1}}">
+				<text>{{details.address.userName}}</text>
+				<text>{{details.address.phone}}</text>
+			</view>
+			<view class="owner-name-phone padding-tb8" wx:if="{{details.isadd==2}}">
+				<text>{{details.shop.name}}</text>
+				<text>{{details.shop.phone}}</text>
+			</view>
+			<view class="owner-addr" wx:if="{{details.isadd==1}}">
+				{{details.address.areaMsg}}- {{details.address.posterAddr}}
+			</view>
+
+			<view class="owner-addr" wx:if="{{details.isadd==2}}">{{details.shop.location}}</view>
+		</view>
+
+		<view class="w29">
+			<image src="https://gdhflw.com/public/partime/coffeeImg/icon-right.png" mode="widthFix" class="w29"></image>
+		</view>
+	</view>
+
+	<view class="deliver-owner-after"></view>
+	<!-- 订单物品 -->
+	<view class="order-info">
+		<view class="order-item" wx:for="{{details.get_goods}}">
+			<view class="img-item">
+				<image src="{{item.images_url}}"></image>
+			</view>
+			<view class="detail-item flex fon26 ">
+				<view class="w100">
+					<view class="detail-name">{{item.name}} {{item.suk_name}}</view>
+					<view class="color9">颜色：银色</view>
+				</view>
+
+				<view class="flex flex-just w100">
+					<view class="detail-price">¥ {{dateUtil.priceSum(item.price,item.num)}}</view>
+					<view class="detail-amount">× {{item.num}}</view>
+
+				</view>
+			</view>
+		</view>
+		<view class="w100  describe fon24 color6">
+			预计项目众筹成功后七天内发货
+		</view>
+
+		<van-cell-group>
+			<van-cell title="商品金额" value="¥5000.00" value-class='color6' />
+			<van-cell title="运费" value="免运费" value-class='color6' />
+			<van-cell title="应付" value="¥5000.00" value-class='color6' />
+		</van-cell-group>
+
+		<view class="order-infos">
+			订单信息
+		</view>
+		<view>
+			<van-cell title="订单号" value="{{details.order_no}}" value-class='color6' />
+			<van-cell title="下单时间" value="{{details.create_time}}" value-class='color6' />
+			<van-cell title="发货时间" value="{{details.create_time}}" value-class='color6' />
+			<van-cell title="付款时间" value="{{details.create_time}}" value-class='color6' />
+			<van-cell title="支付方式" value="微信支付" value-class='color6' />
+		</view>
+		
+		<!-- 发票详情 -->
+		<view>
+			<van-cell title="发票类型" value="电子普通发票" value-class='color6' />
+			<van-cell title="发票抬头" value="{{details.invoice.isinv==1?'个人':'单位'}}" value-class='color6' />
+			<van-cell center  title="发票内容" value="商品明细" label="电子发票将在订单完成后1-2内开具" value-class='color6' >
+				<van-icon name="info-o" class="info-o-icon" />
+			</van-cell>
+		</view>
+	</view>
+	
+
+</view>
+
+<!-- 底部 -->
+<view class="footer-btn">
+	<view class="del-btn" bindtap="OnDelete">删除订单</view>
+	<view class="right-btn">
+		<view class="refund" bindtap="Cancel" wx:if="{{details.status<3}}">取消订单</view>
+		<view class="refund" wx:if="{{details.status===4}}">申请退款</view>
+
+
+		<view class="rate super-lv-btn" bindtap="clickToConfirm" data-id="{{details.id}}" wx:if="{{details.status===3}}">确认收货</view>
+
+		<view class="rate" wx:if="{{details.status===4}}">评价晒单</view>
+	</view>
+</view>

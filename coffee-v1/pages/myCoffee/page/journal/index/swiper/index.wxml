@@ -1,0 +1,18 @@
+<!--pages/reads/swiper/index.wxml-->
+<!-- <view class="logo">
+  <image src="{{logo}}"></image>
+</view> -->
+
+<view class="read-swiper">
+  <!-- 遮罩 -->
+  <!-- <view class="bg-mask-top"></view>
+  <view class="bg-mask-bottom"></view> -->
+  <!-- 遮罩 -->
+  <swiper indicator-color='#fff' indicator-active-color='#333' indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular>
+    <block wx:for="{{swiperImg}}" wx:key="index">
+      <swiper-item>
+        <image  src="{{item.images_url}}" class="slide-image" />
+      </swiper-item>
+    </block>
+  </swiper>
+</view>

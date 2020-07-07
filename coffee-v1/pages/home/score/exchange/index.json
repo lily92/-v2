@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "van-icon": "./../../../../vant-weapp/dist/icon/index",
+    "van-toast": "./../../../../vant-weapp/dist/toast/index",
+    "van-tab": "./../../../../vant-weapp/dist/tab/index",
+    "van-tabs": "./../../../../vant-weapp/dist/tabs/index",
+    "my-header": "./../component/header/index",
+    "component-order-name": "../../../component/int/list"
+  }
+}

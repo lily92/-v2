@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "van-tab": "./../../../vant-weapp/dist/tab/index",
+    "van-tabs": "./../../../vant-weapp/dist/tabs/index",
+    "component-order-name": "../list/list"
+  },
+  "navigationBarTitleText": "我的拍卖订单"
+}

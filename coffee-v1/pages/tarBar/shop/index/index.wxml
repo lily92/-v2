@@ -1,0 +1,14 @@
+<!--pages/coffeeShopping/page/index/index.wxml-->
+<view  class="tao-coffee flex flex-center">
+	<view class="tio-coffee-img positionr">
+		<image src="../../resource/images/haoguan.png"  mode="widthFix" class="w100"></image>
+		<view class="positionb">
+			<block wx:for="{{list}}" wx:key="*this">
+				<navigator url="{{item.url}}"  hover-class="none" class="nav-item"  >
+					{{item.name}}
+				</navigator>
+			</block>
+			
+		</view>
+	</view>
+</view>

@@ -1,0 +1,6 @@
+/* pages/coffeeShopping/page/index/index.wxss */
+page{ background: url('https://gdhflw.com/public/partime/coffeeImg/bg-line.png')   repeat -15rpx;}
+.tio-coffee-img{  width: 671rpx;}
+.tao-coffee{height: 100vh;}
+.nav-item{ height: 25%; font-size: 0;}
+

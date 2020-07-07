@@ -1,0 +1,23 @@
+<!--pages/myCoffee/page/brewing/scanBrewing/clean/clean.wxml-->
+<view class="padding50">
+	<view class="box flex flex-center">
+		<view >
+			<view class="img flex flex-center">
+				<image class="icon-1" mode="widthFix" src="https://gdhflw.com/public/partime/coffeeImg/icon-qx-0.png"></image>
+			</view>
+			<view class="fon28 text-center">清洗</view>
+		</view>
+	</view>
+	<view class="box flex flex-center">
+		<view >
+			<view class="img flex flex-center">
+				<image class="icon-1" mode="widthFix" src="https://gdhflw.com/public/partime/coffeeImg/icon-qx.png"></image>
+			</view>
+			<view class="fon28 text-center">装填</view>
+		</view>
+	</view>
+	<view class="fon20 color6 text-center">
+		清洗、填装两个步骤通过手动操作机器执行，已操作执行请直接进行下一步操作
+	</view>
+	<view class="btn-next" hover-class="btn-next-hover">下一步</view>
+</view>

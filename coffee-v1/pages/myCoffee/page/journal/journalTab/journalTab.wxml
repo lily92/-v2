@@ -1,0 +1,7 @@
+<!--pages/myCoffee/journal/journalTab/journalTab.wxml-->
+<van-tabs active="{{ active }}" bind:change="onChange" title-active-color='#fff' line-height='0'>
+  <van-tab tab-active-class='bold'   title="{{item.title}}" wx:for='{{list}}' wx:key="{{item.id}}">
+	  <item-con list='{{item.listCon}}' types='{{item.types}}'></item-con>
+  </van-tab>
+  
+</van-tabs>

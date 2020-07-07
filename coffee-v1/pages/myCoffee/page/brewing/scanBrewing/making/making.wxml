@@ -1,0 +1,34 @@
+<!--index.wxml-->
+<include src="/components/common/common" wx:if='{{nonetWork}}' />
+<view class="padding30">
+	<view  class="case-top flex flex-just flex-al-center">
+	  <image src="https://gdhflw.com/public/partime/coffeeImg/cp-icon.png" class="case-img" mode="widthFix">
+		  
+	  </image>
+	  <view class="case-desc">
+		  <view  class="fon28">安溪茶农冲泡铁观</view>
+		  <view class="color9 fon24">Espresso 意式浓缩咖啡</view>
+	  </view>
+	</view>
+	<view class="bg2a">
+		<view class="container">
+		  <ec-canvas id="mychart-dom-line" canvas-id="mychart-line" ec="{{ ec }}"></ec-canvas>
+		</view>
+		
+		<view class="fon24 color-c tip" wx:if='{{!iscomplete}}'>
+			注：为保持链接畅通请保持离机器3米之内
+		</view>
+		
+	</view>
+	
+	
+</view>
+
+<template wx:if='{{iscomplete}}'>
+<view class="footer-height"></view>
+<view class="footer-btn flex  flex-just ">
+	<button  class="btn-group fon26" hover-class="op5">曲线对比图</button>
+	<button  class="btn-group fon26" hover-class="op5">曲线评分图</button>
+	<button  class="btn-group fon26" hover-class="op5">关闭</button>
+</view>
+</template>

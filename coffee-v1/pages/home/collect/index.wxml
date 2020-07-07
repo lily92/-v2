@@ -1,0 +1,19 @@
+<!--pages/home/collect/index.wxml-->
+
+<view class="learn-container">
+  <van-dialog id="van-dialog" />
+   <van-toast id="van-toast" />
+  <view class="header-tabs">
+    <view class="tab-item" wx:for="{{tabItem}}" wx:key="{{item}}" data-tab_index="{{index}}" catchtap="clickTab">
+      <text class="{{index === isActive ? 'active' : ''}}">{{item}}</text>
+    </view>
+  </view>
+  <view class="tabs-content">
+    <van-transition show="{{ isActive === 0 }}" name="fade-left" duration="{{ { enter: 700 } }}" name="fade-left">
+      <my-goods goods="{{goods}}" isActive="{{isActive}}" bind:goodsEvent="toggleLike"></my-goods>
+    </van-transition>
+    <van-transition show="{{ isActive === 1 }}" name="fade-right" duration="{{ { enter: 700 } }}" name="fade-right">
+      <my-topic topic="{{topic}}" isActive="{{isActive}}" bind:childEvent="toggleLike"></my-topic>
+    </van-transition>
+  </view>
+</view>

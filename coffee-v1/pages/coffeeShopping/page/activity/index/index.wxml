@@ -1,0 +1,6 @@
+<!--pages/coffeeShopping/page/activity/index/index.wxml-->
+<view class="padding20">
+	<navigator url="{{item.url}}" class="active-item" wx:for="{{activityList}}" wx:key="*this">
+		<image src="{{item.img}}"  mode="widthFix" class="active-img w100"></image>
+	</navigator>
+</view>

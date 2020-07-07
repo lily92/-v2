@@ -1,0 +1,31 @@
+/* pages/coffeeShopping/page/activity/collage/index/item/item.wxss */
+.item{ border-radius: 20rpx; overflow: hidden;  font-size: 14px; margin-bottom: 30rpx; background: #fff; }
+.flex{ display: flex; flex-wrap: wrap;}
+.flex-just{ justify-content: space-between;}
+.flex-al-center{ align-items: center;}
+.flex-center{ align-items: center; justify-content: center;}
+.fon24{ font-size: 12px;}
+.w100{ width: 100%;}
+.color3{ color: #333;}
+.color6{ color: #666;}
+.color9{ color: #999;}
+.item-img{ height: 300rpx; background: #ccc; width: 100%;}
+.positionr{ position: relative;}
+.desc-line{ position: absolute; width: 100%; left: 0; bottom: 0; height:30px; line-height: 30px; background: rgba(0,0,0,.5); z-index: 2; color: #fff; padding: 0 20rpx; box-sizing: border-box;}
+.price-y{ font-size:11px; margin-left: 20rpx;}
+.padding20{padding: 20rpx;}
+.cut-down{ margin-left: 20rpx; color: #fff;}
+.van-count-down{ color: #fff !important;}
+.fon26{ font-size: 13px;}
+.colorf{ color: #fff;}
+.btn {
+	width: 200rpx;
+	height: 50rpx;
+	background-color: #000000;
+	border-radius: 8rpx;
+	line-height: 50rpx;
+	text-align: center;
+	color: #fff;
+}
+.item-num{ color: #fff;}
+.h300{ height: 300rpx;}  

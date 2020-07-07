@@ -1,0 +1,7 @@
+/* pages/indexPack/page/recommendStore/recommendStore.wxss */
+page{ background: #f7f7f7;}
+.txt{ padding: 30rpx 20rpx; background: #fff; margin-bottom: 20rpx; font-size: 14px; }
+.upload-btn{ border: 1px dashed #ccc; width: 104rpx; height: 104rpx; line-height: 104rpx; font-size: 50rpx; text-align: center;}
+.form{ margin-bottom: 30rpx;} 
+.margin-b60{ margin-bottom: 60rpx;}
+.box-sizing-border-box{ box-sizing: border-box;}

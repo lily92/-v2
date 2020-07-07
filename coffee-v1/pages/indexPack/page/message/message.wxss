@@ -1,0 +1,6 @@
+/* pages/indexPack/page/message/message.wxss */
+page{ background: #f7f7f7;}
+.message-box{ border-radius: 20rpx; background: #fff;}
+.txt{ padding: 30rpx 20rpx; border-bottom: 1px solid #e3e3e3;}
+.txt-noborder{ border-bottom: 0;}
+.message{ height: 85vh;}

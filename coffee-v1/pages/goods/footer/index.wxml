@@ -1,0 +1,18 @@
+<!--pages/goods/footer/index.wxml-->
+<view class="footer-bar">
+    <view class="icon-item">
+      <view class="shop-icon" bindtap="openShop">
+        <van-icon name="shop-o" />
+        <view class="shop-text">商铺</view>
+      </view>
+      <view class="shop-icon" bindtap="openCart">
+        <van-tag plain round type="danger">{{cart}}</van-tag>
+        <van-icon name="shopping-cart-o" />
+        <view class="shop-text">购物车</view>
+      </view>
+    </view>
+    <view class="sub-btn">
+      <view class="sub add-to-cart" bindtap="addToCart">加入购物车</view>
+      <view class="sub purchase" bindtap="purchase" >立即购买</view>
+    </view>
+  </view>

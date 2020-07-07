@@ -1,0 +1,9 @@
+<!--pages/home/score/instruction/index.wxml-->
+
+<view class="instruction">
+  <view class="instruction-title">积分说明</view>
+  <view class="instruction-content">1、会员在购买商品，并确定为有效订单后，根据购物的金额，可以获得购物积分（消费满1元得1分积分，不足1元则不计入积分）。购物额只计算订单实际支付金额，赠品、积分支付、优惠金额等不计算在内。</view>
+  <view class="instruction-content">2、若发生因产品质量、服务投诉等各种原因而产生的退换货情况，积分以退换货后的新购买金额计算。办理退换货时，厨易将会扣除您先前购买时产生的赠送积分。如您已经使用了相应积分，而导致账户积分不足，我们将会在您的退款金额中减去相应的金额，具体折算比例参照您在积分商城已经兑换的产品的价格和积分的比例来计算。</view>
+  <view class="instruction-content">3、厨易积分商场全年可进行商品兑换。</view>
+  <view class="tip">注意：团购商品不参与购物回馈积分活动。</view>
+</view>

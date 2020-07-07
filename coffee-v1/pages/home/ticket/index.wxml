@@ -1,0 +1,37 @@
+<!--pages/home/ticket/index.wxml-->
+<wxs module="dateUtil" src="../../../wxs/timeUtil.wxs"></wxs>
+
+<view class="ticket-container">
+  <van-toast id="van-toast" />
+  <view class="ticket-wrapper" wx:for="{{ticketList}}" wx:key="{{index}}">
+    <view class="ticket-img">
+      <image src="./../../../static/images/ticket-bg.png"></image>
+      <view class="ticket-img-text">
+        <view class="img-text-top">
+          <text>¥</text>{{item.sub_price}}</view>
+        <view class="img-text-bottom">
+          <text>满{{item.low_price}}使用</text>
+        </view>
+      </view>
+    </view>
+    <view class="ticket-text">
+      <text>{{item.name}} \n   {{
+      dateUtil.getDateTime(item.start_time)
+      
+}}-{{
+    dateUtil.getDateTime(item.end_time)
+     
+}}</text>
+      <view class="get-ticket" 
+            bindtap="getTicket" 
+            data-id="{{item.id}}" 
+            data-status="{{!item.isActive}}" 
+            wx:if="{{!item.isActive}}">立刻领取</view>
+      <view class="get-ticket {{!item.isActive ?'':'ticket-had-token'}}" 
+            data-id="{{item.id}}" 
+            data-status="{{item.isActive}}" 
+            bindtap="getTicket" 
+            wx:else>领过了</view>
+    </view>
+  </view>
+</view>

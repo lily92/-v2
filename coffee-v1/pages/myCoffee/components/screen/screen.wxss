@@ -1,0 +1,14 @@
+/* pages/myCoffee/components/screen/screen.wxss */
+/* popup */
+.popup{ width: 580rpx; height: 100vh; padding: 30rpx; box-sizing: border-box;border-radius: 0 !important;}
+.van-popup { border-radius: 0 !important;}
+.tab-s{ padding: 8rpx 15rpx; font-size: 12px; background: #f2f2f2; margin:10rpx 10rpx; color: #666; min-width: 100rpx; box-sizing: border-box; text-align: center; line-height: 1;  box-sizing: border-box;}
+.item-s{ margin-bottom: 40rpx; font-size: 26rpx;}
+.tab-list{ padding-top: 10rpx; display: flex; flex-wrap: wrap;}
+.actives{ border: 1px solid #000; background: #fff; position: relative; overflow: hidden;}
+.actives::after{ display: block; content: ''; width: 0; height: 0; border: 5px solid #000;  position: absolute; right: -10rpx; bottom: 0; border-color: transparent transparent #000 transparent;}
+
+.btn-groups{display: flex; width:100%; }
+.btn-groups .btn{ line-height: 88rpx; border: 0; background: #000; color: #fff; border-radius: 44rpx; justify-content: space-between; width: 45%; font-size: 28rpx;}
+.view-select{ height:85vh; margin-bottom: 20rpx;}
+.op5{ background: #333 !important;}

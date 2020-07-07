@@ -1,0 +1,472 @@
+{
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"enhance": true,
+		"postcss": true,
+		"preloadBackgroundData": false,
+		"minified": true,
+		"newFeature": true,
+		"coverView": true,
+		"nodeModules": true,
+		"autoAudits": false,
+		"showShadowRootInWxmlPanel": true,
+		"scopeDataCheck": false,
+		"checkInvalidKey": true,
+		"checkSiteMap": true,
+		"uploadWithSourceMap": true,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		},
+		"useCompilerModule": false,
+		"userConfirmedUseCompilerModuleSwitch": false
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.9.0",
+	"appid": "wx5ef616327383ee57",
+	"projectname": "%E5%92%96%E5%95%A1%E5%86%B2%E6%B3%A1v1",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"isGameTourist": false,
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"gamePlugin": {
+			"current": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": [
+				{
+					"id": -1,
+					"name": "收藏店铺",
+					"pathName": "pages/shop/index",
+					"query": "id=1",
+					"scene": null
+				},
+				{
+					"id": 1,
+					"name": "商品详情",
+					"pathName": "pages/goods/index",
+					"query": "id=106",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "我的收藏",
+					"pathName": "pages/home/collect/index",
+					"query": "id=106",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "文章详情",
+					"pathName": "pages/reads/list-detail/index",
+					"query": "id=1",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "个人中心",
+					"pathName": "pages/home/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "搜索店铺",
+					"pathName": "pages/home/map/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "店铺详情",
+					"pathName": "pages/shop/index",
+					"query": "id=88",
+					"scene": null
+				},
+				{
+					"id": 7,
+					"name": "地图",
+					"pathName": "pages/home/map/index",
+					"query": "index=2",
+					"scene": null
+				},
+				{
+					"id": 8,
+					"name": "首页关于我们",
+					"pathName": "pages/indexPack/page/about/about",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "留言",
+					"pathName": "pages/indexPack/page/message/message",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "推荐好馆",
+					"pathName": "pages/indexPack/page/recommendStore/recommendStore",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "留言",
+					"pathName": "pages/indexPack/page/message/message",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "博客",
+					"pathName": "pages/reads/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "优惠券",
+					"pathName": "pages/coffeeShopping/page/coupon/coupon",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "课程",
+					"pathName": "pages/coffeeShopping/page/course/course",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "活动",
+					"pathName": "pages/coffeeShopping/page/activity/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "淘咖啡",
+					"pathName": "pages/coffeeShopping/page/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "好品首页",
+					"pathName": "pages/coffeeShopping/page/product/product",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "shop好店",
+					"pathName": "pages/shop/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "好店列表",
+					"pathName": "pages/shoplist/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 20,
+					"name": "好店-新",
+					"pathName": "pages/coffeeShopping/page/shoplist/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "活动众筹",
+					"pathName": "pages/coffeeShopping/page/activity/crowdFunding/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "拍卖",
+					"pathName": "pages/coffeeShopping/page/activity/auction/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "拼团",
+					"pathName": "pages/coffeeShopping/page/activity/collage/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "商品评价",
+					"pathName": "pages/home/order/evaluate/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 25,
+					"name": "添加地址",
+					"pathName": "pages/home/address/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/reads/index",
+					"pathName": "pages/reads/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "拍卖详情",
+					"pathName": "pages/coffeeShopping/page/activity/auction/detail/detail",
+					"query": "id=10",
+					"scene": null
+				},
+				{
+					"id": 28,
+					"name": "竞拍结果",
+					"pathName": "pages/coffeeShopping/page/activity/auction/results/results",
+					"query": "type=1",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "我的订单",
+					"pathName": "pages/home/order/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "拍卖订单",
+					"pathName": "pages/coffeeShopping/page/activity/auction/auctionOrder/auctionOrder",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "店铺",
+					"pathName": "pages/shop/index",
+					"query": "shop_id=0",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "活动众筹详情",
+					"pathName": "pages/coffeeShopping/page/activity/crowdFunding/detail/detail",
+					"query": "shop_id=0",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "个人简介p",
+					"pathName": "pages/home/profile/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "我的优惠券",
+					"pathName": "pages/home/ticket/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "订单提交",
+					"pathName": "pages/shop/pay/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "详情",
+					"pathName": "pages/home/order/detail/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/shop/pay/index",
+					"pathName": "pages/shop/pay/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "日志-点赞-转发列表",
+					"pathName": "pages/myCoffee/page/journal/journalTab/journalTab",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "日志列表",
+					"pathName": "pages/myCoffee/page/journal/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "日志编辑",
+					"pathName": "pages/myCoffee/page/journal/journalEdit/journalEdit",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "冲泡",
+					"pathName": "pages/myCoffee/page/brewing/historyBrewing/historyBrewing",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "清洗",
+					"pathName": "pages/myCoffee/page/brewing/scanBrewing/clean/clean",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "查找机器",
+					"pathName": "pages/myCoffee/page/brewing/scanBrewing/findMachine/findMachine",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "选择设备",
+					"pathName": "pages/myCoffee/page/brewing/scanBrewing/selectMachine/selectMachine",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 45,
+					"name": "输入密码",
+					"pathName": "pages/myCoffee/page/brewing/scanBrewing/inputPassword/inputPassword",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "曲线方案",
+					"pathName": "pages/myCoffee/page/brewing/scanBrewing/curveScheme/curveScheme",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "制作中",
+					"pathName": "pages/myCoffee/page/brewing/scanBrewing/making/making",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "我的设备",
+					"pathName": "pages/myCoffee/page/myDevice/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "绑定设备",
+					"pathName": "pages/myCoffee/page/myDevice/bindingDevice/bindingDevice",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "我的订单",
+					"pathName": "pages/home/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "我的订单-首页",
+					"pathName": "pages/home/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "我的咖啡",
+					"pathName": "pages/tarBar/mycoffee/mycoffee",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "金杯",
+					"pathName": "pages/myCoffee/page/goldenCup/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "曲线方案",
+					"pathName": "pages/myCoffee/page/case/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "风味雷达图",
+					"pathName": "pages/myCoffee/page/goldenCup/detail/detail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "分享图案例",
+					"pathName": "pages/myCoffee/page/goldenCup/example/example",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "金杯详情",
+					"pathName": "pages/myCoffee/page/goldenCup/detail/detail",
+					"scene": null
+				}
+			]
+		}
+	}
+}

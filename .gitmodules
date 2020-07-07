@@ -1,0 +1,3 @@
+[submodule "coffee-v1/components/painter"]
+	path = coffee-v1/components/painter
+	url = https://github.com/Kujiale-Mobile/PainterCore.git

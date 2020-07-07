@@ -1,0 +1,54 @@
+/* pages/shop/index.wxss */
+page{ background: #f7f7f7;}
+.command-container {
+  padding: 20rpx 10rpx;
+}
+
+/* 轮播图 */
+.read-swiper {
+  position: relative;
+}
+
+.read-swiper  swiper {
+  height: 480rpx;
+  background: #e5e5e5;
+}
+
+.slide-image {
+  width: 100%;
+}
+
+swiper .wx-swiper-dots.wx-swiper-dots-horizontal {
+  position: absolute;
+  bottom: 50rpx;
+}
+
+/* 设置点点的样式 */
+
+swiper .wx-swiper-dot {
+  width: 16rpx;
+  height: 16rpx;
+  border-radius: 50%;
+  display: inline-flex;
+  /* 这里设置点点之间的距离 */
+  margin-left: 10rpx;
+  justify-content: space-between;
+}
+swiper .wx-swiper-dot::before {
+  content: '';
+  flex-grow: 1;
+  background: #fff;
+  border-radius: 50%;
+}
+
+/* 当前点点的样式 */
+
+swiper .wx-swiper-dot-active::before {
+  background: #e45265 !important;
+  border-radius: 50%;
+}
+.displa-list .van-ellipsis {
+  overflow:inherit;
+  white-space: normal;
+
+}

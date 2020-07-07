@@ -1,0 +1,25 @@
+<!--pages/coffeeShopping/page/activity/crowdFunding/index/item/item.wxml-->
+
+<navigator url='/pages/coffeeShopping/page/activity/crowdFunding/detail/detail?id={{item.id}}' class="item" wx:for='{{list}}' wx:key='index'>
+	<image mode="widthFix" src="https://gdhflw.com/public/partime/coffeeImg/zc-img.jpg" class="w100"></image>
+	<view class="padding30">
+		<view class="color9">格米莱</view>
+		<view>CRM3200C咖啡机</view>
+		<view class="progress">
+			<van-progress percentage="50" color="#000" />
+		</view>
+		<view class="flex flex-just flex-al-center">
+			<text>￥2000.00</text>
+			<view class="flex">
+				<view class="margin-r20 flex flex-al-center ">
+					<van-icon class='block' name="balance-o"  color="#ccc" size='16px' />
+					<text class="color-c">51,120</text>
+				</view>
+				<view class="flex flex-al-center">
+					<van-icon class='block' name="contact"   color="#ccc" size='16px'/>
+					<text class="color-c">51,120</text>
+				</view>
+			</view>
+		</view>
+	</view>
+</navigator>

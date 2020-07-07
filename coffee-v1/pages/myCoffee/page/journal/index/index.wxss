@@ -1,0 +1,56 @@
+/* pages/myCoffee/page/journal/index/index.wxss */
+page{  background: #f7f7f7;}
+.tab {
+	width:100%;
+	height: 88rpx;
+	background-color: #ffffff;
+	box-shadow: 0px -5px 10px 1px 
+		rgba(131, 131, 131, 0.05);
+  border-radius: 10px;
+  text-align: center;
+	align-items: center;
+}
+.item{ flex: 1;  position: relative; height:88rpx; line-height: 88rpx;}
+.item.active::after{ position: absolute; content: ''; width: 113rpx; height: 5rpx;
+	background-color: #000000;
+	box-shadow: 0rpx -5rpx 10rpx 1rpx 
+		rgba(131, 131, 131, 0.05);
+		 bottom: 0;
+	border-radius: 3rpx; left: 50%; transform: translateX(-50%);}
+.item .dot{ content: ''; width: 10rpx; height: 10rpx; background: #ff0000; position: absolute; top:25%; border-radius: 50%; display: block; right: 28%;}
+.popup{ width: 580rpx; height: 100vh; padding: 30rpx; box-sizing: border-box;}
+.van-popup { border-radius: 0 !important;}
+.tab-s{ padding: 8rpx 15rpx; background: #f2f2f2; margin:10rpx 10rpx; color: #666; min-width: 100rpx; box-sizing: border-box; text-align: center; line-height: 1;  box-sizing: border-box;}
+.item-s{ margin-bottom: 40rpx;}
+.tab-list{ padding-top: 10rpx;}
+.actives{ border: 1px solid #000; background: #fff; position: relative; overflow: hidden;}
+.actives::after{ display: block; content: ''; width: 0; height: 0; border: 5px solid #000;  position: absolute; right: -10rpx; bottom: 0; border-color: transparent transparent #000 transparent;}
+
+.btn-groups{display: flex; width:100%; }
+.btn-groups .btn{ height: 88rpx; border: 0; background: #000; color: #fff; border-radius: 44rpx; justify-content: space-between; width: 45%;}
+.view-select{ height:85vh; margin-bottom: 20rpx;}
+.op5{ background: #333 !important;}
+
+
+.haoguan-master{ position: fixed;left: 0; top: 0;right: 0;bottom: 0; background: rgba(0,0,0,.6); z-index: 1000; display: none;}
+.haoguan{ position: fixed; width: 96%; left: 2%; bottom: 0; z-index: 10001;transform: translateY(100%);}
+.huaguan-item{ border-radius: 20rpx; background: #fff; text-align: center; margin-bottom: 10rpx;}
+.item-link{ padding: 40rpx 0; border-top: 1px solid #afafaf;  }
+.broder-top0{ border-top: 0;}
+.haoguan-master.active{ display: block;}
+.haoguan.active{ transform: translateY(0)}
+
+.edit-height,.edit{ height: 120rpx;}
+.edit{ position: fixed; left: 0; bottom: 0; width: 100%; padding: 15rpx 20rpx; box-sizing: border-box; z-index: 99;}
+.edit-btn{ height: 90rpx; line-height: 90rpx; background-image: linear-gradient(-75deg, 
+		#2d2d2d 0%, 
+		#111111 100%), 
+	linear-gradient(
+		#ffffff, 
+		#ffffff);
+	background-blend-mode: normal, 
+		normal;
+	border-radius: 41rpx;}
+	.colorf{ color: #fff;}
+	.icon{ background: url('https://gdhflw.com/public/partime/coffeeImg/icon-edit-rizhi.png') no-repeat right center; padding-right:30rpx ; background-size: 26rpx;}
+	.edit-btn{ text-align: center;}

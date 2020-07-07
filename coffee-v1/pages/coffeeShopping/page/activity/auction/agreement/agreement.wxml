@@ -1,0 +1,8 @@
+
+<import src="../../../../../../wxParse/wxParse.wxml" />
+
+<view class="about-con">
+    <template is="wxParse" data="{{wxParseData:article.nodes}}" wx:key='about' />
+</view>
+
+ 

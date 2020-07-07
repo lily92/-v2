@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+	  "list-item":"./item/item",
+	   "van-loading": "../../../vant-weapp/dist/loading/index"
+  },
+  "navigationBarTitleText": "拍卖"
+}

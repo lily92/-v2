@@ -1,0 +1,61 @@
+/* component/item/index.wxss */
+
+.cell-group-item {
+  display: block;
+  border-bottom: 1px solid #f5f5f5;
+}
+
+.checkbox-item {
+  padding: 20rpx 0 20rpx 100rpx;
+  text-align: center;
+  width: 50%;
+  display: inline-block;
+  margin: 0 25%;
+  font-size: 32rpx;
+  color: #333;
+}
+
+.save {
+  font-size: 32rpx;
+  color: #fff;
+  background: #000;
+  width: 70%;
+  margin: 0 15%;
+  padding: 20rpx 0;
+  text-align: center;
+  position: fixed;
+  bottom: 50rpx;
+  border-radius: 60rpx;
+}
+
+
+.tab{
+width: 90%;
+margin: auto;
+margin-top: 60rpx;
+
+}
+.tab text{
+  padding-left: 20rpx;
+}
+.provinces{
+  border-left: 2px solid black;
+}
+.area-other{
+  height: 200rpx;
+  text-align: center;
+  line-height: 200rpx;
+  background: #ffff;
+}
+.area-other .other{
+  background: black;
+  padding: 25rpx;
+  color: #fff;
+  padding-left: 130rpx;
+  padding-right: 130rpx;
+  border-radius: 50rpx;
+  font-size: 28rpx;
+}
+.addres-detailed{
+  margin-top: 30rpx;
+}

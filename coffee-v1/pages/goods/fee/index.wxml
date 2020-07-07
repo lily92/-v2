@@ -1,0 +1,10 @@
+<!--pages/goods/fee/index.wxml-->
+<view class="post-fee">
+  <view class="post-title">运费</view>
+  <view class="fee-detail" wx:if="{{!noPostFee}}">
+    <text>{{detailed.freight}}</text>
+  </view>
+  <view class="fee-detail" wx:if="{{noPostFee}}">
+    <text>免运费</text>
+  </view>
+</view>

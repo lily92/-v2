@@ -1,0 +1,20 @@
+<!--pages/shop/index.wxml-->
+
+<view class="shop-container">
+  <my-swiper swiperImg="{{imgUrls}}" logo="{{shop_logo}}" shop_name="{{shop_name}}" shop_distance="{{shop_distance}}"></my-swiper>
+
+  <view class="displa-list">
+    <van-tabs color='#fff' active="{{ active }}"  bind:change="onChange">
+
+    
+      <van-tab wx:for="{{category}}"  title="{{item.name}}" wx:key='index'>
+        <view class="command-container">
+		  <shop-item list="{{shoplist}}" wx:if='{{active==0}}'></shop-item>
+          <my-shop-card list="{{list}}" wx:if='{{active >0}}' ></my-shop-card>
+        </view>
+      </van-tab>
+    
+    </van-tabs>
+  </view>
+
+</view>

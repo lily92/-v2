@@ -1,0 +1,34 @@
+<!--pages/myCoffee/page/journal/index/index.wxml-->
+<view class="">
+	<view class="padding30">
+		<van-tabs bind:disabled="showPopup" swipe-threshold='{{number}}' swipeable color='#000' custom-class='tab' active="{{ active }}" bind:change="onChange">
+		  <van-tab title="{{item.name}}" data-id='{{item.id}}' wx:for='{{typeList}}'>
+			  <my-list articleList="{{articleList}}"   data-isshow='true' ></my-list>
+		  </van-tab>	
+		  <van-tab title='筛选' disabled></van-tab>	
+		</van-tabs>
+	</view>
+ 
+	
+	<view class="flex flex-center loading-txt">
+		<van-loading size="5" wx:if='{{isloadding}}'>加载中...</van-loading>
+		<view wx:if='{{!isloadding}}' class="color9 fon24">—— 我是有底线的 ——</view>
+	</view>
+	
+	<view class="edit-height"></view>
+	<view class="edit bgf flex  flex-just">
+		<navigator class="edit-btn"  url="../journalEdit/journalEdit">
+			<text class="fon28 colorf icon">金杯计算</text>
+		</navigator>
+		<navigator class="edit-btn"  url="/pages/myCoffee/page/brewing/scanBrewing/curveScheme/curveScheme">
+			<text class="fon28 colorf icon">风味雷达</text>
+		</navigator>
+	</view>
+
+    <!-- 筛选 -->
+	<screen shaixuanList='{{shaixuanList}}' show='{{show}}'></screen>
+	<!-- end筛选 -->
+	
+
+
+</view>

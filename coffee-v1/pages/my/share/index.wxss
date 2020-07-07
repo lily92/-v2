@@ -1,0 +1,6 @@
+/* pages/my/share/index.wxss */
+image{
+  width: 100%;
+height: 1205rpx;
+
+}

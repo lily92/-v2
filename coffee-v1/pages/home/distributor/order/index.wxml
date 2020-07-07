@@ -1,0 +1,15 @@
+<!--pages/home/distributor/order/index.wxml-->
+
+<view class="distrib-order-container">
+  <van-tabs active="{{ active }}" bind:change="onChangeTabs">
+    <van-tab title="全部">
+     <component-order-list detailList="{{detailList}}"/>
+    </van-tab>
+    <van-tab title="未结算">
+       <component-order-list detailList="{{detailList}}"/>
+    </van-tab>
+    <van-tab title="已结算">
+       <component-order-list detailList="{{detailList}}"/>
+    </van-tab>
+  </van-tabs>
+</view>

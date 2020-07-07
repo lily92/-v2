@@ -1,0 +1,70 @@
+<!--pages/home/index.wxml-->
+<view class="home-container">
+  <!-- 头部黑色卡片 -->
+  <my-top userinfo='{{userinfo}}' active='2'></my-top>
+  <!-- 我的订单 -->
+  <view class="my-order" >
+    <view class="all-order" bindtap="goMyOrder" data-index="0" >
+      <text class="all-order-left fon28">我的订单</text>
+      <text class="all-order-right fon28">查看全部订单</text>
+      <van-icon name="arrow" class="order-arrow-icon" />
+    </view>
+    <view class="order-category">
+      <view class="o-category wait-to-pay" bindtap="goMyOrder" data-index="1">
+        <van-icon name="peer-pay" class="o-category-icon" />
+        <view class="pay-title">待付款</view>
+      </view>
+      <view class="o-category wait-to-delivery" bindtap="goMyOrder" data-index="2">
+        <van-icon name="send-gift-o" class="o-category-icon" />
+        <view class="pay-title">待收货</view>
+      </view>
+      <view class="o-category wait-to-rate" bindtap="goMyOrder" data-index="3">
+        <van-icon name="comment-o" class="o-category-icon" />
+        <view class="pay-title">待评价</view>
+      </view>
+      <view class="o-category after-sale" bindtap="goMyOrder" data-index="4">
+        <van-icon name="cash-on-deliver" class="o-category-icon" />
+        <view class="pay-title">退款/售后</view>
+      </view>
+    </view>
+  </view>
+  
+  <!-- 更多订单 -->
+  <view class="my-order" >
+    <view class="all-order" data-index="0" >
+      <text class="all-order-left fon28">更多订单</text>
+    </view>
+    <view class=" more-order  flex">
+      <view class="more-order-item" data-index="1">
+        <view class="m-icon m-icon-1"></view>
+        <view class="pay-title">拼团</view>
+      </view>
+      <view class="more-order-item" data-index="2">
+        <view class="m-icon m-icon-2"></view>
+        <view class="pay-title">拍卖</view>
+      </view>
+	  <view class="more-order-item" data-index="3">
+	     <view class="m-icon m-icon-3"></view>
+	    <view class="pay-title">众筹</view>
+	  </view>
+    </view>
+  </view>
+  
+  
+  
+  <!-- 分类 -->
+  <view class="home-category">
+    <van-cell-group border="{{ false }}">
+      <van-cell title="我的地址 " is-link icon="location-o" class="h-category-cell" bindtap="goMyAddress"/>
+      <van-cell title="我的优惠券" is-link icon="coupon-o" class="h-category-cell" bindtap="goMyTicket"/>
+      <van-cell title="领券中心" is-link icon="aim" class="h-category-cell" bindtap="goGetTicket"/>
+      <van-cell title="分享有利" bindtap="goShare" is-link icon="gift-o" class="h-category-cell"/>
+      <van-cell title="我的收藏" catchtap="goMyCollect" is-link icon="like-o" class="h-category-cell"/>
+
+             <button open-type='contact'>
+
+      <van-cell title="联系客服" is-link icon="service-o" class="h-category-cell" border="{{ false }}" />
+      </button>
+    </van-cell-group>
+  </view>
+</view>

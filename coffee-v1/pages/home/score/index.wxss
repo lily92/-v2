@@ -1,0 +1,102 @@
+/* pages/home/score/instruction/index.wxss */
+
+.sign-in {
+  padding: 10rpx 30rpx;
+  width: 40%;
+  margin: 6rpx auto;
+  text-align: center;
+  font-size: 28rpx;
+  color: #fff;
+  background: -webkit-linear-gradient(left, #e7c9a4, #e7dacb);
+  border-radius: 30rpx;
+}
+
+.had-sign-in {
+  background: -webkit-linear-gradient(left, #807f7f, #d8d7d6);
+}
+
+.stuff-wrapper {
+  width: 85%;
+  height: 800rpx;
+  border-radius: 20rpx;
+  box-shadow: 0 0 10rpx 4rpx #d1d1d1;
+  background: #fff;
+  margin: 20rpx auto;
+}
+
+.mall-header {
+  text-align: center;
+  padding: 20rpx 0 10rpx;
+  position: relative;
+}
+
+.mall-header image {
+  width: 30rpx;
+  height: 30rpx;
+  max-width: 30rpx;
+  max-height: 30rpx;
+  margin-right: 10rpx;
+  position: absolute;
+  top: 26rpx;
+  left: 216rpx;
+}
+
+.mall-container {
+  padding: 0 10rpx;
+}
+
+.mall-scroll {
+  height: 660rpx;
+}
+
+.scroll-item {
+  display: inline-block;
+  width: 46%;
+  margin: 2%;
+  background: #f7f7f7;
+}
+
+.no-goods-item {
+  text-align: center;
+  margin: 250rpx 0;
+  color: #333;
+}
+
+.img-wrapper image {
+  width: 284rpx;
+  height: 230rpx;
+  max-width: 284rpx;
+  max-height: 230rpx;
+}
+
+.item-info {
+  font-size: 24rpx;
+  padding: 0 10rpx 10rpx;
+}
+
+.item-info .name, .item-info .condition {
+  margin-bottom: 6rpx;
+  width: 260rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.item-info .condition {
+  color: #ee0303;
+}
+
+.rate {
+  display: flex;
+  color: #999;
+  font-weight: 400;
+}
+
+.rate text {
+  flex: 1;
+  font-size: 18rpx;
+}
+
+.rate text:last-child,.rate text:nth-child(2) {
+  text-align: right;
+}

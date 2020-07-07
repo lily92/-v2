@@ -1,0 +1,12 @@
+{
+  "usingComponents": {
+    "my-swiper": "./swiper/index",
+    "van-popup": "./../../vant-weapp/dist/popup/index",
+    "van-transition": "./../../vant-weapp/dist/transition/index",
+    "van-icon": "../../../vant-weapp/dist/icon/index",
+    "van-stepper": "./../../vant-weapp/dist/stepper/index",
+    "van-toast": "./../../vant-weapp/dist/toast/index",
+    "card-item": "./cardItem/index",
+    "van-tag": "./../../vant-weapp/dist/tag/index"
+  }
+}

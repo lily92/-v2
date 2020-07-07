@@ -1,0 +1,253 @@
+/* pages/index/map/index.wxss */
+
+page {
+  background: #f7f7f7;
+}
+
+/* 列表 */
+
+.shop-map-container {
+  overflow: hidden;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.control-bar {
+  background: #fff;
+  padding: 0 30rpx;
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 3;
+}
+
+.city-item {
+  display: inline-block;
+  width: 40%;
+  padding: 20rpx 0;
+  position: relative;
+  color: #333;
+  font-size: 28rpx;
+}
+
+.area text {
+  overflow: hidden;
+  width: 260rpx;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: inline-block;
+}
+
+.city-item.exchange {
+  width: 20%;
+  text-align: right;
+}
+
+.city-item .item-icon {
+  position: absolute;
+  top: 26rpx;
+  left: 60rpx;
+}
+
+.city-item.exchange .item-icon {
+  left: 50rpx;
+}
+
+.shop-item {
+  margin-top: 120rpx;
+}
+
+.shop-banner {
+  margin: 50rpx 30rpx;
+  background: #fff;
+  box-shadow: 10rpx 10rpx 16rpx 2rpx #d1d1d1;
+}
+
+.shop-banner image {
+  width: 100%;
+  height: 450rpx;
+  max-width: 750rpx;
+  max-height: 450rpx;
+}
+
+.shop-name-distance {
+  display: flex;
+  font-size: 28rpx;
+  padding: 10rpx 0;
+}
+
+.shop-name {
+  width: 70%;
+  padding: 10rpx 0 10rpx 30rpx;
+  color: #333;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.shop-distance {
+  width: 30%;
+  position: relative;
+  line-height: 60rpx;
+  color: #333;
+  font-size: 26rpx;
+  padding-left: 26rpx;
+}
+
+.shop-distance .locate-icon {
+  position: absolute;
+  left: -6rpx;
+  font-size: 30rpx;
+  color: #000;
+}
+
+/* 地图 */
+
+.map-wrapper image {
+  /* width: 750rpx;
+  height: 510rpx;
+  max-width: 750rpx;
+  max-height: 510rpx; */
+  width: 750rpx;
+  height: 560rpx;
+  max-width: 750rpx;
+  max-height: 560rpx;
+}
+
+.row-container {
+  white-space: nowrap;
+  display: inline-block;
+  padding: 0 5%;
+}
+
+.shop-detail {
+  display: inline-block;
+  width: 600rpx;
+  padding: 20rpx 10rpx;
+  border: 1px solid #f1f1f1;
+  margin: 50rpx 20rpx;
+  background: #fff;
+  box-shadow: 10rpx 10rpx 10rpx 4rpx #d1d1d1;
+  min-height: 280rpx;
+  max-height: 280rpx;
+}
+
+.detail-wrap {
+  display: flex;
+}
+
+.shop-img-wrapper {
+  width: 40%;
+  height: 220rpx;
+}
+
+.shop-img-wrapper image {
+  width: 220rpx;
+  height: 220rpx;
+}
+
+.shop-info-wrapper {
+  width: 80%;
+  padding: 20rpx 10rpx;
+}
+
+.shop-name-item {
+  font-size: 32rpx;
+  overflow: hidden;
+  max-width: 350rpx;
+  text-overflow: ellisis;
+  white-space: nowrap;
+  width: 350rpx;
+}
+
+.shop-on-sale {
+  font-size: 26rpx;
+  color: #666;
+  margin: 10rpx 0;
+}
+
+.shop-address-item {
+  font-size: 26rpx;
+  color: #333;
+  white-space: normal;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  text-overflow: ellisis;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  height: 108rpx;
+}
+
+/* 城市模块 */
+
+.city_list {
+  width: 90%;
+  margin: auto;
+  overflow: auto;
+  height: 500rpx;
+}
+
+.tab {
+  width: 90%;
+  margin: auto;
+  margin-top: 60rpx;
+}
+
+.tab text {
+  padding-left: 20rpx;
+}
+
+.provinces {
+  border-left: 2px solid black;
+}
+
+.area-other {
+  height: 200rpx;
+  text-align: center;
+  line-height: 200rpx;
+  background: #ffff;
+}
+
+.area-other .other {
+  background: black;
+  padding: 25rpx;
+  color: #fff;
+  padding-left: 130rpx;
+  padding-right: 130rpx;
+  border-radius: 50rpx;
+  font-size: 28rpx;
+}
+
+.addres-detailed {
+  margin-top: 30rpx;
+}
+
+.wxParse-p image {
+  width: 100% !important;
+}
+
+.shop-btn-group {
+  display: flex;
+  padding-top: 12rpx;
+}
+
+.shop-btn-group text {
+  width: 100%;
+  margin: 0 5%;
+  text-align: center;
+  padding: 4rpx 8rpx;
+  font-size: 24rpx;
+  border-radius: 40rpx;
+  border: 1px solid #e5e5e5;
+}
+
+.address-prop {
+  z-index: 99;
+}

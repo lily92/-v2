@@ -1,0 +1,85 @@
+<!--pages/index/map/index.wxml-->
+<view class="shop-map-container" catchtouchmove="moveHandle">
+  <view class="control-bar">
+    <view class="city-item area" >
+    
+        <text bindtap="toggleShowCityPop" wx:if="{{areainfo===''}}">选择城市</text>
+        <!-- <van-icon name="arrow-down" class="item-icon" /> -->
+     
+      <text  bindtap="toggleShowCityPop"   wx:if="{{areainfo!==''}}">{{areainfo}}</text>
+    </view>
+    <view class="city-item exchange" bindtap="toggleShowType">
+      <van-icon name="exchange" class="item-icon" />
+      <text wx:if="{{!showType}}">地图</text>
+      <text wx:if="{{showType}}">列表</text>
+    </view>
+  </view>
+  <!-- 地区弹出层 -->
+  <!-- <van-popup show="{{ showAreaPop }}" position="bottom" bind:close="toggleShowAreaPop">
+    <van-area area-list="{{ areaList }}" columns-num="{{ 2 }}" value="440600" bind:confirm="onSelectArea" />
+  </van-popup> -->
+  <!-- 列表 -->
+  <van-transition show="{{ !showType }}" custom-class="block">
+    <view class="shop-item" wx:if="{{!showType}}">
+      <view class="shop-banner" wx:for="{{markers}}" bindtap="handeShop" data-id="{{item.id}}" wx:key="{{index}}">
+        <image mode='aspectFit' src="{{item.logo}}"></image>
+        <view class="shop-name-distance">
+          <view class="shop-name">{{item.area}}丨{{item.name}}</view>
+          <view class="shop-distance">
+            <van-icon name="location-o" class="locate-icon" />距离您{{item.km}}km</view>
+        </view>
+      </view>
+    </view>
+  </van-transition>
+  <!-- 地图  -->
+  <van-transition show="{{ showType }}" custom-class="block">
+    <view class="shop-item" wx:if="{{showType}}">
+      <map id="map" longitude="{{longitude}}" latitude="{{latitude}}" scale="10" controls="{{controls}}" markers="{{markers}}" bindmarkertap="markerTap" show-location style="width: 100%; height: 600rpx;">
+      </map>
+      <scroll-view scroll-x class="card-scroll" bindscrolltoupper="leftEnd" bindscrolltolower="rightEnd" scroll-with-animation="{{true}}">
+        <view class="row-container">
+          <view class="shop-detail" wx:for="{{markers}}" wx:key="{{index}}">
+            <view class="detail-wrap">
+              <view bindtap="handeShop" data-id="{{item.id}}" class="shop-img-wrapper">
+                <image src="{{item.logo}}"></image>
+              </view>
+              <!-- 点击地图门店显示对应的门店信息 -->
+              <view class="shop-info-wrapper" wx:if="{{shoptrue==true}}">
+                <view class="shop-name-item">{{item.name}}</view>
+                <view class="shop-on-sale">营业时间：{{item.startTime}}-{{item.endTime}}</view>
+                <view class="shop-address-item">地址：{{item.location}}</view>
+                <view class="shop-btn-group">
+                  <text bindtap="handeShop" data-id="{{item.id}}">进入店铺</text>
+                  <text bindtap="clickmap" data-info="{{item}}">一键导航</text>
+                </view>
+              </view>
+
+              <view class="shop-info-wrapper" wx:else>
+                <view class="shop-name-item">当前地区没有店铺</view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </scroll-view>
+    </view>
+  </van-transition>
+</view>
+
+<!-- 地图弹出层 -->
+<view class="address-prop">
+  <van-popup  show="{{ showAddress }}" bind:close="onCloseAddress" position="bottom">
+   <scroll-view scroll-y style="height: 400px;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" >
+      <view class="tab">
+        <text bindtap="handeProvince" class="provinces">{{provinces}}</text>
+        <text bindtap="handeCity">{{city}}</text>
+        <text bindtap="handeArea">{{area}}</text>
+      </view>
+      <view class="city_list">
+        <text wx:for="{{city_list}}" data-id="{{item.id}}" data-name='{{item.area_name}}' data-level="{{item.level}}" data-area_code='{{item.area_code}}' bindtap="handelProvinces">
+          {{item.area_name}}
+        </text>
+      </view>
+
+  </scroll-view>
+  </van-popup>
+</view>

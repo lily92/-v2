@@ -1,0 +1,16 @@
+<!--pages/indexPack/page/message/message.wxml-->
+<view class="message padding20">
+  <view class="message-box bgf"> 
+    <view>
+      <input  placeholder="请填您的姓名"  class="txt fon24" />
+    </view>
+    <view>
+      <input  placeholder="请填您的手机号"  class="txt fon24"/>
+    </view>
+    <view>
+    <textarea  placeholder="写下你想要了解的信息或疑问"  class="txt fon24 txt-noborder"></textarea>
+    
+    </view>
+  </view>
+</view>
+<button class="btn-submit">提交</button>

@@ -1,0 +1,49 @@
+<!--pages/login/index.wxml-->
+<view class="login-container">
+  <van-toast id="van-toast" />
+  <view class="bg-wrapper">
+    <!-- 文字 -->
+    <view class="logo-text">
+      <view class="logo-title">
+        <text>极客咖啡联盟</text>
+      </view>
+      <view class="logo-desc">
+        <text>专业咖啡新鲜式</text>
+      </view>
+    </view>
+    <!-- 遮罩 -->
+    <view class="bg-mask-top"></view>
+    <view class="bg-mask-bottom"></view>
+    <!-- 背景图 -->
+    <view class="bg">
+      <image src="https://hhh.10huisp.com/uploads/bg.png"></image>
+    </view>
+  </view>
+  <view class="login-choose" wx:if="{{isPhoneLogin===1}}">
+
+    <button class="wx-login" open-type="getUserInfo" bindgetuserinfo="onwxLogin">
+
+      <!-- <view class="option wx-login"> -->
+        <text>微信一键登录</text>
+      <!-- </view> -->
+    </button>
+    <!-- <view class="option phone-login" bindtap="handlePhoneLogin">
+      <text>手机验证码登录</text>
+    </view> -->
+  </view>
+
+  <view class="login-choose phone-login" wx:if="{{isPhoneLogin===2}}">
+    <view class="login-wrapper phone-input">
+      <input type="number" bindinput="bindKeyInput" value="{{phone}}" placeholder="请输入手机号码" placeholder-class="placeholder" />
+    </view>
+    <view class="login-wrapper valid-input">
+      <input placeholder="请输入验证码" placeholder-class="placeholder" />
+      <view class="valid-code" bindtap="getCode">
+        <!-- 遮罩 -->
+        <view class="valid-mask"></view>
+        <text wx:if="{{isGetCode==='1'}}">获取验证码</text>
+        <text wx:if="{{isGetCode==='2'}}" class="{{isGetCode!==1?'get-code-later':''}}">{{downNum}} s后再试</text>
+      </view>
+    </view>
+  </view>
+</view>

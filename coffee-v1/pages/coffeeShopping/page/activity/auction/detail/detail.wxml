@@ -1,0 +1,123 @@
+<!--pages/coffeeShopping/page/activity/auction/detail/detail.wxml-->
+<import src="../../../../../../wxParse/wxParse.wxml" />
+<view>
+	<cust-swiper height='750rpx' swiperImg='{{swiperImg}}'></cust-swiper>
+	<!-- 拍卖详情 -->
+	<view class="flex flex-just flex-al-center">
+		<view class="left">拍卖中</view>
+		<view class="right color0">
+			剩余时间：01 天21 时28 分56 秒
+		</view>
+	</view>
+
+	<view class="padding30 product-desc">
+		<view class="fon34">格米莱CRM3200C咖啡机</view>
+		<view class="flex flex-al-center flex-just">
+			<view><text class="fon24">当前价：</text>
+				<text class="fon42">￥1000.00</text></view>
+			<text class="color9 fon24">3人已出价</text>
+		</view>
+	</view>
+	<view class="padding30 product-desc">
+		<text class="margin-r40">规格</text>
+		<text>银色 CRM3200C</text>
+	</view>
+	<view class="padding30 product-desc fon24 flex">
+		<view class="w50">
+			<text class="title">拍卖类型 </text>
+			<text class="color9 yiwen" bindtap='showModal'>密封拍</text>
+		</view>
+		<view class="w50">
+			<text class="title">起拍价 </text>
+			<text class="color9">￥8000.00</text>
+		</view>
+		<view class="w50">
+			<text class="title">开拍时间 </text>
+			<text class="color9"> 01-01 12:00:00 </text>
+		</view>
+
+		<view class="w50">
+			<text class="title">结束时间 </text>
+			<text class="color9"> 01-02 11:00:00 </text>
+		</view>
+	</view>
+
+	<!-- 产品详情 -->
+	<view class="product-detail">
+		<view class="fon28 padding30">产品详情</view>
+
+		<view>
+			<template is="wxParse" data="{{wxParseData:article.nodes}}" wx:key='about' />
+		</view>
+	</view>
+	<!-- end 产品详情 -->
+
+	<view class="lj-btn btn-fix" hover-class="lj-hover" bindtap="showPopup">立即参拍</view>
+
+	<!-- 保证金 -->
+	<van-popup show="{{ show }}" bind:close="onClose" position="bottom" custom-style="height: 740rpx;">
+		<view class="padding30">
+			<view class="flex flex-just flex-al-center">
+				<view class="fon24 color9">没有拍到，保证金将原路返回</view>
+				<view class="close-btn color0" bindtap="onClose">×</view>
+			</view>
+			<view class="fon42 flex flex-just">
+				<text>保证金</text>
+				<text>200元</text>
+			</view>
+		</view>
+		<view class="padding30 bgf7 content-height  w100 fon26">
+			<view class="margin-b20">添加收货地址</view>
+			
+			<van-radio-group  wx:for='{{addressList}}' wx:key='index' value="{{ radioAddess }}" bind:change="onChangeAdd" checked-color="#000">
+			  <van-radio name="{{item.id}}" icon-size="5" checked-color="#000">
+				  <view class="">
+				  	<view class="padding-tb8">
+				  		<text class="w150 color9">收货人</text>
+				  		<text class="">启灵 15226530479</text>
+				  	</view>
+				  	<view class="padding-tb8">
+				  		<text class="w150 color9">收货地址</text>
+				  		<text class="">广东省广州市白云区南航传媒有限公司</text>
+				  	</view>
+				  	<view class="padding-tb8">
+				  		<text class="w150 color9">快递费</text>
+				  		<text class="">6.00</text>
+				  	</view>
+				  </view>
+				  		
+			  </van-radio>
+	
+		</van-radio-group>
+		</view>
+
+		<view class="padding30 bgf fon24">
+			<view class="flex flex-al-center margin-b20">
+				<van-checkbox checked-color="#000" value="{{ checked }}" bind:change="onChange">竞拍需要同意</van-checkbox>
+				<text>《格米莱竞拍协议》</text>
+				<navigator url="../agreement/agreement" class="link"> 查看协议</navigator>
+			</view>
+			<view class="lj-btn" hover-class="lj-hover" bindtap="showPopupPrice">确认</view>
+		</view>
+	</van-popup>
+	<!--end  保证金 -->
+	
+	
+	<!-- 出价 -->
+	<van-popup show="{{ showPrice }}" bind:close="onClose" position="bottom" custom-style="height:500rpx;">
+		<view class="padding30">
+			<view class="flex flex-just flex-al-center">
+				<view class="fon36" >出价</view>
+				<view class="close-btn color0" bindtap="onClose">×</view>
+			</view>
+			<view class="stepper flex flex-center">
+				<van-stepper input-class='input-class'  input-width="180rpx" button-size="32px" value="{{ price }}" bind:change="onChangeChujia" step="2" plus-class='plus-class' minus-class='minus-class' />
+			</view>
+			<view class="lj-btn" bindtap='givePrice'>立即出价</view>
+		</view>
+	 </van-popup>
+	<!-- end 出价 -->
+	
+
+	<!-- end 拍卖详情 -->
+</view>

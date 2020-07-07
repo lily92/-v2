@@ -1,0 +1,41 @@
+<!--component/new/index.wxml-->
+<view class="address-item">
+  <view class="input-wrapper">
+    <view class="input-item">
+      <van-cell-group class="cell-group-item">
+        <van-field value="{{userName}}" clearable bind:change="changeUserName" label="用户名" placeholder="请输入用户名" />
+        <van-field value="{{phone}}" type="number" bind:change="changePhone" label="手机号码" placeholder="请输入手机号码" />
+        <van-cell title="省/市/区" clickable bind:click="areaToggle" wx:if="{{areaMsg===''}}" />
+        <van-cell title="{{areaMsg}}" clickable bind:click="areaToggle" wx:if="{{areaMsg!==''}}" />
+        <van-field value="{{posterAddr}}" clearable bind:change="changePosterAddr" label="收货地址" placeholder="请填写详细地址" />
+        <van-checkbox value="{{ is_default }}" name="is_default" checked-color="#000" class="checkbox-item" bind:change="onChangeDefault">默认地址</van-checkbox>
+      </van-cell-group>
+    </view>
+  </view>
+  <!-- <view class="addr-pop">
+    <van-popup show="{{ showArea }}" position="bottom" bind:close="areaToggle">
+      <van-area area-list="{{ areaList }}" bind:confirm="onSelect" />
+    </van-popup>
+  </view> -->
+
+  <view class="save" bindtap="onSave">保存</view>
+</view>
+
+
+
+<van-popup show="{{ showArea }}" bind:close="areaToggle" closeable position="bottom">
+  <view class="tab">
+    <text bindtap="handeProvince" class="provinces">{{provinces}}</text>
+    <text bindtap="handeCity">{{city}}</text>
+    <text bindtap="handeArea">{{area}}</text>
+  </view>
+  <view class="city_list">
+    <text wx:for="{{city_list}}" data-id="{{item.id}}" data-name='{{item.area_name}}' data-level="{{item.level}}" data-area_code='{{item.area_code}}' bindtap="handelProvinces">
+          {{item.area_name}}
+        </text>
+    <view class="addres-detailed" wx:if="{{area!=='' || special_city}}">
+      <text>Tips: 点击区域可更换</text>
+    </view>
+  </view>
+
+</van-popup>

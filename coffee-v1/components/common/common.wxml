@@ -1,0 +1,4 @@
+<!--components/common/common.wxml-->
+<view class="common" >
+  <include src="/components/promptConnection/promptConnection"  />
+</view>

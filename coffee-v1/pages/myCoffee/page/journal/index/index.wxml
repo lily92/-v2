@@ -1,0 +1,50 @@
+<!--pages/myCoffee/page/journal/index/index.wxml-->
+<view class="">
+	<view class="padding30">
+		<view class="tab flex ">
+			<view class="item {{type==1?'active':''}}" bindtap='getList' data-type='1'>未发布</view>
+			<view class="item {{type==2?'active':''}}" bindtap='getList' data-type='2'>
+				已发布
+				<view class="dot"></view>
+			</view>
+			<view class="item" bindtap='showPopup'>筛选</view>
+		</view>
+	</view>
+	<my-list articleList="{{articleList}}" types='{{type}}'  bind:showAction="showAction" data-isshow='true' ></my-list>
+	<view class="flex flex-center loading-txt">
+		<van-loading size="5" wx:if='{{isloadding}}'>加载中...</van-loading>
+		<view wx:if='{{!isloadding}}' class="color9 fon24">—— 我是有底线的 ——</view>
+	</view>
+	
+	<view class="edit-height"></view>
+	<view class="edit bgf">
+		<navigator class="edit-btn"  url="../journalEdit/journalEdit">
+			<text class="fon28 colorf icon">日志编辑</text>
+		</navigator>
+	</view>
+
+ 
+     <!-- 筛选 -->
+	 
+	<screen shaixuanList='{{shaixuanList}}' show='{{show}}'></screen>
+	<!-- end筛选 -->
+	
+	
+	<!--  -->
+	<!-- view 好馆  -->
+	<view class="{{showActions?'haoguan-master active':'haoguan-master'}}"  bindtap="showAction" data-isshow="false"></view>
+	<view class="{{showActions?'haoguan active':'haoguan-master'}}"   >
+		  <view class="huaguan-item bgf">
+			  <view class="choice-title fon28 color9 item-link broder-top0" bindtap="showAction" data-isshow="true">选择操作功能</view>
+			  <view>
+			  		 <view bindtap=''  class="item-link">发布</view>
+			  		 <view bindtap=''  class="item-link">删除</view>
+			  </view>
+		  </view>
+		 
+		 <view class="huaguan-item bgf item-link"  bindtap="showAction" data-isshow="false">取消</view>
+		
+	</view>
+	
+	<!-- end view好馆 -->
+</view>

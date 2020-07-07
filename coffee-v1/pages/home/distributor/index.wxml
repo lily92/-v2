@@ -1,0 +1,81 @@
+<!--pages/home/distributor/index.wxml-->
+<van-toast id="van-toast" />
+<van-popup show="{{ show }}" bind:close="onClose">
+  <image class="bg" src="{{userinfo.bg}}" bindtap='previewImg'></image>
+  <view></view>
+</van-popup>
+
+<!-- 不是经销商 -->
+<view class="distrib-container" wx:if="{{distributor===fasle}}">
+  <view class="img-wrapper">
+    <image src="./../../../static/images/distributor-bg.png"></image>
+  </view>
+  <view class="distrib-warning">您还不是分销商，请先提交申请</view>
+  <view class="distrib-btn" bindtap="clickToJoin">立即加入</view>
+</view>
+<!-- 是经销商 -->
+<view class="is-distrib distrib-container" wx:if="{{distributor===true}}">
+
+  <!-- 海报 -->
+  <view class="banner-item" bindtap="onToggleMask" wx:if="{{showBanner}}">
+    <image src="./../../../static/images/banner.png" catchlongpress="onClickPic"></image>
+  </view>
+  <!-- 海报 -->
+  <view class="apply-bg" style="background:url(./../../../../static/images/bg-1.png)">
+  </view>
+  <view class="distrib-center">
+    <view class="distrib-top-card">
+      <view class="card-title">
+        <view class="user-name">{{userinfo.nickName}}</view>
+        <view class="invitor">推荐人：
+          <text>平台</text>
+        </view>
+        <view class="avatar">
+          <image src="{{userinfo.avatarUrl}}"></image>
+        </view>
+      </view>
+      <view class="deposit-wrapper">
+        <view class="deposit-item">
+          <view class="deposit-left">
+            <view class="can-deposit">总积分：
+              <text>{{integral.sum}}</text>
+            </view>
+            <view class="ready-deposit">已使用：
+              <text>{{integral.usersum}}</text>
+            </view>
+          </view>
+          <view class="deposit-right">
+            <view class="go-deposit">去换购</view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="distrib-bottom-card">
+      <view class="category-item" bindtap="clickToBill">
+        <view class="icon-img">
+          <image src="./../../../static/images/bills.png"></image>
+        </view>
+        <view class="category-title">积分明细</view>
+      </view>
+      <view class="category-item" bindtap="clickToOrder">
+        <view class="icon-img">
+          <image src="./../../../static/images/order.png"></image>
+        </view>
+        <view class="category-title">分销订单</view>
+      </view>
+      <view class="category-item" bindtap="clickToTeam">
+        <view class="icon-img">
+          <image src="./../../../static/images/team.png"></image>
+        </view>
+        <view class="category-title">我的团队</view>
+      </view>
+      <view class="category-item" bindtap="onToggleMask">
+        <view class="icon-img">
+          <image src="./../../../static/images/qrcode.png"></image>
+        </view>
+        <view class="category-title">推广二维码</view>
+      </view>
+
+    </view>
+  </view>
+</view>

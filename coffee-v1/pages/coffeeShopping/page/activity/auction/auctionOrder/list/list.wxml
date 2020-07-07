@@ -1,0 +1,40 @@
+ <view class="all-order-list">
+        <view class="order-wrapper" wx:for="{{list}}" wx:key="index">
+          <view class="order-item" data-id="{{item.id}}" bindtap="goOrderDetail">
+			  <view class="w100 flex flex-just flex-al-center order-statusp">
+				  <view class="order-numbers">订单编号：1313213132</view>
+				  <view class="detail-status">
+				            
+				                <text wx:if="{{item.status===1}}">竞拍中</text>
+				                <text wx:if="{{item.status===2}}">竞拍成功</text>
+				                <text wx:if="{{item.status===3}}">竞拍失败</text>
+				               
+				              </view>
+			  </view>
+              <view class="order-statusp flex flex-just ">
+				  <view class="img-item">
+				    <image src="{{item.goods.images_url}}"></image>
+				  </view>
+				  <view class="detail-item flex">
+				      <view class="w100">
+						   <view class="detail-name">{{item.goods.name}}</view>
+						   <view class="type">颜色：银色</view>
+					  </view>
+					  <view class="flex flex-just w100">
+						  <view class="detail-price">¥ {{item.goods.price}}</view>
+						  <view class="detail-amount">× {{item.goods.num}}</view>
+					  </view>
+				   
+				  </view>
+			  </view>
+			  <view class="total-money">结束时间：2020-01-01 12:00</view>
+          </view>
+          <view class="item-btn-group">
+            <view class="lv-btn normal-lv-btn" bindtap="clickToCheckDeliver" wx:if="{{item.status===1}}">取消竞拍</view>
+           
+            
+            <view class="lv-btn normal-btn" bindtap="clickToCancel" data-id="{{item.id}}" wx:if="{{item.status===2}}" >查看物流</view>
+            <view class="lv-btn super-lv-btn" bindtap="clickToPay" wx:if="{{item.status===3}}">立即付款</view>
+          </view>
+        </view>
+      </view>

@@ -1,0 +1,12 @@
+/* pages/coffeeShopping/page/activity/crowdFunding/index/item/item.wxss */
+.item{ border-radius: 20rpx; overflow: hidden; background: #fff; font-size: 14px; margin-bottom: 30rpx;}
+.w100{ width: 100%;}
+.color9{ color: #999;}
+.progress{ padding: 20rpx 0;}
+.color-c{ color: #ccc; line-height: 1; margin-top: -4rpx; position: relative;}
+.flex{ display: flex;}
+.margin-r20{ margin-right: 20rpx;}
+.flex-just{ justify-content: space-between;}
+.flex-al-center{ align-items: center;}
+.padding30{ padding: 30rpx;}
+.block{ display:block;}

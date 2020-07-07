@@ -1,0 +1,37 @@
+<!--pages/coffeeShopping/page/course/course.wxml-->
+<view class="course padding20">
+	
+	<!-- banner -->
+	<swiper class="swiper-height" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}"
+	 duration="{{duration}}" indicator-color="{{colorf}}" indicator-active-color='{{colorf}}'>
+		<block wx:for="{{cBannerList}}" wx:key="*this">
+			<swiper-item>
+				<view class="swiper-item {{item}}">
+					<image src="{{item}}" mode="widthFix" class="w100"></image>
+				</view>
+			</swiper-item>
+		</block>
+	</swiper>
+	
+	<!-- list -->
+	<view class="course-list">
+		<view class="list-item" wx:for="{{itemList}}" wx:key="*this">
+			<image src="{{item.img}}" class="w100 item-img" mode="widthFix"  ></image>
+			<view class="bgf padding20">
+				<view class="fon26">EHS咖啡老板课程</view>
+				<view class="color6 fon24 desc line2">咖啡基础知识、意式浓缩制作、咖啡拉花、出品流程、单品、创意、开店管理。</view>
+				<view class="fon24 color6 flex flex-just flex-al-center">
+					<view class="left">
+						<view>时长：15节，4小时/节</view>
+						<view>时间：2020.6.1 - 2020.8.1</view>
+
+					</view>
+					<view class="right">
+						立即报名
+					</view>
+				</view>
+			</view>
+		</view>
+	</view>
+	
+</view>

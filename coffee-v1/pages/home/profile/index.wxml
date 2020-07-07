@@ -1,0 +1,28 @@
+<!--pages/home/profile/index.wxml-->
+
+<view class="profile-container">
+  <view class="user-info">
+    <view class="avatar">
+      <image src="{{userInfo.avatarUrl}}"></image>
+    </view>
+    <view class="name">{{userInfo.nickName}}</view>
+    <view class="level">
+      <image src="./../../../static/images/lv-1.png"></image>
+    </view>
+  </view>
+  <view class="user-detail">
+    <van-cell-group border="{{ false }}">
+      <!-- <van-cell title="姓名" is-link clickable bind:click="onToggleDialog" value="{{userInfo.nickName}}" data-title="name" /> -->
+      <van-cell title="姓名" value="{{userInfo.nickName}}" />
+      <van-cell title="手机号码" is-link clickable bind:click="onToggleDialog" value="{{userInfo.phone}}" data-title="phone" />
+      <van-cell title="邮箱" is-link clickable bind:click="onToggleDialog" value="{{userInfo.email}}" data-title="email" />
+      <van-cell title="地址" is-link clickable bind:click="onToggleDialog" value="{{userInfo.address}}" data-title="address" />
+      <van-cell title="性别" is-link clickable bind:click="onToggleDialog" value="{{userInfo.sex}}" data-title="sex" />
+    </van-cell-group>
+  </view>
+
+
+  <van-dialog use-slot title="{{title}}" show="{{ show }}" show-cancel-button bind:close="onToggleDialog">
+    <van-field  placeholder="请输入" value="{{ userInfo[role] }}"  border="{{ false }}" bind:change="onChange{{role}}" />
+  </van-dialog>
+</view>

@@ -1,0 +1,44 @@
+<!--pages/reads/list/index.wxml-->
+
+<view class="article-wrapper">
+	<view class="article-item" wx:for="{{articleList}}" wx:key="index" >
+
+		<view class="article-top flex flex-just flex-al-center">
+			<image src="" class="article-user-img"></image>
+			<view class="article-des">
+				<view class="fon28">作者</view>
+				<view class="time  color9 fon24">{{item.create_time}}</view>
+			</view>
+			<view class="more-dot flex flex-center ">
+				<!-- <van-icon name="ellipsis" /> -->
+			</view>
+		</view>
+		<view class="article-img" data-id="{{item.id}}" bindtap="goDetail">
+			<view class="img-mask" wx:if="{{item.type==='video'}}">
+				<image src="./../../../static/images/video-icon.png"></image>
+			</view>
+			 <my-swiper swiper-img="{{imgUrls}}" ></my-swiper>
+		</view>
+		<view class="article-text">
+			<view class="flex flex-just list-btn">
+				<view class="flex  ">
+					<!-- <van-icon name="share" /> -->
+					<text class="num icon-share">分享</text>
+				</view>
+				<view class="flex flex-al-center">
+					<view class="flex   margin-r20">
+						<!-- <van-icon name="chat-o" /> -->
+						<text class="num icon-comment">{{item.view}}</text>
+					</view>
+					<view class="flex ">
+						<!-- <van-icon name="like-o" /> -->
+						<text class="num icon-like {{isLike?'active':''}}" bindtap='like' data-id="{{item.id}}">{{item.like}}</text>
+					</view>
+				</view>
+			</view>
+			<view class="article-title" data-id="{{item.id}}" bindtap="goDetail">{{item.name}}</view>
+			<view class="article-desc" data-id="{{item.id}}" bindtap="goDetail">{{item.desc}}</view>
+
+		</view>
+	</view>
+</view>

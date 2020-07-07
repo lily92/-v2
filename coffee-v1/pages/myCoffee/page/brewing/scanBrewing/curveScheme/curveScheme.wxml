@@ -1,0 +1,41 @@
+<!--index.wxml-->
+<include src="/components/common/common" wx:if='{{!nonetWork}}' />
+<view class="padding30">
+	<view  class="case-top flex flex-just flex-al-center">
+	  <image src="https://gdhflw.com/public/partime/coffeeImg/cp-icon.png" class="case-img" mode="widthFix">
+		  
+	  </image>
+	  <view class="case-desc">
+		  <view  class="fon28">安溪茶农冲泡铁观</view>
+		  <view class="color9 fon24">Espresso 意式浓缩咖啡</view>
+	  </view>
+	</view>
+	<view class="bg2a">
+		<view class="container">
+		  <ec-canvas id="mychart-dom-line" canvas-id="mychart-line" ec="{{ ec }}"></ec-canvas>
+		</view>
+		<!-- content -->
+		<view class="padding20">
+			<view class="list-txt fon26 flex  " wx:for='{{caseDescList}}' wx:key='index'>
+				<text class="left ">{{item.name}}</text>
+				<text class="right ">{{item.desc}}</text>
+			</view>
+		</view>
+		<view  class="padding30">
+			<view class="fon28 colorf">感官记录：</view>
+			<view class="desc-jilu fon26">
+				在意大利特浓咖啡的基础上，加一层厚厚的气泡牛奶，就成了卡布奇诺，牛奶和泡沫是决定卡布奇诺的重要因素...
+			</view>
+		</view>
+		<!-- end content -->
+	</view>
+	
+	
+</view>
+
+<view class="footer-height"></view>
+<view class="footer-btn flex  flex-just ">
+	<button  class="btn-group fon26" hover-class="op5">保存</button>
+	<button  class="btn-group fon26" hover-class="op5">取消</button>
+	<navigator url="/pages/myCoffee/page/brewing/scanBrewing/making/making"  class="btn-group fon26" hover-class="op5">制作</navigator>
+</view>

@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+	  "list-item":"./item/item"
+  },
+  "navigationBarTitleText": "众筹"
+}

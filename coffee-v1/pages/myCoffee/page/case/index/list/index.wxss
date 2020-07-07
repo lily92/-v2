@@ -1,0 +1,14 @@
+/* pages/reads/list/index.wxss */
+.article-wrapper{ margin-top: 30rpx;}
+.a-item  {
+	width: 710rpx;
+	height: 99rpx;
+	background-color: #ffffff;
+	box-shadow: 0px -5px 10px 1px 
+		rgba(131, 131, 131, 0.05);
+	border-radius: 10px; margin:  0 auto 20rpx;
+}
+.img{ width: 99rpx; height: 99rpx; border-radius: 10rpx 0 0 10rpx;}
+.con{ width: calc(100% - 99rpx); height: 99rpx; background: url('https://gdhflw.com/public/partime/coffeeImg/cp-item-bg.png') repeat-x center bottom; background-size: 724rpx; display: flex; align-items: center; }
+.icon-img{ width: 45rpx;  margin: 0 20rpx;}
+.con-desc{ line-height: 1.5;}

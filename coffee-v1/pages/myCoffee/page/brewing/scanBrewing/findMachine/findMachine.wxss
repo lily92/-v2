@@ -1,0 +1,57 @@
+/* pages/myCoffee/page/brewing/scanBrewing/findMachine/findMachine.wxss */
+
+.locate-area {
+  min-height: 750rpx;
+  height: 750rpx;
+  width: 100%;
+  margin-top: 60rpx;
+}
+
+.bg-circle {
+  width: 680rpx;
+  height: 680rpx;
+  border-radius: 50%;
+  background: #f8f8f8;
+  margin: 150rpx auto;
+}
+.md-circle1 {
+  position: absolute;
+  width: 545rpx;
+  height: 545rpx;
+  border-radius: 50%;
+  background: #e6e6e6;
+  margin:70rpx;
+}
+
+.md-circle {
+  position: absolute;
+  width: 393rpx;
+  height: 393rpx;
+  border-radius: 50%;
+  background: #d9d9d9;
+  margin:73rpx;
+}
+
+
+.sm-circle {
+  position: absolute;
+  width: 230rpx;
+  height: 230rpx;
+  border-radius: 50%;
+  background: #ccc;
+  margin:84rpx;
+}
+.xs-circle{ position: absolute;
+  width: 153rpx;
+  height: 153rpx;
+  border-radius: 50%;
+  background: #000;
+  margin:40rpx;
+  
+  }
+  
+.avatar {
+  position: relative;margin: 30rpx;
+  height: 84rpx;
+}
+.w105{ width: 105rpx;}

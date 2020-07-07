@@ -1,0 +1,21 @@
+{
+  "usingComponents": {
+    "van-button": "./../../vant-weapp/dist/button",
+    "van-datetime-picker": "./../../vant-weapp/dist/datetime-picker/index",
+    "van-popup": "./../../vant-weapp/dist/popup/index",
+    "van-icon": "./../../vant-weapp/dist/icon/index",
+    "van-rate": "./../../vant-weapp/dist/rate/index",
+    "van-tab": "./../../vant-weapp/dist/tab/index",
+    "van-tabs": "./../../vant-weapp/dist/tabs/index",
+    "van-tag": "./../../vant-weapp/dist/tag/index",
+    "van-toast": "/vant-weapp/dist/toast/index",
+    "van-stepper": "./../../vant-weapp/dist/stepper/index",
+    "van-checkbox": "./../../vant-weapp/dist/checkbox/index",
+    "van-checkbox-group": "./../../vant-weapp/dist/checkbox-group/index",
+    "van-area": "./../../vant-weapp/dist/area/index",
+    "good-swiper": "./swiper/index",
+    "good-fee": "./fee/index",
+    "good-ratings":"./ratings/index",
+    "good-footer":"./footer/index"
+  }
+}

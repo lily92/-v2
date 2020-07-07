@@ -1,0 +1,168 @@
+/* pages/home/order/detail/index.wxss */
+
+.order-status {
+  background: #f7f7f7;
+  padding: 40rpx;
+}
+
+.status-text {
+  border-bottom: 14rpx solid #9b9b9b;
+  line-height: 10rpx;
+  font-size: 24rpx;
+  display: inline-block;
+  color: #444;
+  letter-spacing: 2rpx;
+}
+
+.deliver-owner {
+  padding: 30rpx 40rpx;
+  display: flex;
+  border-bottom: 5px solid #f5f5f5;
+}
+
+.locate-icon-wrapper {
+  position: relative;
+}
+
+.location-o-icon {
+  font-size: 50rpx;
+  position: absolute;
+  top: 20rpx;
+  left: 0;
+  color: #313131;
+}
+
+.owner-info-wrapper {
+  font-size: 32rpx;
+  color: #333;
+  padding-left: 50rpx;
+}
+
+.owner-name-phone text {
+  margin: 0 30rpx 0 0;
+}
+
+.owner-addr {
+  font-size: 28rpx;
+  color: #666;
+}
+
+.order-item {
+  display: flex;
+  padding: 20rpx 30rpx;
+  border-bottom: 5px solid #f5f5f5;
+}
+
+.img-item {
+  width: 25%;
+}
+
+.img-item image {
+  width: 150rpx;
+  height: 150rpx;
+  max-width: 150rpx;
+  max-height: 150rpx;
+  margin: 0 10rpx;
+}
+
+.detail-item {
+  width: 65%;
+  font-size: 28rpx;
+  color: #333;
+  font-weight: 400;
+}
+
+.detail-name {
+  line-height: 36rpx;
+  margin: 10rpx 0;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.detail-amount, .detail-price {
+  color: #666;
+  font-size: 24rpx;
+  margin: 2rpx 0;
+}
+
+.detail-price {
+  color: #ee0c0c;
+}
+
+.order-number-time, .pay-way-time, .invoice {
+  border-bottom: 1px solid #f5f5f5;
+  padding: 40rpx 30rpx;
+  font-size: 24rpx;
+}
+
+.order-number-time text:first-child, .pay-way-time text:first-child,
+.invoice text:first-child {
+  color: #666;
+  margin: 6rpx 0;
+  display: inline-block;
+}
+
+.order-number-time text:last-child, .pay-way-time text:last-child,
+.invoice text:last-child {
+  color: #333;
+}
+
+.invoice .invoice-tips {
+  position: relative;
+  color: #c5c3c1;
+  padding-left: 24rpx;
+}
+
+.info-o-icon {
+  position: absolute;
+  top: 4rpx;
+  left: 0;
+}
+
+.footer-btn {
+  display: flex;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 35rpx 0;
+  background: #fff;
+  border-top: 10rpx solid #f5f5f5;
+  color: #333;
+  
+}
+
+.del-btn {
+  width: 20%;
+  margin-left: 30rpx;
+  font-size: 28rpx;
+}
+
+.right-btn {
+  width: 80%;
+  text-align: right;
+}
+
+.right-btn .refund, .right-btn .rate {
+  display: inline-block;
+  border: 1px solid #666;
+  padding: 2rpx 20rpx;
+  color: #555;
+  font-size: 28rpx;
+  margin: 0 30rpx 0 0;
+  border-radius: 30rpx;
+}
+.oreder-detail-container{
+  margin-bottom: 150rpx;
+}
+
+.tocode{
+  position: absolute;
+  top: 3.5%;
+  left: 30%;
+  
+}

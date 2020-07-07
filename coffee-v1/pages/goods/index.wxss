@@ -1,0 +1,605 @@
+/* pages/goods/index.wxss */
+
+/* @import "/wxParse/wxParse.wxss"; */
+
+/* 轮播图 */
+
+.swiper-wrapper  swiper {
+  height: 480rpx;
+  background: #e5e5e5;
+}
+
+.slide-image {
+  width: 100%;
+}
+
+/* 页码展示 */
+
+.show-page {
+  color: #fff;
+  position: absolute;
+  bottom: 20rpx;
+  right: 0;
+  padding: 4rpx 20rpx;
+  font-size: 28rpx;
+  background: #e4e4e470;
+  border-bottom-left-radius: 20rpx;
+  border-top-left-radius: 20rpx;
+  float: right;
+}
+
+/* 商品信息 */
+
+.goods-info-wrapper {
+  padding: 20rpx 30rpx;
+}
+
+.info-item {
+  padding-bottom: 20rpx;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.info-price {
+  color: #000;
+  font-size: 36rpx;
+  padding: 30rpx 0;
+  
+}
+
+.info-price text {
+  margin: 10rpx 8rpx;
+}
+
+.info-name {
+  font-size: 32rpx;
+  font-weight: 400;
+  color: rgb(56, 56, 56);
+  margin: 10rpx 0;
+}
+
+.info-desc {
+  color: #666;
+  font-size: 28rpx;
+  font-weight: 400;
+}
+
+/* 促销 */
+
+.bargin-item, .choose-goods, .choose-address, .post-fee {
+  display: flex;
+  flex-direction: row;
+  padding: 20rpx 0;
+  border-bottom: 20rpx solid #f5f5f5;
+}
+
+.bargin {
+  align-items: center;
+}
+
+.bargin-title, .choose-title, .post-title {
+  font-size: 26rpx;
+  font-weight: 400;
+  color: #222;
+  width: 9%;
+  line-height: 44rpx;
+}
+
+.bargin-tag {
+  font-size: 18rpx;
+  border: 1px solid #000;
+  color: #000;
+  height: 26rpx;
+  line-height: 26rpx;
+  width: 11%;
+  text-align: center;
+  margin: 8rpx 0;
+}
+
+.bargin-detail {
+  font-size: 26rpx;
+  color: #222;
+  font-weight: 300;
+  line-height: 44rpx;
+  margin-left: 16rpx;
+  width: 70%;
+  padding-left: 14rpx;
+}
+
+/* 选择商品属性 */
+
+.choose-goods, .choose-address {
+  border-bottom: 1px solid #f5f5f5;
+}
+
+.choose-title {
+  line-height: 54rpx;
+}
+
+.choose-item, .fee-detail {
+  width: 80%;
+  padding-left: 4%;
+  font-size: 28rpx;
+  font-weight: 300;
+  line-height: 50rpx;
+}
+
+/* 邮费 */
+
+.post-title {
+  line-height: 54rpx;
+}
+
+/* 公用more icon */
+
+.more-icon {
+  line-height: 44rpx;
+  margin-top: 6rpx;
+  width: 7%;
+}
+
+/* 评论 */
+
+.ratings {
+  overflow: hidden;
+  border-bottom: 20rpx solid #f5f5f5;
+}
+
+.ratings-title {
+  display: flex;
+  flex-direction: row;
+  padding: 10rpx 0;
+}
+
+.title-left {
+  width: 50%;
+  color: #333;
+}
+
+.title-left text:first-child {
+  font-size: 32rpx;
+  display: inline-block;
+  padding: 0 20rpx;
+  border-left: 6rpx solid #ee0c0c;
+}
+
+.title-left text:last-child {
+  font-size: 28rpx;
+}
+
+.title-right {
+  width: 50%;
+  text-align: right;
+  color: #a7a7a7;
+  font-size: 26rpx;
+  line-height: 44rpx;
+}
+
+.title-right text:last-child {
+  font-size: 28rpx;
+  color: #4b4b4b;
+}
+
+.user-avatar {
+  display: flex;
+  flex-direction: row;
+}
+
+.user-avatar .img-wrapper {
+  width: 10%;
+  margin-top: 12rpx;
+}
+
+.user-avatar .img-wrapper image {
+  width: 60rpx;
+  height: 60rpx;
+  max-width: 60rpx;
+  max-height: 60rpx;
+  border-radius: 50%;
+}
+
+.rate-star .username {
+  font-size: 28rpx;
+  color: #333;
+  padding-left: 8rpx;
+}
+
+.van-rate__item {
+  font-size: 32rpx !important;
+}
+
+.rate-content {
+  padding: 20rpx 0;
+}
+
+.rate-content .content-text {
+  font-size: 26rpx;
+  color: #333;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  margin-bottom: 20rpx;
+}
+
+.content-img {
+  display: flex;
+  flex-direction: row;
+}
+
+.rate-img-item {
+  width: 30%;
+  margin: 0 2%;
+  justify-content: center;
+}
+
+.rate-img-item image {
+  width: 100%;
+  max-width: 200rpx;
+  max-height: 200rpx;
+  border-radius: 8rpx;
+}
+
+.more-ratings {
+  width: 40%;
+  margin: 20rpx auto 60rpx;
+  padding: 8rpx 0;
+  text-align: center;
+  border: 1px solid #999;
+  border-radius: 60rpx;
+  color: #333;
+  font-size: 28rpx;
+}
+
+.intro-navbar.van-tab {
+  font-weight: 300;
+}
+
+.intro-navbar.van-tab--active {
+  color: #000;
+  font-weight: 400;
+}
+
+.des-line {
+  padding: 0 40rpx 0;
+  margin: 60rpx 0;
+  line-height: 2rpx;
+  border-left: 200rpx solid #ddd;
+  border-right: 200rpx solid #ddd;
+  text-align: center;
+  color: #333;
+  font-weight: 300;
+}
+
+/* 底部 */
+
+.footer-bar {
+  display: flex;
+  border-top: 1px solid #f5f5f5;
+  padding: 20rpx 30rpx;
+  box-shadow: 0px 2px 5px 5px #f4f4f4;
+  background: #fff;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 98;
+}
+
+.icon-item {
+  flex: 2;
+  display: flex;
+  flex-direction: row;
+}
+
+.shop-icon {
+  flex: 1;
+  position: relative;
+}
+
+.shop-icon .van-icon-shopping-cart-o, .shop-icon  .van-icon-shop-o {
+  font-size: 50rpx;
+}
+
+.shop-icon .van-tag {
+  position: absolute;
+  right: 44rpx;
+  top: -6rpx;
+  background: #fff;
+  z-index: 9;
+}
+
+.shop-text {
+  font-size: 26rpx;
+}
+
+.sub-btn {
+  flex: 4;
+  display: flex;
+  padding: 10rpx 0;
+}
+
+.sub-btn .sub {
+  width: 45%;
+  border-radius: 60rpx;
+  border: 1px solid;
+  color: #fff;
+  padding: 10rpx 0;
+  text-align: center;
+  font-size: 28rpx;
+  line-height: 48rpx;
+  margin: 0 10rpx;
+}
+
+.sub-btn view:first-child {
+  background: #000;
+}
+
+.sub-btn view:last-child {
+  background: #ccc;
+}
+
+/* 弹出层 */
+
+.van-bottom-enter-to.van-popup {
+  height: 800rpx;
+  border-top-left-radius: 20rpx;
+  border-top-right-radius: 20rpx;
+}
+
+.chose-btn {
+  position: absolute;
+  right: 16rpx;
+  top: 30rpx;
+  color: #bdbdbd;
+}
+
+/* 优惠券 */
+
+.ticket, .goods-info {
+  margin: 100rpx auto 20rpx;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.ticket-item {
+  width: 46%;
+  margin: 2%;
+  position: relative;
+}
+
+.ticket-item image {
+  width: 100%;
+  height: 180rpx;
+}
+
+.need {
+  display: inline-block;
+}
+
+.ticket-content {
+  position: absolute;
+  top: 52rpx;
+  left: 20rpx;
+  color: #333;
+  width: 90%;
+  text-align: center;
+}
+
+.ticket-content:first-child {
+  font-size: 28rpx;
+  margin: 0 2rpx;
+}
+
+.ticket-content .ti-price {
+  font-size: 70rpx;
+  margin: 0 6rpx 0 0rpx;
+  color: #4b4b4b;
+}
+
+.ticket-content .need {
+  font-size: 26rpx;
+  min-width: 70rpx;
+  text-align: left;
+}
+
+/* 选购商品信息 */
+
+.goods-info {
+  display: flex;
+}
+
+.goods-img {
+  flex: 2;
+}
+
+.goods-img image {
+  width: 180rpx;
+  height: 180rpx;
+  max-height: 180rpx;
+  max-width: 180rpx;
+  margin: 0 30rpx;
+}
+
+.number {
+  flex: 4;
+  justify-content: baseline;
+}
+
+.goods-price {
+  padding: 90rpx 0 0 0;
+  color: #e20e0e;
+  font-size: 36rpx;
+  font-weight: 400;
+}
+
+.goods-price text {
+  margin: 0 10rpx 0 0;
+}
+
+.goods-num {
+  font-size: 26rpx;
+  font-weight: 400;
+  margin-top: 6rpx;
+  color: #666;
+}
+
+/* 数量 */
+
+.goods-amount {
+  display: flex;
+  padding: 20rpx 30rpx;
+}
+
+.goods-amount label, .goods-color label {
+  font-size: 28rpx;
+  line-height: 60rpx;
+  color: #333;
+}
+
+.goods-color {
+  padding: 20rpx 30rpx;
+}
+
+.amount-stepper {
+  width: 90%;
+  text-align: right;
+}
+
+/* 颜色 */
+
+.checked-btn {
+  padding: 10rpx 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.checked-btn .suk {
+  line-height:35rpx;
+  border-radius: 10rpx;
+  text-align: center;
+  border: 1rpx solid #dcdfe6;
+  padding-left: 20rpx;
+  padding-right: 20rpx;
+  font-size: 27rpx;
+  margin-right: 20rpx;
+}
+
+.checked-btn .ac {
+  border: 1px solid #000;
+  color: #000;
+}
+
+.checked-btn .van-checkbox__label {
+  margin-left: 0 !important;
+  margin-right: 20rpx;
+}
+
+.checked-btn .van-button {
+  height: 40rpx;
+  line-height: 38rpx;
+}
+
+.van-button--normal {
+  padding: 0 20rpx;
+  font-size: 28epx;
+}
+
+.checked-btn .item-btn {
+  margin-right: 20rpx;
+}
+
+.checkbox-item {
+  display: inline-block;
+}
+
+.pop-sub-btn {
+  width: 70%;
+  margin: 100rpx auto;
+}
+
+/* 选择其他地址 */
+
+.choose-ano-address {
+  position: absolute;
+  bottom: 50rpx;
+  left: 30%;
+  right: 30%;
+  border: 1px solid #000;
+  border-radius: 50rpx;
+  background: #000;
+  color: #fff;
+  width: 40%;
+  text-align: center;
+  font-size: 28rpx;
+  font-weight: 300;
+  padding: 10rpx 0;
+}
+
+/* 城市模块 */
+
+.city_list {
+  width: 90%;
+  margin: auto;
+  overflow: auto;
+  height: 500rpx;
+}
+
+.tab {
+  width: 90%;
+  margin: auto;
+  margin-top: 60rpx;
+}
+
+.tab text {
+  padding-left: 20rpx;
+}
+
+.provinces {
+  border-left: 2px solid black;
+}
+
+.area-other {
+  height: 200rpx;
+  text-align: center;
+  line-height: 200rpx;
+  background: #ffff;
+}
+
+.area-other .other {
+  background: black;
+  padding: 25rpx;
+  color: #fff;
+  padding-left: 130rpx;
+  padding-right: 130rpx;
+  border-radius: 50rpx;
+  font-size: 28rpx;
+}
+
+.addres-detailed {
+  margin-top: 30rpx;
+}
+.wxParse-p image{
+  width: 100% !important;
+}
+
+
+
+.collection{
+  position: absolute;
+  top: 490rpx;
+  right: 20rpx;
+  z-index: 100;
+  background: #606266;
+  color: #fff;
+  font-size: 23rpx;
+  padding: 6rpx;
+  padding-left: 15rpx;
+  padding-right: 15rpx;
+  border-radius: 30rpx;
+}

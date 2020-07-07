@@ -1,0 +1,30 @@
+<!--pages/coffeeShopping/page/activity/crowdFunding/index/item/item.wxml-->
+<view class="item flex flex-just" wx:for='{{list}}' wx:key='index'>
+	<view  class="item-img flex flex-center positionr">
+		<image src="" mode="widthFix" class="w100 h300"></image>
+		<view class="desc-line flex flex-al-center flex-just">
+			<view>5,000参团成功 </view>
+			<view class="flex flex-al-center">
+				<text>抢购倒计时：</text>
+				<van-count-down  use-slot time="{{ item.time }}" bind:change="onChange">
+				  <text class="item-num">{{ timeData.hours }}</text><text class='colorf'>:</text>
+				  <text class="item-num">{{ timeData.minutes }}</text><text class='colorf'>:</text>
+				  <text class="item-num">{{ timeData.seconds }}</text>
+				</van-count-down>
+			</view>
+			
+		</view>
+	</view>
+	<view class="padding20 w100">
+		<view class="color0 fon26">格米莱</view>
+		<view class="color3">CRM3200C咖啡机</view>
+		<view class="flex flex-just flex-al-center">
+			<view>
+				<text class="color3">团购价:￥2000</text>
+				<text  class="color9 price-y">原价:￥1600</text>
+			</view>
+			<navigator class="btn" url="/pages/goods/index?type=pt&id=105" >去参团</navigator>
+		</view>
+	</view>
+	
+</view>

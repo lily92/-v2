@@ -1,0 +1,2 @@
+/* pages/myCoffee/journal/journalTab/journalTab.wxss */
+.van-tab--active{ font-weight: bold !important;}

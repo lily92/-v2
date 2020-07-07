@@ -1,0 +1,11 @@
+{
+	"usingComponents": {
+		"van-icon": "./../../../vant-weapp/dist/icon/index",
+		"van-popup": "./../../../vant-weapp/dist/popup/index",
+		"van-field": "./../../../vant-weapp/dist/field/index",
+		"van-button": "./../../../vant-weapp/dist/button/index",
+		"van-cell": "./../../../vant-weapp/dist/cell/index",
+		  "van-cell-group": "./../../../vant-weapp/dist/cell-group/index"
+	},
+	"navigationBarTitleText": "订单详情"
+}

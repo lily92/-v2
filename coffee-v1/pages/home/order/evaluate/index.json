@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+      "van-rate": "../../../../../vant-weapp/dist/rate/index",
+	   "van-icon": "../../../../../vant-weapp/dist/icon/index"
+  },
+  "navigationBarTitleText": "评价"
+}

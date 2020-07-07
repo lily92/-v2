@@ -1,0 +1,25 @@
+/* pages/myCoffee/page/brewing/scanBrewing/selectMachine/selectMachine.wxss */
+page{ background: #f7f7f7;}
+.txt{ white-space: nowrap; text-overflow: ellipsis; overflow: hidden;}
+.item{ width: 50%; padding: 20rpx; box-sizing: border-box;}
+.item-img{ width: 260rpx; height: 260rpx; margin: 0 auto 20rpx; display: block;}
+.radio{ position: absolute; right: 20rpx; top: 20rpx;}
+.machine-list{ height: 88vh;}
+.btn-confirm {
+	width: 710rpx;
+	line-height: 90rpx;
+	 color: #fff;
+	background-image: linear-gradient(-75deg, 
+		#2d2d2d 0%, 
+		#111111 100%), 
+	linear-gradient(
+		#ffffff, 
+		#ffffff);
+	background-blend-mode: normal, 
+		normal;
+	box-shadow: 0rpx -5rpx 10rpx 1rpx 
+		rgba(131, 131, 131, 0.05);
+	border-radius: 41rpx;
+	text-align: center;
+	margin: 0 auto 30rpx;
+}

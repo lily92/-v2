@@ -1,0 +1,136 @@
+{
+  "pages": [
+    "pages/tarBar/index/index",
+    "pages/home/index",
+    "pages/goods/index",
+    "pages/goods/swiper/index",
+    "pages/reads/index",
+    "pages/home/order/index",
+    "pages/home/address/index",
+    "pages/home/ticket/myTicket/index",
+    "pages/home/ticket/index",
+    "pages/home/distributor/index",
+    "pages/home/score/index",
+    "pages/shop/swiper/index",
+    "pages/home/profile/index",
+    "pages/component/edit/index",
+    "pages/component/new/index",
+    "pages/home/score/detail/index",
+    "pages/home/score/exchange/index",
+    "pages/home/distributor/apply/index",
+    "pages/home/order/detail/index",
+    "pages/reads/swiper/index",
+    "pages/goods/fee/index",
+    "pages/goods/ratings/index",
+    "pages/goods/footer/index",
+    "pages/reads/list-detail/index",
+    "pages/shop/index",
+    "pages/shop/pay/index",
+    "pages/login/index",
+    "pages/home/score/exchange/detail/index",
+    "pages/home/order/evaluate/index",
+    "pages/home/map/index",
+    "pages/test/index",
+    "pages/home/distributor/buffer/index",
+    "pages/home/score/pay/index",
+    "pages/cart/index",
+    "pages/shoplist/index",
+    "pages/home/distributor/distributor/index",
+    "pages/home/collect/index",
+    "pages/my/share/index",
+    "pages/tarBar/shop/index/index",
+    "pages/tarBar/mycoffee/mycoffee"
+  ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于为您提供更合适您的服务"
+    }
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "极客联盟",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "color": "#000",
+    "selectedColor": "#000",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/tarBar/index/index",
+        "text": "咖啡地图",
+        "iconPath": "/static/images/new/icon-1.png",
+        "selectedIconPath": "/static/images/new/icon-1.png"
+      },
+      {
+        "pagePath": "pages/tarBar/shop/index/index",
+        "text": "淘.咖啡",
+        "iconPath": "/static/images/new/icon-2.png",
+        "selectedIconPath": "/static/images/new/icon-2.png"
+      },
+      {
+        "pagePath": "pages/reads/index",
+        "text": "博客",
+        "iconPath": "/static/images/new/icon-3.png",
+        "selectedIconPath": "/static/images/new/icon-3.png"
+      },
+      {
+        "pagePath": "pages/tarBar/mycoffee/mycoffee",
+        "text": "我.咖啡",
+        "iconPath": "/static/images/new/icon-4.png",
+        "selectedIconPath": "/static/images/new/icon-4.png"
+      }
+    ]
+  },
+  "subPackages": [
+    {
+      "root": "pages/indexPack/",
+      "pages": [
+        "page/about/about",
+        "page/message/message",
+        "page/recommendStore/recommendStore"
+      ]
+    },
+    {
+      "root": "pages/coffeeShopping/",
+      "pages": [
+        "page/coupon/coupon",
+        "page/course/course",
+        "page/activity/index/index",
+        "page/product/product",
+        "page/shoplist/index",
+        "page/activity/crowdFunding/index/index",
+        "page/activity/auction/index/index",
+        "page/activity/collage/index/index",
+        "page/activity/auction/detail/detail",
+        "page/activity/auction/results/results",
+        "page/activity/auction/auctionOrder/auctionOrder",
+        "page/activity/crowdFunding/detail/detail",
+        "page/activity/auction/agreement/agreement"
+      ]
+    },
+    {
+      "root": "pages/myCoffee/",
+      "pages": [
+        "page/journal/journalTab/journalTab",
+        "page/journal/index/index",
+        "page/journal/journalEdit/journalEdit",
+        "page/brewing/historyBrewing/historyBrewing",
+        "page/brewing/scanBrewing/clean/clean",
+        "page/brewing/scanBrewing/findMachine/findMachine",
+        "page/brewing/scanBrewing/selectMachine/selectMachine",
+        "page/brewing/scanBrewing/inputPassword/inputPassword",
+        "page/brewing/scanBrewing/curveScheme/curveScheme",
+        "page/brewing/scanBrewing/making/making",
+        "page/myDevice/index/index",
+        "page/myDevice/bindingDevice/bindingDevice",
+        "page/goldenCup/index/index",
+        "page/case/index/index",
+        "page/goldenCup/detail/detail",
+        "page/goldenCup/example/example"
+      ]
+    }
+  ]
+}

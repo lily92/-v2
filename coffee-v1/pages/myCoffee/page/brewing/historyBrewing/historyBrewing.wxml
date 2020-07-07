@@ -1,0 +1,49 @@
+<!--pages/myCoffee/page/journal/index/index.wxml-->
+<view class="">
+	<view class="padding30">
+		<view class="tab flex ">
+			<view class="item {{type==1?'active':''}}" bindtap='getList' data-type='1'>个人</view>
+			<view class="item {{type==2?'active':''}}" bindtap='getList' data-type='2'>
+				收藏
+				
+			</view>
+			<view class="item" bindtap='showPopup'>筛选</view>
+		</view>
+	</view>
+ 
+	<my-list articleList="{{articleList}}" types='{{type}}'  bind:showAction="showAction" data-isshow='true' ></my-list>
+	<view class="flex flex-center loading-txt">
+		<van-loading size="5" wx:if='{{isloadding}}'>加载中...</van-loading>
+		<view wx:if='{{!isloadding}}' class="color9 fon24">—— 我是有底线的 ——</view>
+	</view>
+	
+	<view class="edit-height"></view>
+	<view class="edit bgf flex  flex-just">
+		<navigator class="edit-btn"  url="../journalEdit/journalEdit">
+			<text class="fon28 colorf icon-qx">曲线冲泡</text>
+		</navigator>
+		<navigator class="edit-btn"  url="/pages/myCoffee/page/brewing/scanBrewing/curveScheme/curveScheme">
+			<text class="fon28 colorf icon">扫码试新</text>
+		</navigator>
+	</view>
+
+    <!-- 筛选 -->
+	<screen shaixuanList='{{shaixuanList}}' show='{{show}}'></screen>
+	<!-- end筛选 -->
+	
+	<view class="btn-down flex flex-center" bindtap="showStepbox">
+		<image class="w100" src="https://gdhflw.com/public/partime/coffeeImg/cp-icon2.png" mode="widthFix"></image>
+	</view>
+
+		<!-- 弹窗 -->
+	<van-popup show="{{ showStep }}" bind:close="onCloseStep" round='true' custom-class='round'>
+		<view class="setp-img">
+			<image class="w100" mode="widthFix" src="https://gdhflw.com/public/partime/coffeeImg/syj-setp.png"></image>
+			<view class="flex flex-just btn-group">
+				<view class="btn" bindtap='onCloseStep'>取消</view>
+				<view class="btn">确认</view>
+			</view>
+		</view>
+	</van-popup>
+
+</view>

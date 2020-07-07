@@ -1,0 +1,7 @@
+/* pages/myCoffee/page/journal/journalTab/item/item.wxss */
+.item{ padding: 30rpx;}
+.user-icon-img{ width: 72rpx; height: 72rpx; border-radius: 50%;}
+.j-img{ width: 78rpx; height: 78rpx;}
+.j-desc{ width: calc(100% - 200rpx); font-size: 28rpx; color: #555;}
+.item{ display: flex; align-items: center; justify-content: space-between;}
+.j-imgs{ width: 78rpx; height: 78rpx;}

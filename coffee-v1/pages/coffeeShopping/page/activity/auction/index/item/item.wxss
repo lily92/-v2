@@ -1,0 +1,16 @@
+/* pages/coffeeShopping/page/activity/crowdFunding/index/item/item.wxss */
+.item{ border-radius: 20rpx; overflow: hidden; background: #fafafa; font-size: 14px; margin-bottom: 30rpx; padding:30rpx;}
+.item-img{ width: 200rpx; }
+.item-desc{ width: calc(100% - 220rpx); align-content: space-between;}
+.w100{ width: 100%;}
+.color3{ color: #333;}
+.color0{ color: #000;}
+.flex{ display: flex; flex-wrap: wrap;}
+.flex-just{ justify-content: space-between;}
+.flex-al-center{ align-items: center;}
+.flex-center{ align-items: center; justify-content: center;}
+.title{ background: #000; padding: 5rpx ; color: #fff; }
+.flex-nowarp{ flex-wrap: nowrap;}
+.fon24{ font-size: 12px;}
+.qp-price{ padding: 10rpx 0;}
+.cut-down{ background: #f3f3f3; padding: 0 5rpx;}

@@ -1,0 +1,7 @@
+/* pages/coffeeShopping/page/activity/auction/auctionOrder/auctionOrder.wxss */
+.bg0{ background: #000 ;}
+.colorf{ color: #fff;}
+.van-tab--active,.van-tab {
+   color: #fff !important;
+}
+  

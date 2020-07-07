@@ -1,0 +1,43 @@
+/* pages/home/profile/index.wxss */
+
+.profile-container {
+  overflow: hidden;
+  background: #f7f7f7;
+}
+
+.user-info {
+  width: 500rpx;
+  margin: 70rpx auto;
+  text-align: center;
+}
+
+.user-info .avatar {
+  width: 100%;
+}
+
+.user-info .avatar image {
+  width: 100rpx;
+  height: 100rpx;
+  max-width: 100rpx;
+  max-height: 100rpx;
+  border-radius: 50%;
+  margin: auto;
+}
+
+.user-info .name {
+  font-size: 28rpx;
+  margin: 6rpx 0;
+}
+
+.user-info .level {
+  width: 100%;
+  height: 50rpx;
+}
+
+.user-info .level image {
+  width: 35%;
+  height: 40%;
+  background: #000;
+  padding: 6rpx 14rpx;
+  border-radius: 20rpx;
+}

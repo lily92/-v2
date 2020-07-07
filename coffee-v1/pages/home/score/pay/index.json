@@ -1,0 +1,19 @@
+{
+  "usingComponents": {
+    "van-icon": "./../../vant-weapp/dist/icon/index",
+    "van-nav-bar": "./../../vant-weapp/dist/nav-bar/index",
+    "van-popup": "./../../vant-weapp/dist/popup/index",
+    "van-radio": "./../../vant-weapp/dist/radio/index",
+    "van-radio-group": "./../../vant-weapp/dist/radio-group/index",
+    "van-checkbox": "./../../vant-weapp/dist/checkbox/index",
+    "van-checkbox-group": "./../../vant-weapp/dist/checkbox-group/index",
+    "van-field": "./../../vant-weapp/dist/field/index",
+    "van-cell": "./../../vant-weapp/dist/cell/index",
+    "van-cell-group": "./../../vant-weapp/dist/cell-group/index",
+    "van-tab": "./../../vant-weapp/dist/tab/index",
+    "van-tabs": "./../../vant-weapp/dist/tabs/index",
+    "van-switch": "./../../vant-weapp/dist/switch/index",
+    "van-toast": "./../../vant-weapp/dist/toast/index",
+      "van-dialog": "./../../vant-weapp/dist/dialog/index"
+  }
+}

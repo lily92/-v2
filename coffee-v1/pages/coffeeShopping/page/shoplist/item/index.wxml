@@ -1,0 +1,16 @@
+<!--pages/shop/item/index.wxml-->
+
+<view class="cmd-item" wx:for="{{list}}" data-id="{{item.id}}" wx:key="{{item.id}}" bindtap="goGoods">
+  <view class="img-item">
+    <image src="{{item.images_url}}"></image>
+  </view>
+  <view class="cmd-title">{{item.name}}</view>
+  <view class="price">
+    <text class="cur-price">¥ {{item.price}}</text>
+    <text class="old-price">¥ {{item.line_price}}</text>
+  </view>
+  <view class="rate">
+    <text>{{item.eva_count}} 条评论</text>
+    <text>100%好评率</text>
+  </view>
+</view>

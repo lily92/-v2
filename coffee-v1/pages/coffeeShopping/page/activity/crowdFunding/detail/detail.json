@@ -1,0 +1,11 @@
+{
+  "usingComponents": {
+	  "cust-swiper":"../../../../../component/swiper/index",
+	  "van-popup": "../../../../vant-weapp/dist/popup/index",
+	  "van-stepper": "../../../../vant-weapp/dist/stepper/index",
+	  "van-progress": "./../../vant-weapp/dist/progress/index",
+	  "van-cell": "./../../vant-weapp/dist/cell/index"
+	  
+  },
+  "navigationBarTitleText": "众筹详情"
+}

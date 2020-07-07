@@ -1,0 +1,33 @@
+ <view class="all-order-list">
+        <view class="order-wrapper" wx:for="{{list}}" wx:key="{{index}}">
+          <view class="order-item" data-id="{{item.id}}" bindtap="goOrderDetail">
+            <view class="img-item">
+              <image src="{{item.goods.images_url}}"></image>
+            </view>
+            <view class="detail-item">
+              <view class="detail-name">{{item.goods.name}}</view>
+              <view class="detail-amount">X 1件</view>
+              <view class="detail-price"> {{item.goods.integral}}积分</view>
+            </view>
+            <view class="detail-status">
+<image src="./../../../static/images/done.png" wx:if="{{item.status===4}}"></image>
+              <text wx:if="{{item.status===1}}">待付款</text>
+              <text wx:if="{{item.status===2}}">待发货</text>
+              <text wx:if="{{item.status===3}}">待收货</text>
+              <!-- <text wx:if="{{item.status===4}}">交易完成</text> -->
+              <text wx:if="{{item.status===5}}">取消订单</text>
+            </view>
+          </view>
+          <view class="item-btn-group">
+            <view class="lv-btn normal-lv-btn" bindtap="clickToCheckDeliver" wx:if="{{item.status===3}}">查看物流</view>
+            <view class="lv-btn normal-lv-btn" bindtap="clickToRefund" wx:if="{{item.status===4}}">申请退款</view>
+            <view class="lv-btn super-lv-btn" bindtap="clickToConfirm" data-id="{{item.id}}" wx:if="{{item.status===3}}">确认收货</view>
+            <view class="lv-btn normal-btn" data-order_id="{{item.id}}" 
+            data-goods_id="{{item.goods.goods_id}}"
+            bindtap="clickToRate" wx:if="{{item.status===4}}">评价晒单</view>
+            <view class="lv-btn middle-lv-btn" bindtap="clickToRate" wx:if="{{item.status===4}}">再次购买</view>
+            <view class="lv-btn normal-btn" bindtap="clickToCancel" data-id="{{item.id}}" wx:if="{{item.status===1||item.status===2}}">取消订单</view>
+            <view class="lv-btn super-lv-btn" bindtap="clickToPay" wx:if="{{item.status===1}}">去支付</view>
+          </view>
+        </view>
+      </view>

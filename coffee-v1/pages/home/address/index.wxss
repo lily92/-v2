@@ -1,0 +1,113 @@
+/* pages/home/address/index.wxss */
+
+.value-class {
+  flex: none !important;
+}
+
+.address-item {
+  display: flex;
+  text-align: left;
+  border-bottom: 1px solid #f5f5f5;
+  padding: 20rpx 0rpx;
+}
+
+.user-name-addr {
+  width: 70%;
+  text-align: left;
+}
+
+.user-name-addr .user-name {
+  color: #333;
+  font-weight: 800;
+  font-size: 32rpx;
+}
+
+.user-phone {
+  width: 35%;
+  font-size: 32rpx;
+  color: #333;
+  font-weight: 400;
+  text-align: right;
+}
+
+.user-addr {
+  margin: 20rpx 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.addr-btn-item {
+  padding-top: 16rpx;
+}
+
+.addr-btn-item, .edit-delete-btn {
+  display: flex;
+  text-align: left;
+}
+
+.default-btn {
+  width: 60%;
+  line-height: 48rpx;
+  font-size: 26rpx;
+  position: relative;
+  padding: 0 0 0 36rpx;
+}
+
+.edit-delete-btn {
+  width: 40%;
+}
+
+.default-btn .default-icon {
+  display: inline-block;
+  position: absolute;
+  top: 8rpx;
+  left: 0;
+}
+
+.default-btn .default-icon .van-radio .van-radio__icon-wrap .van-radio__icon {
+  width: 28rpx;
+  height: 28rpx;
+}
+
+.default-btn .default-icon .van-icon.van-icon-success {
+  line-height: 28rpx !important;
+}
+
+.edit-btn, .delete-btn {
+  flex: 1;
+  font-size: 26rpx;
+  position: relative;
+  line-height: 48rpx;
+  padding-left: 36rpx;
+}
+
+.edit-btn .edit-icon, .delete-btn .delete-icon {
+  position: absolute;
+  top: 6rpx;
+  left: 0;
+  font-size: 36rpx;
+}
+
+.add-more-address {
+  position: fixed;
+  bottom: 50rpx;
+  width: 90%;
+  background: #000;
+  color: #fff;
+  text-align: center;
+  padding: 20rpx 0;
+  border-radius: 10rpx;
+  margin: 0 5%;
+}
+
+.add-more {
+  position: relative;
+}
+
+.add-more .plus-icon {
+  position: absolute;
+  top: 4rpx;
+  left: 200rpx;
+  font-size: 34rpx;
+}

@@ -1,0 +1,32 @@
+<!--components/common/promptConnection/promptConnection.wxml-->
+
+<view class="connection" >
+<view class="bgf main-tip">
+	<image  bindtap='closeTip' src="https://gdhflw.com/public/partime/coffeeImg/icon-close.png" class="colse-btn"></image>
+	<image class="connect-img" mode="widthFix" src="https://gdhflw.com/public/partime/coffeeImg/icon-duankai-lianjie.png"></image>
+	<view class="fon28 text-center">
+		<view>未连接设备！</view>
+		<view>您可以通过以下两种方式连接到设备</view>
+	</view>
+	<view class="tip-items">
+		<view class="tip-item flex flex-al-center">
+			<view class="tip-img">
+				<image class="w100" mode="widthFix" src="https://gdhflw.com/public/partime/coffeeImg/icon-wifi.png"></image>
+			</view>
+			<view class="w310 fon26">
+				您可以打开手机WIFI同机器
+				连接到同一网络
+			</view>
+		</view>
+		<view class="tip-item flex flex-al-center">
+			<view class="tip-bule ">
+				<image class="w100" mode="widthFix" src="https://gdhflw.com/public/partime/coffeeImg/icon-ly.png"></image>
+			</view>
+			<view class="w310 fon26">
+				您可以打开手机设置开启蓝
+				牙连接到设备
+			</view>
+		</view>
+	</view>
+</view>
+</view>

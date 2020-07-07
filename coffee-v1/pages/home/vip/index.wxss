@@ -1,0 +1,36 @@
+/* pages/home/vip/index.wxss */
+
+.vip-title-bar {
+  border-bottom: 1px solid #f5f5f5;
+}
+
+.vip-title-bar view {
+  display: inline-block;
+  padding: 20rpx 20rpx;
+  width: 44%;
+  color: #555;
+}
+
+
+.vip-wrapper {
+  border-bottom: 1px solid #f5f5f5;
+   display: flex;
+  padding: 20rpx 0;
+}
+.vip-item, .vip-detail {
+  width: 50%;
+  height: 90rpx;
+}
+
+
+.vip-item image {
+  margin: 26rpx 20rpx;
+  width: 50%;
+  height: 40%;
+}
+
+.detail .v-item {
+  font-size: 28rpx;
+  color: #333;
+  line-height: 90rpx;
+}

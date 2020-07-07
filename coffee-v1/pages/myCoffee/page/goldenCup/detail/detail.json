@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "ec-canvas": "/ec-canvas/ec-canvas",
+    "van-rate": "/vant-weapp/dist/rate/index",
+    "painter":"/components/painter/painter"
+  },
+  "navigationBarTitleText": "风味雷达图"
+} 

@@ -1,0 +1,264 @@
+<!--pages/pay/index.wxml-->
+<wxs module="dateUtil" src="../../../wxs/timeUtil.wxs"></wxs>
+
+<view class="pay-container">
+	<van-toast id="van-toast" />
+	<view class="order-wrapper">
+		<!-- 新增收货地址按钮 -->
+		<view class="post-address" bindtap="onToggleAddress" wx:if="{{addressRadio=='' &&selfRadio ==''}}">
+			<view class="address-item">
+				<van-icon name="plus" class="plus-icon" />选择收货地址
+			</view>
+		</view>
+		<!-- 选择地址后，显示为已选地址 -->
+		<view class="show-addr post-address" wx:if="{{addressRadio!=='' ||selfRadio !==''}}">
+			<view class="self-address" bindtap="onToggleAddress">
+				<van-icon name="location-o" class="addr-locate-item" />
+				<view class="shop-item-wrapper">
+					<view class="shop-addr">{{selfRadioList[selfRadio-1].name ||addressRadioList[addressRadio-1].areaMsg }}</view>
+					<view class="shop-distance" wx:if="{{selfRadio}}">距离你{{selfRadioList[selfRadio-1].km}}里</view>
+					<view class="shop-distance" wx:else="{{selfRadio}}">{{addressRadioList[addressRadio-1].userName}}-{{addressRadioList[addressRadio-1].phone}}
+					</view>
+				</view>
+			</view>
+			<view class="self-icon-item">
+				<text wx:if="{{selfRadio}}">到店自取</text>
+				<text wx:if="{{addressRadio}}">送货上门
+				</text>
+			</view>
+
+		</view>
+		<view class="pay-ways">
+			<van-cell title="支付方式" is-link value="微信支付" />
+		</view>
+
+
+		<!-- 已选商品信息 -->
+		<view class="pick-goods" wx:for="{{goods1}}">
+			<view class="pg-img">
+				<image src="{{item.images_url}}"></image>
+			</view>
+			<view class="pg-detail flex">
+
+				<view class="w100">
+					<view class="pg-name">{{item.name}} </view>
+					<view class="pg-type">{{item.suk_name}}</view>
+				</view>
+				<view class="w100 pg-price flex flex-al-center flex-just">
+					<view class="price">¥{{item.price}}</view>
+					<view class="amount">× {{item.num}}</view>
+				</view>
+			</view>
+
+		</view>
+
+		<view class="text-right good-tip">
+			感谢您对我们的支持，您将会收到1000.00元咖啡机五件
+		</view>
+		<view class="padding30 fon28 mark flex flex-al-center">
+			<text class="mark-txt">备注信息</text>
+			<input placeholder="可以给我们留意哦~" class="fon28" />
+		</view>
+		<!-- 优惠券 -->
+		<view class="sale-off fon28" bindtap="onToggleTicket">
+			<view class="ticket-left">优惠券</view>
+			<view class="ticket-right">
+
+				<view class="text" wx:if="{{!coun.isShow}}">
+					<text>{{ticketList.length}}</text>张可用
+				</view>
+				<view class="text" wx:else>
+					{{coun.get_counpon.name}}
+				</view>
+
+				<van-icon name="arrow" class="arrow-icon" />
+			</view>
+		</view>
+
+		<!-- 费用清单 -->
+		<view class="fee-list">
+			<van-cell title="商品" is-link value="¥ {{totalPrice}}" />
+
+
+			<van-cell title="运费" is-link value="¥ 0.00" />
+
+			<van-cell title="合计" is-link value="¥ {{actualPrice}}" />
+		</view>
+
+		<!-- 发票 -->
+		<view class="tax-ticket  fon28" bindtap="onToggleTax">
+			<view class="ticket-left">发票</view>
+			<view class="ticket-right">
+				<view class="text">
+					<text wx:if="{{taxResult==='不开具发票'}}">不开发票</text>
+					<text wx:if="{{taxResult==='开具发票'}}">开具发票</text>
+				</view>
+				<van-icon name="arrow" class="arrow-icon" />
+			</view>
+		</view>
+
+		<view class="ty-xieyi flex flex-al-center fon28">
+			<van-checkbox checked-color="#000" value="{{ xieyi }}" bind:change="onChangeXieYi"> 阅读并同意</van-checkbox>
+
+			<navigator url="/pages/coffeeShopping/page/activity/auction/agreement/agreement" class="link"> 《支持者协议》</navigator>
+		</view>
+		<!-- 下单 -->
+		<view class="go-pay">
+			<view class="pay-left">
+				<text>应付金额:</text>
+				<text>¥ {{actualPrice}}</text>
+			</view>
+			<view class="pay-right" bindtap="onPay">去支付</view>
+		</view>
+	</view>
+
+	<!-- 收货地址弹出层 -->
+	<van-popup show="{{ showAddress }}" position="bottom" bind:close="onToggleAddress">
+		<view class="pop-header">
+			配送方式
+			<van-icon name="close" class="pop-close" bindtap="onToggleAddress" />
+		</view>
+		<view class="pick-address">
+			<van-tabs animated active="{{active}}" color="#000">
+				<van-tab title="门店自取">
+					<view class="self-list">
+						<van-radio-group value="{{ selfRadio }}" bind:change="onSelfChange">
+							<van-cell-group>
+								<van-cell wx:for="{{selfRadioList}}" value-class="value-class" class="nearby-shop-cell" clickable data-index="{{index}}"
+								 data-name="{{item.id}}" bind:click="onSelfClick" wx:key="{{index}}">
+									<view class="nearby-shop-list">
+										<view class="nearby-shop-detail">
+											<view class="shop-detail-name">{{item.name}}</view>
+											<view class="shop-on-sale">
+												<van-icon name="clock-o" class="on-sale-icon" />
+												<text>{{item.startTime}}-{{item.endTime}}</text>
+											</view>
+											<view class="shop-detail-locate">
+												<van-icon name="location-o" class="detail-locate-icon" />
+												<text>{{item.location}}</text>
+											</view>
+										</view>
+										<view class="nearby-shop-distance">距离你{{item.km}}m</view>
+									</view>
+									<van-radio name="{{item.id}}" class="nearby-shop-radio-item" />
+								</van-cell>
+							</van-cell-group>
+						</van-radio-group>
+					</view>
+				</van-tab>
+				<van-tab title="送货上门">
+					<view class="address-list">
+						<view class="list-title">我的收货地址</view>
+						<view class="list-wrapper" wx:if="{{addressRadioList.length>0}}">
+							<van-radio-group value="{{ addressRadio }}" bind:change="onChoiseAddress">
+								<van-radio name="{{item.id}}" wx:for="{{addressRadioList}}" wx:key="{{index}}" class="choise-addr-item">{{item.areaMsg}}
+									{{item.posterAddr}}</van-radio>
+							</van-radio-group>
+						</view>
+						<view class="ddadd-more-address" bindtap="addMoreAddress" wx:else>
+							<view class="add-more">
+								<van-icon name="plus" class="plus-icon" />新建地址</view>
+						</view>
+
+					</view>
+				</van-tab>
+			</van-tabs>
+		</view>
+	</van-popup>
+
+	<!-- 优惠券弹出层 -->
+	<van-popup show="{{ showTicket }}" position="bottom" bind:close="onToggleTicket">
+		<view class="pop-header">
+			优惠券
+			<van-icon name="close" class="pop-close" bindtap="onToggleTicket" />
+		</view>
+		<view class="pick-ticket">
+			<van-radio-group value="{{ ticketRadio }}" bind:change="onChangeTicket">
+				<van-cell-group>
+					<van-cell value-class="value-class" clickable data-name="{{item.id}}" data-info="{{item}}" class="ticket-cell"
+					 checked-color="#07c160" bind:click="onClickTicket" wx:for="{{ticketList}}" wx:key="{{index}}">
+						<view class="ticket-wrapper">
+							<view class="ticket-img">
+								<!-- <image src="./../../static/images/ticket-bg.png"></image> -->
+								<view class="ticket-img-text">
+									<view class="img-text-top">
+										<text>¥</text>{{item.get_counpon.sub_price}}</view>
+									<view class="img-text-bottom">
+										<text>满{{item.get_counpon.low_price}}使用</text>
+									</view>
+								</view>
+							</view>
+							<view class="ticket-text">
+								<text>{{item.get_counpon.name}} \n
+									{{dateUtil.getDateTime(item.get_counpon.start_time)}}-{{dateUtil.getDateTime( item.get_counpon.end_time)}}</text>
+							</view>
+						</view>
+						<van-radio name="{{item.id}}" class="ticket-radio-item" />
+					</van-cell>
+				</van-cell-group>
+			</van-radio-group>
+		</view>
+	</van-popup>
+
+	<!-- 发票弹出层 -->
+	<van-popup show="{{ showTax }}" position="bottom" bind:close="onToggleTax" class="pop-wrapper">
+		<view class="pop-header">
+			发票信息
+			<van-icon name="close" class="pop-close" bindtap="onToggleTax" />
+		</view>
+		<view class="pick-tax">
+			<van-radio-group value="{{ taxResult }}" bind:change="onChangeTax">
+				<van-radio wx:for="{{taxList}}" wx:key="index" name="{{item}}" checked-color="#db1e16" class="radio-item">
+					{{item}}
+				</van-radio>
+			</van-radio-group>
+		</view>
+		<!-- 发票抬头 -->
+		<view class="tax-invoise">
+			<view class="invoise-title">发票抬头</view>
+			<view class="invoise-type">
+				<van-radio-group value="{{ invResult }}" bind:change="onChangeInvoise">
+					<van-radio wx:for="{{invList}}" wx:key="index" name="{{item}}" checked-color="#db1e16" class="radio-item">
+						{{item}}
+					</van-radio>
+				</van-radio-group>
+				{{unitName}}
+				<!-- 发票抬头为单位 -->
+				<view class="tax-unit" wx:if="{{invResult==='单位'}}">
+					<van-cell-group>
+						<van-field class="info-cell-item" value="{{ unitName }}" clearable placeholder="请输入单位名称" border="{{ false }}"
+						 placeholder-style="font-size:22rpx;" bind:change="handelunit" />
+						<van-field class="info-cell-item" value="{{ taxNum }}" clearable placeholder="请填写纳税人识别号" bind:change="handelTax"
+						 border="{{ false }}" placeholder-style="font-size:22rpx;" />
+					</van-cell-group>
+				</view>
+			</view>
+		</view>
+
+		<!-- 收票人信息 -->
+		<view class="receive-info">
+			<view class="info-title">收票人信息</view>
+			<view class="info-input">
+				<van-cell-group>
+					<van-field class="info-cell-item" value="{{ phone }}" clearable label="收票人手机:" placeholder="请输入手机号码" border="{{ false }}"
+					 bind:change="handelPhone" placeholder-style="font-size:22rpx;" />
+
+					<van-field class="info-cell-item" value="{{ email }}" type="email" clearable label="收票人邮箱:" bind:change="handelEmail"
+					 placeholder="用来接受电子发票(选填)" border="{{ false }}" placeholder-style="font-size:22rpx;" />
+				</van-cell-group>
+			</view>
+		</view>
+
+		<!-- 发票信息 -->
+		<view class="tax-info">
+			<view class="info-title">发票信息:</view>
+			<van-checkbox-group value="{{ info }}" bind:change="onChangeDetail">
+				<van-checkbox name="明细" class="checkbox-item" checked-color="#db1e16">明细</van-checkbox>
+			</van-checkbox-group>
+			<view class="info-detail">
+				<text>1.电子发票与纸质发票具备同等法律效力，可作为用户维权、保修的有效凭据；\n2.请确保开票据头、纳税人识别号货统一社会信用代码的准确性，开票成功后无法更改；</text>
+			</view>
+		</view>
+	</van-popup>
+
+</view>

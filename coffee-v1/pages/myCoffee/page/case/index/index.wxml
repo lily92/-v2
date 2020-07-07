@@ -1,0 +1,63 @@
+<!--pages/myCoffee/page/journal/index/index.wxml-->
+<view class="">
+	<view class="padding30">
+		<van-tabs bind:disabled="showPopup" swipe-threshold='{{number}}' swipeable color='#000' custom-class='tab' active="{{ active }}"
+		 bind:change="onChange">
+			<van-tab title="{{item.name}}" data-id='{{item.id}}' wx:for='{{typeList}}'>
+				<my-list articleList="{{articleList}}" data-isshow='true'></my-list>
+			</van-tab>
+			<van-tab title='筛选' disabled></van-tab>
+		</van-tabs>
+	</view>
+
+
+	<view class="flex flex-center loading-txt">
+		<van-loading size="5" wx:if='{{isloadding}}'>加载中...</van-loading>
+		<view wx:if='{{!isloadding}}' class="color9 fon24">—— 我是有底线的 ——</view>
+	</view>
+
+	<view class="edit-height"></view>
+	<view class="edit bgf flex  flex-just">
+		<view class="edit-btn" bindtap="showDetailbox">
+			<text class="fon28 colorf ">+意式曲线</text>
+		</view>
+		<view class="edit-btn" bindtap="showDetailbox">
+			<text class="fon28 colorf ">+单品曲线</text>
+		</view>
+		<view class="edit-btn" bindtap="showDetailbox">
+			<text class="fon28 colorf ">+茶品曲线</text>
+		</view>
+	</view>
+
+	<!-- 筛选 -->
+	<screen shaixuanList='{{shaixuanList}}' show='{{show}}'></screen>
+	<!-- end筛选 -->
+
+	<view class="btn-down flex flex-center" bindtap="showStepbox">
+		<image class="w100" src="https://gdhflw.com/public/partime/coffeeImg/icon-upload.png" mode="widthFix"></image>
+	</view>
+
+	<!-- 弹窗 -->
+	<van-popup show="{{ showStep }}" bind:close="onCloseStep" round='true' custom-class='round'>
+		<view class="setp-img">
+			<image class="w100" mode="widthFix" src="https://gdhflw.com/public/partime/coffeeImg/syj-setp.png"></image>
+			<view class="flex flex-just btn-group">
+				<view class="btn" bindtap='onCloseStep'>取消</view>
+				<view class="btn">确认</view>
+			</view>
+		</view>
+	</van-popup>
+	
+	<van-popup show="{{ showDetail }}" bind:close="onCloseDetail" round='true' custom-class='round'>
+		<view class="tip">
+			<view class="fon24">
+				该曲线设计标准基于格米莱云台网意式咖啡机系统，可设计包含预浸在内四段变压萃取方案，如果您已拥有该标准机器或使用授权，请开启您的私人定制冲泡之旅。
+			</view>
+			<view class="btn margin0-auto">开始</view>
+
+
+		</view>
+	</van-popup>
+
+
+</view>

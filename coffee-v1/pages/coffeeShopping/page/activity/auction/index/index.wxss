@@ -1,0 +1,3 @@
+/* pages/coffeeShopping/page/activity/crowdFunding/index/index.wxss */
+
+.pm-list{ padding: 30rpx;}

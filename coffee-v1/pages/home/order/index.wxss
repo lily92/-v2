@@ -1,0 +1,81 @@
+/* pages/home/order/index.wxss */
+.bg0{ background: #000 !important; }
+.colorf{ color: #fff !important;}
+.order-item {
+  display: flex;
+  padding: 20rpx 30rpx;
+}
+
+.img-item {
+  width: 25%;
+}
+
+.img-item image {
+  width: 150rpx;
+  height: 150rpx;
+  max-width: 150rpx;
+  max-height: 150rpx;
+  margin: 0 10rpx;
+}
+
+.detail-item {
+  width: 65%;
+  font-size: 28rpx;
+  color: #333;
+  font-weight: 400;
+}
+
+.detail-name {
+  line-height: 36rpx;
+  margin: 10rpx 0;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.detail-amount, .detail-price {
+  color: #666;
+  font-size: 24rpx;
+  margin: 6rpx 0;
+}
+
+.detail-status image {
+  max-width: 120rpx;
+  max-height: 80rpx;
+  width: 120rpx;
+  height: 80rpx;
+  position: absolute;
+  top: -60rpx;
+  right: -30rpx;
+}
+
+.item-btn-group {
+  text-align: right;
+  border-bottom: 1px solid #f5f5f5;
+  padding: 0 0 20rpx;
+}
+
+.lv-btn {
+  display: inline-block;
+  border: 1px solid #999;
+  padding: 5rpx 20rpx;
+  margin: 0 16rpx;
+  border-radius: 40rpx;
+  font-size: 24rpx;
+  color: #999;
+}
+
+.middle-lv-btn {
+  color: #a5a5a5;
+  border-color: #dbdbdb;
+}
+
+.super-lv-btn {
+  background: #313131;
+  border-color: #313131;
+  color: #f5f5f5;
+}
+
+.van-tabs__scroll--line{ background: #000 !important;}

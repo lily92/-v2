@@ -1,0 +1,84 @@
+<!--pages/list/index.wxml-->
+
+<view class="list-container">
+  <van-toast id="van-toast" />
+  <!-- 弹出购物车 -->
+  <van-popup show="{{ showCart }}" position="bottom" custom-style="min-height:30%; max-height:60%; border-top-left-radius:40rpx;border-top-right-radius:40rpx;padding:30rpx 40rpx 140rpx" bind:close="toggleCart">
+    <view class="choose-item">
+      <view class="clear-cart" catchtap="clearCart">清空购物车</view>
+      <view class="item-wrap" wx:for="{{cartList}}" wx:for-item="list" wx:for-index="idx" wx:key="idx" data-idx="{{idx}}">
+        <view class="item-img">
+          <image src="../../../../../static/images/1-3.png"></image>
+        </view>
+        <view class="item-info">
+          <view catchtap="clickToDetail" data-id="{{list.id}}">
+            <view class="info-title">{{list.title}}</view>
+          </view>
+        </view>
+        <view class="price-num">
+          <view class="num-btn">
+            <view catchtap="add" data-type="add" data-menu_id="{{item.id}}" data-list_id="{{list.id}}" class="fake-btn">+</view>
+            <view wx:if="{{list.goods_num !== 0}}" class="goods-num">{{list.goods_num}}</view>
+            <view catchtap="add" data-type="minus" data-menu_id="{{item.id}}" data-list_id="{{list.id}}" wx:if="{{list.goods_num !== 0}}" class="fake-btn">-</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </van-popup>
+  <!-- 弹出购物车 -->
+  <view class="locate">
+    <van-icon name="location-o" class="locate-icon" />
+    <view class="locate-name">
+      <view>武汉市桥口区新越秀店</view>
+    </view>
+  </view>
+  <van-search value="{{ value }}" placeholder="请输入搜索关键词" class="search-bar" />
+  <view class="category-list" catchtouchmove="preventPop">
+    <view class="list-left">
+      <scroll-view scroll-y="true" style="height: 920rpx;" bindscroll="scroll" catchtouchmove="preventPop" scroll-with-animation="{{true}}">
+        <view class="left-menu {{curId === item.id? 'active': ''}}" catchtap="clickToMenu" data-anchor="{{item.anchor}}" data-id="{{item.id}}" wx:for="{{menu}}" wx:key="{{index}}">{{item.name}}</view>
+      </scroll-view>
+    </view>
+    <view class="list-right">
+      <scroll-view scroll-y="true" style="height: 920rpx;" bindscroll="scroll" catchtouchmove="preventPop" scroll-into-view="{{cate}}" scroll-with-animation="{{true}}">
+        <view class="right-item" wx:for="{{menu}}" wx:key="index" id="{{item.anchor}}">
+          <view class="menu-title">{{item.name}}</view>
+          <view class="item-wrap" wx:for="{{item.items}}" wx:for-item="list" wx:for-index="idx" wx:key="idx" data-idx="{{idx}}">
+            <view class="item-img">
+              <image src="../../../../../static/images/1-3.png"></image>
+            </view>
+            <view class="item-info">
+              <view catchtap="clickToDetail" data-id="{{list.id}}">
+                <view class="info-title">{{list.title}}</view>
+                <view class="info-desc">{{list.desc}}</view>
+              </view>
+              <view class="price-num">
+                <view class="info-price">
+                  ¥
+                  <text>{{list.price}}</text>
+                  <text>¥{{list.old_price}}</text>
+                </view>
+                <view class="num-btn">
+
+                  <view catchtap="add" data-type="minus" data-menu_id="{{item.id}}" data-list_id="{{list.id}}" wx:if="{{list.goods_num !== 0}}" class="fake-btn">-</view>
+                  <view wx:if="{{list.goods_num !== 0}}" class="goods-num">{{list.goods_num}}</view>
+                  <view catchtap="add" data-type="add" data-menu_id="{{item.id}}" data-list_id="{{list.id}}" class="fake-btn">+</view>
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </scroll-view>
+    </view>
+  </view>
+  <view class="cart-bar">
+    <view class="cart-num">{{total.count}}</view>
+    <view class="cart-icon">
+      <image src="../../../../../static/images/cart.png"></image>
+    </view>
+    <view class="total" catchtap="toggleCart">总计: ¥
+      <text>{{total.money}}</text>
+    </view>
+    <view class="pay" catchtap="clickToPay">结算</view>
+  </view>
+</view>

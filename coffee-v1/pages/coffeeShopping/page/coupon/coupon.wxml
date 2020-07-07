@@ -1,0 +1,18 @@
+<!--pages/coffeeShopping/page/coupon/coupon.wxml-->
+<view class="">
+  <van-tabs class='bgf' active="{{ active }}" bind:change="onChange" swipeable border='{{false}}'>
+    <van-tab title="未领取" >
+    <view class="padding20">
+		<view >
+			<list-item couponList='{{couponList}}' active="{{ active }}" ></list-item>
+		</view>
+        
+    </view>
+    </van-tab>
+    <van-tab title="已领取">
+      <view class="padding20">
+        <list-item couponList='{{couponList}}' active="{{ active }}"></list-item>
+    </view>
+    </van-tab>
+  </van-tabs>
+</view>

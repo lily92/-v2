@@ -1,0 +1,15 @@
+/* pages/coffeeShopping/page/product/item/item.wxss */
+.bgf{ background: #fff;}
+.item{ border-radius: 20rpx; margin-bottom: 30rpx;}
+.logo{ width: 80rpx; height: 80rpx; flex-shrink: 0; border-radius: 50%;}
+.desc{width: calc(100% - 50px);}
+.flex{ display: flex;}
+.flex-al-center{ align-items: center;}
+.flex-just{ justify-content: space-between;}
+.padding20{ padding: 20rpx;}
+.color9{ color: #999;}
+.fon26{ font-size: 13px;}
+.fon24{font-size: 12px;}
+.item-top{ margin-bottom: 20rpx;}
+.w100{ width: 100%;}
+.item-img{ border-radius:20rpx 20rpx 0 0;}

@@ -1,0 +1,9 @@
+/* pages/coffeeShopping/page/activity/auction/results/results.wxss */
+page{ background: #f7f7f7;}
+.icon-tip{ width: 200rpx; margin: 0 auto; display: block; padding: 120rpx 0;}
+.font-b{ font-weight: bold; padding-bottom: 80rpx;}
+.price{ margin: 20rpx  auto 60rpx; color: #000;}
+.color0{ color: #000;}
+
+.btn{ line-height: 100rpx; text-align: center;  font-size: 14px; border: 1px solid #000; margin-bottom: 60rpx;}
+.btn.bg0{ background: #000; color: #fff;}

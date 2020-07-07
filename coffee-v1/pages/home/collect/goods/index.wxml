@@ -1,0 +1,18 @@
+<!--pages/home/collect/goods/index.wxml-->
+
+<view class="shop-item">
+  <van-dialog id="van-dialog" />
+  <view class="shop-banner" wx:for="{{goods}}"  wx:key="{{index}}">
+    <view class="like-tag" catchtap="cancelLike" data-id="{{item.id}}">
+      <image src="./../../../../static/images/like.png"></image>
+    </view>
+    <image data-id="{{item.id}}" bindtap="goshop" src="{{item.logo}}"></image>
+    <view class="shop-name-distance">
+      <view class="shop-name">
+        {{item.area.area_name}}丨{{item.name}}
+      </view>
+      <view class="shop-distance">
+        <van-icon name="location-o" class="locate-icon" />距离您{{item.km}}km</view>
+    </view>
+  </view>
+</view>

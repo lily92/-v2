@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "my-swiper": "./swiper/index",
+    "my-list":"./list/index",
+	"van-loading": "../../../vant-weapp/dist/loading/index"
+  },
+   "navigationBarTitleText": "博客"
+}

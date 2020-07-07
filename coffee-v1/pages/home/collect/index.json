@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "van-transition": "./../../../vant-weapp/dist/transition/index",
+    "van-dialog": "./../../../vant-weapp/dist/dialog/index",
+    "van-toast": "./../../../vant-weapp/dist/toast/index",
+    "my-goods": "./goods/index",
+    "my-topic": "./topic/index"
+  }
+}

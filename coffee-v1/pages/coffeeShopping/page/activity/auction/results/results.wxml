@@ -1,0 +1,19 @@
+<!--pages/coffeeShopping/page/activity/auction/results/results.wxml-->
+<view>
+	<view class="bgf">
+		<image class="icon-tip" wx:if='{{type ==0}}' src="https://gdhflw.com/public/partime/coffeeImg/icon-fail.png" mode="widthFix"></image>
+		<image class="icon-tip" wx:if='{{type ==1}}' src="https://gdhflw.com/public/partime/coffeeImg/icon-success.png" mode="widthFix"></image>
+		<view class="fon48 font-b text-center" wx:if='{{type ==0}}'>很遗憾，竞拍失败</view>
+		<view class="fon48 font-b text-center" wx:if='{{type ==1}}'>竞拍成功</view>
+	</view>
+	<view>
+		 <van-cell custom-class='price' label-class='color0' title="出价金额" value="¥2000"  border="{{ false }}" />
+	</view>
+	
+	<view class="padding30">
+		<view class="btn bg0"  wx:if='{{type ==0}}' >查看其它项目</view>
+		<view class="btn bg0"  wx:if='{{type ==1}}' >立即支付</view>
+		<view class="btn">关闭</view>
+	</view>
+	
+</view>

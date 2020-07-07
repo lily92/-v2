@@ -1,0 +1,3 @@
+/* pages/goods/swiper/index.wxss */
+.swiper-wrapper{ position: relative;}
+.show-page{ width: 53rpx; z-index: 99; height: 53rpx; background: rgba(0,0,0,.5); position: absolute; right: 20rpx; bottom: 60rpx; color: #fff; border-radius: 50%; font-size: 11px; line-height: 53rpx; text-align: center;}

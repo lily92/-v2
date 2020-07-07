@@ -1,0 +1,32 @@
+<!--textarea-->
+<view class="conts  padding-t30">
+	<textarea class="areas" placeholder='更多评价请写在这里（最多300字）' minlength="{{min}}" maxlength="{{max}}" bindinput="inputs">
+    </textarea>
+</view>
+<view class='picture'>
+	<view class='right'>
+		<view class="parcel" wx:for="{{pics}}" wx:key="{{index}}">
+			<image src="{{pics[index]}}" class="According" data-index="{{index}}" mode="aspectFill" bindtap="previewImg"></image>
+			<!-- <image src="../../../../static/images/error.png" ></image> -->
+			<van-icon name="delete" class='deleteimg' catchtap="deleteImg" data-index="{{index}}" color="#333" />
+		</view>
+		<image src='../../../../static/images/add.png' class='add' bindtap='choose'></image>
+	</view>
+</view>
+<!--服务评价-->
+<view class="service">
+	<view class='score flex  flex-al-center' wx:for='{{scoreList}}'>
+		<view class='left'>
+			{{item.name}}
+		</view>
+		<view class='right'>
+			<van-rate color="#000" void-color='#000' gutter='20px' value="{{ item.score }}" bind:change="onChange" data-index='' />
+			<!-- <text class='rtxt'>{{score}}.0分</text> -->
+		</view>
+	</view>
+
+</view>
+
+
+<!--提交评价-->
+<button class='btn' bindtap="postData">发布评价</button>

@@ -1,0 +1,76 @@
+/* pages/home/score/component/header/index.wxss */
+
+.header-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 320rpx;
+  z-index: -1;
+}
+
+.header-bg image {
+  width: 750rpx;
+  height: 320rpx;
+}
+
+.ques-icon {
+  color: #fff;
+  font-weight: 800;
+}
+.ques-icon .van-icon-question-o {
+  font-weight: 800;
+}
+.integral-wrapper {
+  padding: 70rpx 0 10rpx;
+}
+
+.my-integral {
+  text-align: center;
+  font-size: 28rpx;
+  color: #fff;
+  font-weight: 800;
+}
+
+.integral-num {
+  text-align: center;
+  font-size: 50rpx;
+  color: #fff;
+  font-family: Comic Sans MS;
+  line-height: 70rpx;
+}
+
+.integral-category {
+  display: flex;
+  font-size: 28rpx;
+  color: #fff;
+  font-family: "Microsoft Yahei";
+  padding: 30rpx 40rpx;
+}
+
+.exchange {
+  flex: 1;
+  text-align: center;
+  position: relative;
+}
+
+.exchange .exchange-icon {
+  position: absolute;
+  top: -4rpx;
+  left: 70rpx;
+  font-size: 40rpx;
+}
+
+.sign-in {
+  padding: 10rpx 30rpx;
+  width: 40%;
+  margin: 6rpx auto;
+  text-align: center;
+  font-size: 28rpx;
+  color: #fff;
+  background: -webkit-linear-gradient(left, #e7c9a4, #e7dacb);
+  border-radius: 30rpx;
+}
+.had-sign-in {
+  background: -webkit-linear-gradient(left, #807f7f, #d8d7d6);
+}

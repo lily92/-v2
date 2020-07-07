@@ -1,0 +1,12 @@
+<!--pages/coffeeShopping/page/activity/collage/index/index.wxml-->
+<view >
+	<view class="pm-banner">
+		<image src="https://gdhflw.com/public/partime/coffeeImg/pt-banner.jpg" class="w100" mode="widthFix"></image>
+	</view>
+	<!--star 拍卖 -->
+	<view class="pm-list">
+		<list-item list='{{list}}' ></list-item>
+	</view>
+	<!--end  拍卖 -->
+</view>
+ 

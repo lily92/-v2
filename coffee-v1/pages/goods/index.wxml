@@ -1,0 +1,218 @@
+<!--pages/goods/index.wxml-->
+
+<view class="collection" bindtap="collection">{{collectionText}}</view>
+<import src="../../wxParse/wxParse.wxml" />
+
+<view class="goods-container">
+  <!-- 弹窗信息 -->
+  <van-toast id="van-toast" />
+  <!-- 轮播图 -->
+  <good-swiper swiper-img="{{imgUrls}}"></good-swiper>
+  <!-- 商品信息 -->
+  <view class="goods-info-wrapper">
+    <!-- 信息 -->
+    <view class="info-item">
+      
+      <view class="info-name">
+        <text>{{detailed.name}}</text>
+      </view>
+      <view class="info-desc">
+        <text>{{detailed.suk_name}}</text>
+      </view>
+	  <view class="info-price flex flex-just flex-al-center">
+	    <view>
+			<text>¥</text>
+			<text  class="margin-r20">{{detailed.price}}</text>
+			<text class="fon24 color9">￥2000.00</text>
+		</view>
+		
+		<!-- 拼团详情显示 -->
+		<view class="color9 fon24">5,010人已拼团</view>
+	  </view>
+    </view>
+
+    <!-- 促销 -->
+    <view class="bargin-item">
+      <view class="bargin bargin-title">促销</view>
+      <view class="bargin bargin-tag" wx:if="{{isBargin}}">店铺满减</view>
+      <view class="bargin bargin-detail" bindtap="moreBargin" wx:if="{{goods_sub_price!==''}}">
+        ¥{{goods_sub_price}} 优惠券,
+        <text wx:if="{{low_price>0}}">满{{low_price}}使用</text>
+        <text wx:else>无门槛使用</text>
+      </view>
+      <view class="bargin bargin-detail" bindtap="moreBargin" wx:if="{{goods_sub_price===''}}">
+        选择优惠券
+      </view>
+      <view class="bargin bargin-detail" wx:if="{{!isBargin}}">商家暂无促销活动</view>
+      <view class="more-icon" bindtap="moreBargin" wx:if="{{isBargin}}">
+        <van-icon name="more-o" />
+      </view>
+    </view>
+
+    <!-- 促销弹出层 -->
+    <van-popup show="{{ showBargin }}" bind:close="onCloseBargin" position="bottom">
+      <view class="chose-btn" bindtap="onCloseBargin">
+        <van-icon name="close" />
+      </view>
+      <view class="ticket">
+        <view class="ticket-item" wx:for="{{detailed.coupon}}" data-id="{{item.id}}" data-info="{{item.sub_price}}" bindtap="chosedTicket">
+          <image src="../../static/images/bargin-bg-2.png"></image>
+          <view class="ticket-content">
+            <text>¥</text>
+            <text class="ti-price">{{item.sub_price}}</text>
+            <view class="need">
+              <view>优惠券</view>
+              <view wx:if="{{low_price>0}}">满{{low_price}}使用</view>
+              <view wx:else>无门槛使用</view>
+            </view>
+          </view>
+        </view>
+
+      </view>
+    </van-popup>
+    <!-- 选择商品规格 -->
+    <view class="choose-goods">
+      <view class="choose choose-title">选择</view>
+      <!-- <view class="choose choose-item" bindtap="moreItem" wx:if="{{!isChoosed}}">选择商品属性</view> -->
+      <view class="choose choose-item" bindtap="moreItem">
+        <text>{{detailed.suk_name}}</text>，
+        <text>{{num}}件</text>，
+      </view>
+      <view class="more-icon" bindtap="moreItem">
+        <van-icon name="more-o" />
+      </view>
+    </view>
+
+    <!-- 商品属性弹出层 -->
+    <van-popup show="{{ showItem }}" bind:close="onCloseItem" position="bottom">
+      <!-- 按钮 -->
+      <view class="chose-btn" bindtap="onCloseItem">
+        <van-icon name="close" />
+      </view>
+      <!-- 信息 -->
+      <view class="goods-info">
+        <view class="goods-img">
+          <image src="{{detailed.images_url}}"></image>
+        </view>
+        <view class="number">
+          <view class="goods-price">
+            <text>¥ {{detailed.price}}</text>
+          </view>
+          <view class="goods-num">
+            <text>编号：{{detailed.id}}</text>
+          </view>
+        </view>
+      </view>
+      <!-- 颜色 -->
+      <view class="goods-color">
+        <label>颜色</label>
+        <view class="checked-btn">
+
+          <view wx:for="{{suk}}" class="suk {{suk_id==item.id?'ac':''}}" data-id="{{item.id }}" data-name="{{item.name}}" data-index="{{index}}" bindtap="handelsuk">
+            {{item.name}}
+          </view>
+
+        </view>
+      </view>
+      <!-- 数量 -->
+      <view class="goods-amount">
+        <label>数量</label>
+        <van-stepper value="{{ num }}" bind:change="onChange" class="amount-stepper" />
+      </view>
+      <view class="sub-btn pop-sub-btn">
+        <view class="sub add-to-cart" bindtap="addToCart">加入购物车</view>
+        <view class="sub purchase" bindtap="purchase">立即购买</view>
+      </view>
+    </van-popup>
+
+    <!-- 选择配送地址 -->
+    <view class="choose-address">
+      <view class="choose choose-title">送至</view>
+      <view class="choose choose-item" bindtap="moreAddress" wx:if="{{!isAddress}}">选择配送地址</view>
+      <view class="choose choose-item" bindtap="moreAddress" wx:if="{{isAddress}}">
+        <text>{{areainfo}}</text>
+      </view>
+      <view class="more-icon" bindtap="moreAddress">
+        <van-icon name="more-o" />
+      </view>
+    </view>
+    <!-- 配送地址弹出层 -->
+    <van-popup show="{{ showAddress }}" bind:close="onCloseAddress" position="bottom">
+      <view class="tab">
+        <text class="provinces">{{provinces}}</text>
+        <text bindtap="handeCity">{{city}}</text>
+        <text bindtap="handeArea">{{area}}</text>
+      </view>
+      <view class="city_list">
+        <text wx:for="{{city_list}}" data-id="{{item.id}}" data-name='{{item.area_name}}' data-level="{{item.level}}" data-area_code='{{item.area_code}}' bindtap="handelProvinces">
+          {{item.area_name}}
+        </text>
+        <view class="addres-detailed" wx:if="{{isArea}}">
+          <textarea placeholder="这个只有在按钮点击的时候才聚焦" />
+
+        </view>
+      </view>
+
+      <view class="area-other">
+        <text class="other">选择其他地址</text>
+      </view>
+    </van-popup>
+
+    <!-- 运费 -->
+    <!-- <good-fee noPostFee="{{noPostFee}}" detailed="{{detailed}}"></good-fee> -->
+
+    <!-- 评论 -->
+    <good-ratings ratings="{{detailed.eva}}" eavcout="{{detailed.eavcout}}" eavnumber="{{detailed.eavnumber}}"></good-ratings>
+
+    <!-- 商品介绍 -->
+    <view class="goods-intro">
+      <van-tabs sticky animated swipeable color="transparent" tab-class="intro-navbar">
+        <van-tab title="商品介绍">
+          <!-- <view class="des-line">
+            商品视频
+          </view> -->
+          <!-- code -->
+          <view class="des-line">
+            商品详情
+          </view>
+          <view>
+
+            <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+          </view>
+          <!-- code -->
+          <view style="margin-bottom:100rpx;"></view>
+        </van-tab>
+        <van-tab title="商品规格">
+            <template is="wxParse" data="{{wxParseData:spec.nodes}}" />
+          <view style="margin-bottom:100rpx;"></view>
+        </van-tab>
+        <van-tab title="包装售后">
+               <template is="wxParse" data="{{wxParseData:pack.nodes}}" />
+          <view style="margin-bottom:100rpx;"></view>
+        </van-tab>
+      </van-tabs>
+    </view>
+     
+	 <view class="h100"></view>
+  </view>
+  <!-- 底部 -->
+  <view class="footer-bar">
+    <view class="icon-item">
+      <view class="shop-icon" bindtap="openShop">
+        <van-icon name="shop-o" />
+        <view class="shop-text">商铺</view>
+      </view>
+      <view class="shop-icon" bindtap="openCart">
+        <van-tag plain round >{{totalCount}}</van-tag>
+        <van-icon name="shopping-cart-o" />
+        <view class="shop-text">购物车</view>
+      </view>
+    </view>
+    <view class="sub-btn">
+      <view class="sub add-to-cart" bindtap="moreItem">加入购物车</view>
+      <view class="sub purchase" bindtap="purchase">立即购买</view>
+    </view>
+  </view>
+  <!--   
+  <good-footer cart="{{cart}}"></good-footer> -->
+</view>
