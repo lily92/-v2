@@ -145,7 +145,8 @@
         "page/case/curveDesign/step10/step10",
         "page/case/curveDesign/step11/step11",
         "page/case/curveDesign/step12/step12",
-        "page/case/curveDesign/setTitle/setTitle"
+        "page/case/curveDesign/setTitle/setTitle",
+        "ec-canvas/ec-canvas"
       ]
     }
   ]

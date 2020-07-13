@@ -5,7 +5,7 @@
   bind:close="onClose" >
  	<view class="a-item flex flex-just" >
 		<view class="img">
-			<image class="w100" mode="widthFix" src="https://gdhflw.com/public/partime/coffeeImg/cp-icon.png"></image>
+			<image class="w100  img" mode="aspectFit" src="https://gdhflw.com/public/partime/coffeeImg/cp-icon.png"></image>
 		</view>
 		<view class="con ">
 			<view class="icon-img">

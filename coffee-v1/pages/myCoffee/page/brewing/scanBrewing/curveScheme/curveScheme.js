@@ -1,4 +1,5 @@
 import * as echarts from '../../../../../../ec-canvas/echarts';
+
 const app = getApp();
 
 var symbolSize = 20;

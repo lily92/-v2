@@ -1,4 +1,4 @@
-import * as echarts from '../../../../../ec-canvas/echarts';
+import * as echarts from '../../../ec-canvas/echarts';
 import Card from '../../../../../palette/cup';
 const app = getApp();
 

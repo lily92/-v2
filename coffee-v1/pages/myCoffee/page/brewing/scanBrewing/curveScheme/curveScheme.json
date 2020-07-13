@@ -1,6 +1,6 @@
 {
   "usingComponents": {
-    "ec-canvas": "../../../../../../ec-canvas/ec-canvas"
+    "ec-canvas": "/pages/myCoffee/ec-canvas/ec-canvas"
   },
   "navigationBarTitleText": "曲线方案"
 }
