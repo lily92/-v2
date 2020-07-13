@@ -1,0 +1,19 @@
+<!--pages/myCoffee/page/case/curveDesign/component/lineBar/lineBar.wxml-->
+<view class="line-box positionr">
+	<view class="y-line-number">
+		<view wx:for='{{yLineNum}}' class="item" wx:key='index'>{{item}}</view>
+	</view>
+
+	<view style="height:360rpx; width:100%" class="bar-list">
+		<view wx:for='{{pressureLine}}' class="flex-1" wx:key='index' >
+			<slider-vertical block-color="#fff" block-size="40" backgroundColor="transparent" activeColor="{{index == Pindex ?'#ff9f4d':'#fff'}}" bindchange="slider1change" bindchanging="slider1changing" step="1" min="0" max="10" value="{{item}}"  disabled="{{index == Pindex ?false:true}}" show-value="{{true}}">
+			</slider-vertical>
+		</view>
+	</view>
+</view>
+
+<view class="btn-action">
+	<view class="btn" bindtap="reduce">-</view>
+	<view class="sce">（Bar）</view>
+	<view class="btn" bindtap="add">+</view>
+</view>

@@ -1,0 +1,21 @@
+/* pages/myCoffee/page/case/curveDesign/setTitle/setTitle.wxss */
+page{ background: #f7f7f7;}
+.van-uploader__upload{ background: #fff !important;}
+.title{ height: 80px; border-radius: 8px; background: #fff; width:530rpx; padding: 20rpx; box-sizing: border-box;}
+.fon30{ font-size: 30rpx;}
+.margin-b10{ margin-bottom: 10rpx;}
+.btn{
+	width: 680rpx;
+	height: 90rpx;
+	background-image: linear-gradient(-75deg, 
+		#2d2d2d 0%, 
+		#111111 100%), 
+	linear-gradient(
+		#ffffff, 
+		#ffffff);
+	background-blend-mode: normal, 
+		normal;
+  border-radius: 41rpx;
+  line-height: 90rpx; text-align: center; color: #fff;
+  position: absolute; bottom: 50rpx; left: 50%; transform: translateX(-50%);
+}

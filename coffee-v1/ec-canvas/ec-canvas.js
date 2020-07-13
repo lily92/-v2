@@ -181,16 +181,21 @@ Component({
           .exec(res => {
             const canvasNode = res[0].node
             opt.canvas = canvasNode
-            wx.canvasToTempFilePath(opt)
+           
+            setTimeout(()=>{
+              wx.canvasToTempFilePath(opt)
+            },200)
+			
+            
           })
       } else {
         // 旧的
         if (!opt.canvasId) {
           opt.canvasId = this.data.canvasId;
         }
-        ctx.draw(true, () => {
+        ctx.draw(true,setTimeout(()=>{
           wx.canvasToTempFilePath(opt, this);
-        });
+        },100))
       }
     },
 

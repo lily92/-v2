@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "time":"../component/time/time",
+    "stepNum":"../component/stepNum/stepNum",
+    "rectangleBar":"../component/rectangleBar/rectangleBar",
+    "btnGroup":"../component/btnGroup/btnGroup"
+  }
+}

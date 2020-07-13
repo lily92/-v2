@@ -8,8 +8,8 @@ page {
 .container {
   /* background: #fff; */
   display: block;
-  
 }
+.text-just{text-align: justify;}
 
 
 .common-header-xian {

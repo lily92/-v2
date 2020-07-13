@@ -1,0 +1,17 @@
+<!--pages/myCoffee/page/brewing/scanBrewing/contrast/contrast.wxml-->
+<view>
+
+ <view class="master" wx:if='{{showShareImg}}'>
+   <painter  
+    customStyle=''
+    dancePalette="{{template}}"
+    palette="{{paintPallette}}"
+    bind:imgOK="onImgOK" 
+    bind:touchEnd="touchEnd" 
+    action="{{action}}" 
+    />
+  <view class="btn-save" bindtap="saveImage">保存</view>
+ </view>
+ </view>
+
+

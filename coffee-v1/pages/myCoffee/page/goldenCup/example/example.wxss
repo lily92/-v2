@@ -1,2 +1,0 @@
-/* src/pages/xml2can/xml2can.wxss */
-.fix-save{ background: #000; left: 0; top: 0; bottom: 0; top: 0; position: fixed; width: 100%;}

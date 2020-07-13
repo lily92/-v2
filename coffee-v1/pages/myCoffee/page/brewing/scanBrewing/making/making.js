@@ -1,5 +1,4 @@
 import * as echarts from '../../../../../../ec-canvas/echarts';
-import * as dark from '../../../../../../ec-canvas/dark';
 const app = getApp();
 
 var symbolSize = 20;
@@ -26,7 +25,7 @@ var data2 = [
 
 
 function initChart(canvas, width, height, dpr) {
-	const chart = echarts.init(canvas, 'dark', {
+	const chart = echarts.init(canvas, null, {
 		width: width,
 		height: height,
 		devicePixelRatio: dpr // new
@@ -35,6 +34,7 @@ function initChart(canvas, width, height, dpr) {
 
 
 	var option = {
+		backgroundColor:'#2a2a2a',
 		title: {
 			text: ''
 		},
@@ -47,7 +47,10 @@ function initChart(canvas, width, height, dpr) {
 				return 'X: ' + params.data[0].toFixed(2) + '<br>Y: ' + params.data[1].toFixed(2);
 			}
 		},
-		grid: {},
+		grid: {
+			y:25,
+			y2:25
+		},
 		xAxis: {
 			min: 5,
 			max: 60,
@@ -83,7 +86,15 @@ function initChart(canvas, width, height, dpr) {
 				animationDelay: function(idx) {
 					return idx * 10;
 				},
-				data: data
+				data: data,
+				itemStyle: {
+					normal: {
+						color: "#adb8c6",//折线点的颜色
+						lineStyle: {
+						color: "#adb8c6"//折线的颜色
+					 }
+				 }
+			}
 			},
 			{
 				id: 'b',
@@ -95,7 +106,15 @@ function initChart(canvas, width, height, dpr) {
 				data: data2,
 				animationDelay: function(idx) {
 					return idx * 10 + 100;
-				}
+				},
+				itemStyle: {
+					normal: {
+						color: "#fdb685",//折线点的颜色
+						lineStyle: {
+						color: "#fdb685"//折线的颜色
+					 }
+				 }
+			}
 			}
 		],
 		animationEasing: 'elasticOut',
@@ -167,7 +186,7 @@ Page({
 		ec: {
 			onInit: initChart
 		},
-		iscomplete: false
+		iscomplete: true
 	},
 
 	onReady() {},
@@ -176,6 +195,22 @@ Page({
 		console.log('app.globalData.noNetwork:', app.globalData.Network)
 		this.setData({
 			nonetWork: true
+		})
+	}, 
+	pingfen(){
+		wx.navigateTo({
+			url: '../score/score',
+		})
+	
+	},
+	contrast(){
+		wx.navigateTo({
+			url: '../contrast/contrast',
+		})
+	},
+	close(){
+		wx.redirectTo({
+			url: '../../historyBrewing/historyBrewing',
 		})
 	}
 });

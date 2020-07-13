@@ -1,7 +1,7 @@
 <!--pages/reads/list/index.wxml-->
 
 <view class="article-wrapper">
-	<navigator url="../detail/detail?id=1&type=1" class="list-item bg{{item.type}}" wx:for="{{articleList}}" wx:key="index" >
+	<navigator url="../detail/detail?id=1&type={{item.type}}" class="list-item bg{{item.type}}" wx:for="{{articleList}}" wx:key="index" >
 		<view class="item-top">
 			<view class="name">风味雷达图</view>
 			<view class="date">日期：2020-3-1</view>

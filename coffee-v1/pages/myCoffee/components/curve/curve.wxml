@@ -1,0 +1,35 @@
+<!--pages/myCoffee/components/curve/curve.wxml-->
+	<van-popup show="{{ showDetail }}" bind:close="onCloseDetail" round='true' custom-class='round'>
+		<view class="tip">
+			<!-- list -->
+			<view class="fon28 case-add-title">选择曲线</view>
+			<scroll-view scroll-y="{{true}}" class="select-height">
+				<van-radio-group value="{{ result }}" bind:change="onChangeCheckbox">
+					<view wx:for='{{selectList}}' wx:key='index' class='flex flex-al-center w100 r-item flex-just '>
+						<van-radio name="{{item.value}}" checked-color="#000">
+						</van-radio>
+						<view class="flex flex-al-center select-con">
+							<image class="case-img" src="https://gdhflw.com/public/partime/coffeeImg/cp-icon.png" mode="widthFix"></image>
+							<view class="case-desc flex flex-al-center flex-just">
+								<image src="https://gdhflw.com/public/partime/coffeeImg/icon-cup.png" class="desc-icon" mode="widthFix"></image>
+								<view class="desc-tit">
+									<view class="nowarp  fon24">
+										安溪茶农冲泡铁观
+									</view>
+									<view class="fon20 color9">时间：3：45</view>
+								</view>
+							</view>
+						</view>
+					</view>
+
+				</van-radio-group>
+			</scroll-view>
+
+
+			<!-- end list -->
+			<view class="flex flex-just">
+				<view class="btn margin0-auto" bindtap="onCloseDetail">取消</view>
+				<view class="btn margin0-auto" bindtap="comfrim">确认</view>
+			</view>
+		</view>
+	</van-popup>

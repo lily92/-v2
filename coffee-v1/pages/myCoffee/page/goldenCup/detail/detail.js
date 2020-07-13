@@ -1,15 +1,10 @@
 import * as echarts from '../../../../../ec-canvas/echarts';
-import Card from '../../../../../palette/img';
+import Card from '../../../../../palette/cup';
 const app = getApp();
 
-function initChart(canvas, width, height, dpr) {
-  const chart = echarts.init(canvas, null, {
-    width: width,
-    height: height,
-    devicePixelRatio: dpr // new
-  });
+function setOption(chart) {
   var option = {
-    backgroundColor: "#535c46",
+    backgroundColor: "transparent",
     color: ["#37A2DA", "#FF9F7F"],
     xAxis: {
       show: false
@@ -52,7 +47,7 @@ function initChart(canvas, width, height, dpr) {
     nameGap:3
     },
     series: [{
-      name: '预算 vs 开销',
+      name: '',
       type: 'radar',
       data: [{
         value: [430, 340, 500, 300, 490, 400],
@@ -67,9 +62,7 @@ function initChart(canvas, width, height, dpr) {
       ]
     }]
   };
-
   chart.setOption(option);
-  return chart;
 }
 
 Page({
@@ -82,11 +75,17 @@ Page({
     }
   },
   data: {
+    type:1,
+    starColor:'#ff9b44',
+    starColorVoid:"#9f9f9f",
     src: '' ,
     showShareImg:false,
     ec: {
-      onInit: initChart
+        // 将 lazyLoad 设为 true 后，需要手动初始化图表
+     lazyLoad: true
     },
+    isLoaded: false,
+    isDisposed: false,
     file:'',
     show:true,
     rateList:[
@@ -160,8 +159,131 @@ Page({
       delete: {
         icon: '/palette/close.png'
       }
+    },
+    bgcolor:"#535c46",
+    option:{
+      backgroundColor: "transparent",
+      color: ["#37A2DA", "#FF9F7F"],
+      xAxis: {
+        show: false
+      },
+      yAxis: {
+        show: false
+      },
+      radar: {
+        // shape: 'circle',
+        indicator: [{
+          name: '香气',
+          max: 500
+        },
+        {
+          name: '风味',
+          max: 500
+        },
+        {
+          name: '酸质',
+          max: 500
+        },
+        {
+          name: '平衡度',
+          max: 500
+        },
+        {
+          name: '口感',
+          max: 500
+        },
+        {
+          name: '回甘',
+          max: 500
+        }
+        ],
+        name: {
+          textStyle: {
+              color: '#fff'
+          }
+      },
+      nameGap:3
+      },
+      series: [{
+        name: '',
+        type: 'radar',
+        data: [{
+          value: [430, 340, 500, 300, 490, 400],
+          name: '预算',
+          areaStyle: {
+            color: 'rgba(255, 155, 68, 0.5)'
+        },
+        lineStyle: {
+          color:'rgba(255, 155, 68, 0.5)'
+         },
+        }
+        ]
+      }]
     }
   },
+    // 获取数据后初始化图表
+    init () {
+      let that  = this
+      this.ecComponent.init((canvas, width, height, dpr) => {
+        // 获取组件的 canvas、width、height 后的回调函数
+        // 在这里初始化图表
+        const chart = echarts.init(canvas, null, {
+          width: width,
+          height: height,
+          devicePixelRatio: dpr // new
+        });
+        chart.setOption(that.data.option);
+        // 将图表实例绑定到 this 上，可以在其他成员函数（如 dispose）中访问
+        this.chart = chart;
+        this.setData({
+          isLoaded: true,
+          isDisposed: false
+        });
+  
+        // 注意这里一定要返回 chart 实例，否则会影响事件处理等
+        return chart;
+      });
+    },
+  onLoad(options){
+    const that = this
+    let type = options.type || 1
+    let  bgcolor = '#000'
+    
+    switch (type) {
+      case '1':
+        bgcolor = '#535c46'
+        break;
+      case '2':
+      bgcolor = '#c1ac99'
+      break;
+      case '3':
+      bgcolor = '#ff9b44',
+      that.setData({
+        'starColor':"#fff",
+        'starColorVoid':"#fff"
+      })
+      break;
+      default:
+        break;
+    }
+    // let option = this.data.option
+    // option.backgroundColor = '#000'
+    that.setData({
+      'bgcolor':bgcolor,
+      'type':type
+      // 'option':option
+    })
+   
+  },
+    dispose: function () {
+      if (this.chart) {
+        this.chart.dispose();
+      }
+  
+      this.setData({
+        isDisposed: true
+      });
+    },
 
   onImgOK(e) {
     this.imagePath = e.detail.path;
@@ -171,7 +293,7 @@ Page({
     if (this.isSave) {
       this.saveImage(this.imagePath);
     }
-  },
+  }, 
 
   onRevert() {
     const pre = this.history.pop()
@@ -240,6 +362,9 @@ Page({
   },
 
   saveImage(imagePath = '') {
+    wx.showLoading({
+      title: '请稍后',
+    })
     if (!this.isSave) {
       this.isSave = true;
       this.setData({
@@ -251,6 +376,9 @@ Page({
         filePath: imagePath,
       });
     }
+    wx.hideLoading({
+      complete: (res) => {},
+    })
   },
 
   touchEnd({ detail }) {
@@ -287,25 +415,53 @@ Page({
     }
     this.setData(props);
   },
+  //点击分享按钮生成图片
   showShare(){
-    wx.showLoading({
-      title: '图片正在生成，请稍后',
-    })
-     let that = this
-     let template =  new Card().palette()
-     template.views[3].url = that.data.file
-     console.log(template)
-     that.setData({
-      template: template,
-      showShareImg:true,
-      show:false
+    let that = this
+    this.saveCanvasImg(function(){
+      wx.showLoading({
+        title: '图片正在生成……'
+      })
+       let template =  new Card().palette()
+       //改变模板的值,生成不同的背景颜色
+       template.views[0].css.color = that.data.bgcolor
+       template.views[1].css.color = that.data.bgcolor
+       template.views[2].css.color = that.data.bgcolor
+       template.views[4].url = that.data.file //图表img
+       template.views[3].text = '标题'
+       template.views[5].text= '分享标题花要追溯到二战时期，那时意式\n咖啡逐渐进入了人们的视线，被很多人拥簇。'
+       let view =template.views
+       console.log(that.data.type)
+       if(that.data.type == '3'){
+         console.log('3')
+         view = view.map(i => {
+          if(i.url == 'https://gdhflw.com/public/partime/coffeeImg/star1.png'){
+            i.url = 'https://gdhflw.com/public/partime/coffeeImg/star0.png'
+          }
+         return i
+       })
+       }
+       template.views = view
+       console.log(template)
+       that.setData({
+        template: template,
+        showShareImg:true,
+        show:false
+      });
+      console.log(that.data.template)
+      wx.hideLoading({
+        complete: (res) => {},
+      })
     });
-    wx.hideLoading({
-      complete: (res) => {},
+  },
+  closeShareImg(){
+    this.setData({
+      showShareImg:false,
+      show:true
     })
   },
   //保存canvas-成为图片
-  saveCanvasImg(){
+  saveCanvasImg(callback){
     wx.showLoading({
       title: '正在加载'
     })
@@ -324,6 +480,7 @@ Page({
           file:res.tempFilePath,
           show:false
         })
+        callback()
         wx.hideLoading({
           complete: (res) => {
             console.log('success')
@@ -340,16 +497,15 @@ Page({
       }
     })
   },
+  save(){
+    console.log('save')
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function() {
-     let that = this
-    //  that.saveImg();
-    // that.saveCanvasImg()
-    // let template =  new Card().palette()
-    // this.setData({
-    //   template: template
-    // });
+      // 获取组件
+    this.ecComponent = this.selectComponent('#mychart-dom-graph');
+    this.init();
   },
 });

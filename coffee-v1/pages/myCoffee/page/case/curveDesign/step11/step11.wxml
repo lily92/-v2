@@ -1,0 +1,7 @@
+<!--pages/myCoffee/page/case/curveDesign/step1/step1.wxml-->
+
+<view class="container ">
+	<ec-canvas id="mychart-dom-graph" canvas-id="mychart-graph" ec="{{ ec }}"></ec-canvas>
+</view>
+<stepNum stepDesc='{{stepDesc}}'></stepNum>
+<btnGroup bind:next='next' bind:prev='prev'></btnGroup>

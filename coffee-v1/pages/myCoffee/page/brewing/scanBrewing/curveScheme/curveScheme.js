@@ -1,5 +1,4 @@
 import * as echarts from '../../../../../../ec-canvas/echarts';
-import * as dark from '../../../../../../ec-canvas/dark';
 const app = getApp();
 
 var symbolSize = 20;
@@ -15,7 +14,7 @@ var data = [
 ];
 
 function initChart(canvas, width, height, dpr) {
-	const chart = echarts.init(canvas, 'dark', {
+	const chart = echarts.init(canvas, null, {
 		width: width,
 		height: height,
 		devicePixelRatio: dpr // new
@@ -24,6 +23,7 @@ function initChart(canvas, width, height, dpr) {
 
 
 	var option = {
+		backgroundColor:'#2a2a2a',
 		title: {
 			text: ''
 		},
@@ -33,7 +33,10 @@ function initChart(canvas, width, height, dpr) {
 				return 'X: ' + params.data[0].toFixed(2) + '<br>Y: ' + params.data[1].toFixed(2);
 			}
 		},
-		grid: {},
+		grid: {
+			y:25,
+			y2:25
+		},
 		xAxis: {
 			min: 5,
 			max: 60,
@@ -62,34 +65,21 @@ function initChart(canvas, width, height, dpr) {
 			interval: 1 //每次增加几个
 
 		},
-		// dataZoom: [
-		//     {
-		//         type: 'slider',
-		//         xAxisIndex: 0,
-		//         filterMode: 'empty'
-		//     },
-		//     {
-		//         type: 'slider',
-		//         yAxisIndex: 0,
-		//         filterMode: 'empty'
-		//     },
-		//     {
-		//         type: 'inside',
-		//         xAxisIndex: 0,
-		//         filterMode: 'empty'
-		//     },
-		//     {
-		//         type: 'inside',
-		//         yAxisIndex: 0,
-		//         filterMode: 'empty'
-		//     }
-		// ],
 		series: [{
 			id: 'a',
 			type: 'line',
 			// smooth: true,
 			// symbolSize: symbolSize,
-			data: data
+			symbolSize: 8,   //折线点的大小
+			data: data,
+			itemStyle: {
+				normal: {
+					color: "#adb8c6",//折线点的颜色
+					lineStyle: {
+					color: "#adb8c6"//折线的颜色
+				 }
+			 }
+		}
 		}]
 	};
 
@@ -132,32 +122,6 @@ function initChart(canvas, width, height, dpr) {
 	return chart;
 }
 
-function updatePosition() {
-	chart.setOption({
-		graphic: echarts.util.map(data, function(item, dataIndex) {
-			return {
-				position: chart.convertToPixel('grid', item)
-			};
-		})
-	});
-}
-
-function showTooltip(dataIndex) {
-	chart.dispatchAction({
-		type: 'showTip',
-		seriesIndex: 0,
-		dataIndex: dataIndex
-	});
-}
-
-function hideTooltip(dataIndex) {
-	chart.dispatchAction({
-		type: 'hideTip'
-	});
-}
-
-
-
 Page({
 	onShareAppMessage: function(res) {
 		return {
@@ -187,7 +151,7 @@ Page({
 				'desc': '旧街场白咖啡'
 			},
 			{
-				'name': '处理方式：：',
+				'name': '处理方式：',
 				'desc': '水洗'
 			},
 			{
@@ -204,6 +168,11 @@ Page({
 		console.log('app.globalData.noNetwork:', app.globalData.Network)
 		this.setData({
 		 nonetWork:true
+		})
+	},
+	making(){
+		wx.navigateTo({
+			url: '../findMachine/findMachine',
 		})
 	}
 });

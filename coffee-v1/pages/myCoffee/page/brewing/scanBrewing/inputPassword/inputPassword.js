@@ -14,9 +14,10 @@ Page({
   onLoad: function (options) {
 
   },
-  goConfrim(){
+  goConfrim(e){
+    console.log('接收到的password',e.detail.value)
     wx.navigateTo({
-      url: '/pages/myCoffee/page/brewing/historyBrewing/historyBrewing?isDownLoad=1',
+      url: '../clean/clean',
     })
   },
 

@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+     "ec-canvas": "/ec-canvas/ec-canvas",
+     "painter":"/components/painter/painter",
+     "van-overlay": "/vant-weapp/dist/overlay/index",
+     "shareImgbtn":"/components/shareImgBtn/shareImgBtn"
+  },
+  "navigationBarTitleText": "分享"
+}

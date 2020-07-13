@@ -1,0 +1,8 @@
+<!--pages/myCoffee/page/case/curveDesign/component/btnGroup/btnGroup.wxml-->
+<view class="view-group-height"></view>
+<view class="view-group">
+
+<view class="btn" bindtap="prev"  wx:if="{{!isFrist}}" >上一步</view>
+<view class="btn {{isFrist?'block':''}}" bindtap="next" > 下一步</view>
+</view>
+ 

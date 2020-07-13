@@ -1,10 +1,15 @@
 /* pages/myCoffee/page/brewing/scanBrewing/selectMachine/selectMachine.wxss */
 page{ background: #f7f7f7;}
+.list{ display: flex; flex-wrap: wrap;}
 .txt{ white-space: nowrap; text-overflow: ellipsis; overflow: hidden;}
 .item{ width: 50%; padding: 20rpx; box-sizing: border-box;}
 .item-img{ width: 260rpx; height: 260rpx; margin: 0 auto 20rpx; display: block;}
 .radio{ position: absolute; right: 20rpx; top: 20rpx;}
 .machine-list{ height: 88vh;}
+.padding20{ padding: 20rpx;}
+.text-center{  text-align: center;}
+.fon24{ font-size: 24rpx;}
+.bgf{ background:#fff;}
 .btn-confirm {
 	width: 710rpx;
 	line-height: 90rpx;

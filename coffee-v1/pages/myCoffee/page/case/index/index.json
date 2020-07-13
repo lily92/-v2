@@ -4,8 +4,8 @@
 		"van-loading": "/vant-weapp/dist/loading/index",
 		"van-popup": "/vant-weapp/dist/popup/index",
 		"screen": "../../../components/screen/screen",
-		  "van-tab": "/vant-weapp/dist/tab/index",
-				"van-tabs": "/vant-weapp/dist/tabs/index"
+		"van-tab": "/vant-weapp/dist/tab/index",
+		"van-tabs": "/vant-weapp/dist/tabs/index"
 	},
 	"navigationBarTitleText": "曲线方案"
 }

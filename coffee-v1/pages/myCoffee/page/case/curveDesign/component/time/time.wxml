@@ -1,0 +1,6 @@
+<!--pages/myCoffee/page/case/curveDesign/component/time/time.wxml-->
+<view class="time">{{time}} 
+<text wx:if='{{isBar == true}}'>Bar</text>
+<text wx:if='{{isBar == false}}'>s</text>
+</view>
+ 

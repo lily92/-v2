@@ -1,0 +1,9 @@
+<!--pages/myCoffee/page/goldenCup/component/item-detail/itemDetail.wxml-->
+	 <view class=" bggreen  box1 flex padding20 colorf box2 "  style="background:{{bgcolor}}">
+			<view class="w50  fon24" wx:for='{{descList}}' wx:key='index'>
+				 <view class="border-b">
+				   <text  class=" colorf ">{{item.key}}：</text>
+			 	<text class="date">{{item.value}}</text>
+				 </view>
+			</view>
+		</view>

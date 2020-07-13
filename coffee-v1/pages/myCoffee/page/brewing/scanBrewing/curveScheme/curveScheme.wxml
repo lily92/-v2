@@ -1,5 +1,5 @@
 <!--index.wxml-->
-<include src="/components/common/common" wx:if='{{!nonetWork}}' />
+ <include src="/components/common/common" wx:if='{{nonetWork}}' />
 <view class="padding30">
 	<view  class="case-top flex flex-just flex-al-center">
 	  <image src="https://gdhflw.com/public/partime/coffeeImg/cp-icon.png" class="case-img" mode="widthFix">
@@ -37,5 +37,5 @@
 <view class="footer-btn flex  flex-just ">
 	<button  class="btn-group fon26" hover-class="op5">保存</button>
 	<button  class="btn-group fon26" hover-class="op5">取消</button>
-	<navigator url="/pages/myCoffee/page/brewing/scanBrewing/making/making"  class="btn-group fon26" hover-class="op5">制作</navigator>
+	<view  class="btn-group fon26" hover-class="op5" bindtap="making">制作</view>
 </view>

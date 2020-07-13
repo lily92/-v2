@@ -4,69 +4,45 @@
 		<text class="type color1">茶</text>
 		<text class="type color2">手冲</text>
 		<text class="type color3">意式</text>
-	</view>
+	</view> 
 	<view>
 		<view class="">
 			<input class="input-title" placeholder="请填写标题" />
 		</view>
-		<view class=" bggreen positionr box1">
+		<view class=" bggreen positionr box1" style="background:{{bgcolor}}">
 			<view class="detail-box1 colorf fon26 padding20">
 				<view class="flex flex-just flex-al-center rate-item" wx:for='{{rateList}}' wx:key='index'>
 					<view>{{item.name}}</view>
 					<view class="star flex flex-al-center">
-						<van-rate size='15' color='#ff9b44' void-color='#9f9f9f' value="{{ item.value }}" bind:change="onChange" readonly />
+						<van-rate size='15' color='{{starColor}}' void-color='{{starColorVoid}}' value="{{ item.value }}" bind:change="onChange" readonly />
 					</view>
 					<view class="score">{{item.score}}分</view>
 				</view>
 			</view>
-			<view class="container "  wx:if='{{show}}' >
+			<view class="container " hidden="{{ !show }}">
 				<ec-canvas id="mychart-dom-graph" canvas-id="mychart-graph" ec="{{ ec }}"></ec-canvas>
 			</view>
-		  	<view class="container "  wx:if='{{show}}' >
-				<image class="canvas-img" src="{{file}}" ></image>
-				</view>
-		</view>
-			<image class="canvas-img" src="{{file}}" ></image>
-
-		<!-- <view class=" bggreen  box1 flex padding20 color box2">
-			<view class="w50 flex flex-al-center" wx:for='{{descList}}' wx:key='index'>
-				<text  class="fon24 colorf w49">{{item.key}}：</text>
-				<text class="date">{{item.value}}</text>
+			<view class="container " hidden="{{ show }}">
+				<image class="canvas-img" src="{{file}}"></image>
 			</view>
 		</view>
-		<view class=" bggreen  padding20 color box3">
-			<textarea class="fon24 colorf textarea" placeholder="认真写下此刻的想法，能收获更多的互动哦！"></textarea>
-		</view> -->
+		-
+		<item-detail descList='{{descList}}' bgcolor='{{bgcolor}}'></item-detail>
 
-		<button  bindtap="saveCanvasImg">生成图片{{show}}</button>
-		<image class="canvas-img" src="{{file}}" ></image>
-
+		<view class=" bggreen  padding20 color box3" style="background:{{bgcolor}}">
+			<textarea class="fon24 colorf textarea" placeholder-class='colorf' placeholder="认真写下此刻的想法，能收获更多的互动哦！"></textarea>
+		</view>
 	</view>
 
-	<view class="btn-group-height"></view>
-	<view class="btn-group  fon28 flex flex-just">
-		<view class="btn btn-save">保存</view>
-		<view class="btn btn-share" bindtap="showShare">分享</view>
-	</view>
+	<btn-group bind:share='showShare' bind:save='save'></btn-group>
 
-    <cover-view class="fix-save" wx:if='{{showShareImg == true}}'>
-		     <painter  
-    customStyle='margin-left:20rpx; margin-top:20rpx'
-    customActionStyle="{{customActionStyle}}"
-    dancePalette="{{template}}"
-    palette="{{paintPallette}}"
-    bind:imgOK="onImgOK" 
-    bind:touchEnd="touchEnd" 
-    action="{{action}}" 
-    />
-		</cover-view>
+<view class="fix-save" wx:if='{{showShareImg == true}}'>
+	<scroll-view class="scroll" scroll-y='{{true}}'>
+		<painter customStyle='margin-top:20rpx' customActionStyle="{{customActionStyle}}" dancePalette="{{template}}" palette="{{paintPallette}}" bind:imgOK="onImgOK" bind:touchEnd="touchEnd" action="{{action}}" />
+		<shareImgbtn isshow='{{showShareImg}}'  bind:closeShareImg='closeShareImg'  bind:saveImage='saveImage'></shareImgbtn>
 
-
-
-	 <cover-view  bindtap="saveImage" class="btn-save-img" wx:if='{{showShareImg == true}}'>长摁图片保存分享给好友</cover-view> 
-
-
-
+	</scroll-view>
+</view>
 
 
 </view>

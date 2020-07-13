@@ -1,0 +1,13 @@
+/* pages/myCoffee/page/case/curveDesign/component/btnAction/btnAction.wxss */
+.btn {
+	width: 39rpx;
+  height: 39rpx;
+  line-height: 38rpx;
+  background-color: #ffffff;
+  text-align: center;
+   font-size: 30rpx;
+   color: #999;
+    border-radius: 50%;
+}
+.sce{ font-size: 20rpx; color: #8c8c8c;}
+.btn-action{ display: flex; align-items: center; justify-content: space-between; width: 635rpx; margin: 20rpx auto;}

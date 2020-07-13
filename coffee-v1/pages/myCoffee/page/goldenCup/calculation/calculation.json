@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "ec-canvas": "/ec-canvas/ec-canvas",
+    "van-rate": "/vant-weapp/dist/rate/index",
+    "painter":"/components/painter/painter",
+    "item-detail":"../component/itemDetail/itemDetail",
+    "btn-group":"../component/btnGroup/btnGroup"
+  },
+  "navigationBarTitleText": "金杯趣味计算"
+} 

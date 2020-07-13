@@ -10,13 +10,13 @@
 		  <view class="color9 fon24">Espresso 意式浓缩咖啡</view>
 	  </view>
 	</view>
-	<view class="bg2a">
+	<view class="bg2a positionr">
 		<view class="container">
 		  <ec-canvas id="mychart-dom-line" canvas-id="mychart-line" ec="{{ ec }}"></ec-canvas>
 		</view>
 		
 		<view class="fon24 color-c tip" wx:if='{{!iscomplete}}'>
-			注：为保持链接畅通请保持离机器3米之内
+			注：为保持链接畅通请保持离机器3米之内 
 		</view>
 		
 	</view>
@@ -24,11 +24,9 @@
 	
 </view>
 
-<template wx:if='{{iscomplete}}'>
-<view class="footer-height"></view>
-<view class="footer-btn flex  flex-just ">
-	<button  class="btn-group fon26" hover-class="op5">曲线对比图</button>
-	<button  class="btn-group fon26" hover-class="op5">曲线评分图</button>
-	<button  class="btn-group fon26" hover-class="op5">关闭</button>
+<view class="footer-height"  wx:if='{{iscomplete == true}}'></view>
+<view class="footer-btn flex  flex-just "  wx:if='{{iscomplete == true}}'>
+	<button  class="btn-group fon26" hover-class="op5" bindtap="contrast">曲线对比图</button>
+	<button  class="btn-group fon26" hover-class="op5" bindtap="pingfen">曲线评分图</button>
+	<button  class="btn-group fon26" hover-class="op5" bindtap="close">关闭</button>
 </view>
-</template>

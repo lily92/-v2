@@ -1,0 +1,9 @@
+/* pages/myCoffee/page/case/curveDesign/step1/step1.wxss */
+page{ background: #000;}
+.container{ height:35vh; position: relative;  }
+ec-canvas {
+  width: 100%;
+  height: 100%;
+}
+
+

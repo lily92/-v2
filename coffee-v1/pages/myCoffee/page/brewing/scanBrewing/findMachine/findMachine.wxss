@@ -1,5 +1,4 @@
 /* pages/myCoffee/page/brewing/scanBrewing/findMachine/findMachine.wxss */
-
 .locate-area {
   min-height: 750rpx;
   height: 750rpx;

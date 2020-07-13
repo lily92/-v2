@@ -1,0 +1,43 @@
+/* pages/myCoffee/page/goldenCup/component/btnGroup/btnGroup.wxss */
+.btn-group { display: flex; justify-content: space-between;}
+.btn-group,.btn-group-height{ height: 134rpx;}
+.btn-group{ padding: 20rpx 50rpx; position: fixed; bottom: 0; width: 100%; left: 0; background: #000; border-top: 1px solid #a0a0a0; box-sizing: border-box; z-index: 99;}
+.btn {
+	width: 300rpx;
+  line-height: 90rpx;
+  height: 90rpx;
+	background-image: linear-gradient(-75deg, 
+		#2d2d2d 0%, 
+		#111111 100%), 
+	linear-gradient(
+		#ffffff, 
+		#ffffff);
+	background-blend-mode: normal, 
+		normal;
+	box-shadow: 0rpx 5rpx 10rpx 1rpx 
+		rgba(131, 131, 131, 0.05);
+  border-radius: 41rpx;
+   color: #fff;
+   text-align: center;
+   box-sizing: border-box;
+}
+.btn-save{ background: url('https://gdhflw.com/public/partime/coffeeImg/icon-save.png') no-repeat 70%  center #222; background-size: 24rpx;}
+.btn-share{ background: url('https://gdhflw.com/public/partime/coffeeImg/icon-shage.png') no-repeat 70%  center #222; background-size: 24rpx;}
+
+.fix-save{ background: #000; left: 0; top: 0; bottom: 0; top: 0; position: fixed; width: 100%; z-index: 1;}
+.btn-save-img{
+	width: 680rpx;
+	line-height: 80rpx;
+	text-align: center;
+	background-image: linear-gradient(-75deg, 
+		#2d2d2d 0%, 
+		#111111 100%), 
+	linear-gradient(
+		#000000, 
+		#000000);
+	background-blend-mode: normal, 
+		normal;
+	border-radius: 10rpx; position: fixed; bottom: 10rpx; z-index:999; left: 20rpx;
+	color: #fff;
+	
+}

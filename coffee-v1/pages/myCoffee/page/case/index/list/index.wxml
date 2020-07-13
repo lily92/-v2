@@ -1,7 +1,9 @@
 <!--pages/reads/list/index.wxml-->
 
 <view class="article-wrapper">
-	<view class="a-item flex flex-just" wx:for="{{articleList}}" wx:key="index" >
+	<van-swipe-cell right-width="{{ 65 }}" wx:for="{{articleList}}" wx:key="index" async-close
+  bind:close="onClose" >
+ 	<view class="a-item flex flex-just" >
 		<view class="img">
 			<image class="w100" mode="widthFix" src="https://gdhflw.com/public/partime/coffeeImg/cp-icon.png"></image>
 		</view>
@@ -16,4 +18,7 @@
 		</view>
 	  
 	</view>
+  <view slot="right" class="del-btn">删除</view>
+</van-swipe-cell>
+
 </view>

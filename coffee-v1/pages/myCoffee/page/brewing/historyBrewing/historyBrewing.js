@@ -20,11 +20,6 @@ Page({
 			page: 1
 		},
 		isloadding: false,
-		imgUrls: [
-			'https://gdhflw.com/public/partime/coffeeImg/blog-img.jpg',
-			'https://gdhflw.com/public/partime/coffeeImg/blog-img.jpg',
-			'https://gdhflw.com/public/partime/coffeeImg/blog-img.jpg'
-		],
 		articleList: [{
 			'id': 9,
 			'create_time': '2020-06-06',
@@ -144,7 +139,15 @@ Page({
 					
 				]
 			}
-		]
+		],
+		showDetail:false,
+		selectList: [{
+			value: 1
+		}, {
+			value: 2
+		}, {
+			value: 3
+		}]
 	},
 
 	/**
@@ -188,6 +191,17 @@ Page({
 			type: event.target.dataset.type
 		})
 
+	},
+	quxianBrew(){
+		this.setData({
+			showDetail:true
+		})
+	},
+	comfrim(){
+		console.log('选择曲线，确认冲泡')
+		wx.navigateTo({
+			url: '../scanBrewing/curveScheme/curveScheme',
+		})
 	},
 
 	/**

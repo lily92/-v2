@@ -1,4 +1,5 @@
 <!--pages/myCoffee/page/brewing/scanBrewing/findMachine/findMachine.wxml-->
+<view>
   <view class="locate-area">
     <view class="bg-circle">
 		 <view class="md-circle1">
@@ -18,3 +19,4 @@
     </view>
   </view>
   <view class="text-center fon32">查找附近的机器</view>
+</view>

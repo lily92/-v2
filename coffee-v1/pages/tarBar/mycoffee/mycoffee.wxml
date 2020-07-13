@@ -1,16 +1,13 @@
 <!--pages/tarBar/mycoffee/mycoffee.wxml-->
 <view class="padding20">
-  <my-top  active='0'></my-top>
-  <view class="content positionr">
-   <image class="w100" mode="widthFix" src="https://gdhflw.com/public/partime/coffeeImg/my-coffee-img.jpg"></image>
-   <navigator class="icon-link icon-rigzhi" url="/pages/myCoffee/page/journal/index/index">日志</navigator>
-   <navigator class="icon-link icon-cp" url="/pages/myCoffee/page/brewing/historyBrewing/historyBrewing">冲泡</navigator>
-   <navigator class="icon-link icon-jinbei" url="/pages/myCoffee/page/goldenCup/index/index">金杯</navigator>
-   <navigator class="icon-link icon-fangan" url="/pages/myCoffee/page/case/index/index">方案</navigator>
-  </view>
-  
-  
+	<my-top active='0'></my-top>
+	<view class="content positionr">
+		<image class="w100" mode="widthFix" src="https://gdhflw.com/public/partime/coffeeImg/my-coffee-img.jpg"></image>
+		<view class="icon-link icon-rigzhi" bindtap="linkUrl" data-url="/pages/myCoffee/page/journal/index/index">日志</view>
+		<view class="icon-link icon-cp" bindtap="linkUrl" data-url="/pages/myCoffee/page/brewing/historyBrewing/historyBrewing">冲泡</view>
+		<view class="icon-link icon-jinbei" bindtap="linkUrl" data-url="/pages/myCoffee/page/goldenCup/index/index">金杯</view>
+		<view class="icon-link icon-fangan" bindtap="linkUrl" data-url="/pages/myCoffee/page/case/index/index">方案</view>
+	</view>
+
+
 </view>
-
-
-

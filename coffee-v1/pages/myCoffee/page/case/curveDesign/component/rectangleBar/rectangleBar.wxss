@@ -1,0 +1,23 @@
+/* pages/myCoffee/page/case/curveDesign/component/lineBar/lineBar.wxss */
+/* 图表 */
+.positionr{ position: relative;}
+.positionb{ position: absolute;}
+.line-box{ width: 635rpx; height: 360rpx; margin: 0 auto; border-left: 1rpx solid #fff; border-bottom: 1px solid #fff; border-right: 1px solid #fff;}
+.y-line-number{ position: absolute;  width: 20rpx; height: 360rpx; display: flex; flex-wrap: wrap; left: -25rpx;  bottom: 0; flex-wrap: wrap-reverse; color: #c8c8c8; font-size: 18rpx;}
+.item{ width: 20rpx; height: 36rpx; display: flex; align-items: flex-end; }
+.item:first-child{ position: relative; left: -40rpx;}
+.bar-list{ display: flex;}
+.flex-1{ flex: 1; display: flex; justify-content: center;}
+
+.btn {
+	width: 39rpx;
+  height: 39rpx;
+  line-height: 38rpx;
+  background-color: #ffffff;
+  text-align: center;
+   font-size: 30rpx;
+   color: #999;
+    border-radius: 50%;
+}
+.sce{ font-size: 20rpx; color: #8c8c8c;}
+.btn-action{ display: flex; align-items: center; justify-content: space-between; width: 635rpx; margin: 20rpx auto;}

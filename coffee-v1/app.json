@@ -124,12 +124,28 @@
         "page/brewing/scanBrewing/inputPassword/inputPassword",
         "page/brewing/scanBrewing/curveScheme/curveScheme",
         "page/brewing/scanBrewing/making/making",
+        "page/brewing/scanBrewing/score/score",
+        "page/brewing/scanBrewing/contrast/contrast",
         "page/myDevice/index/index",
         "page/myDevice/bindingDevice/bindingDevice",
         "page/goldenCup/index/index",
         "page/case/index/index",
         "page/goldenCup/detail/detail",
-        "page/goldenCup/example/example"
+        "page/goldenCup/calculation/calculation",
+        "page/case/existingCases/index",
+        "page/case/curveDesign/step1/step1",
+        "page/case/curveDesign/step2/step2",
+        "page/case/curveDesign/step3/step3",
+        "page/case/curveDesign/step4/step4",
+        "page/case/curveDesign/step5/step5",
+        "page/case/curveDesign/step6/step6",
+        "page/case/curveDesign/step7/step7",
+        "page/case/curveDesign/step8/step8",
+        "page/case/curveDesign/step9/step9",
+        "page/case/curveDesign/step10/step10",
+        "page/case/curveDesign/step11/step11",
+        "page/case/curveDesign/step12/step12",
+        "page/case/curveDesign/setTitle/setTitle"
       ]
     }
   ]

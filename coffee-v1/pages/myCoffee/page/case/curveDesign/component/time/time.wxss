@@ -1,0 +1,12 @@
+/* pages/myCoffee/page/case/curveDesign/component/time/time.wxss */
+.time {
+	width: 680rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+	background-color: #626262;
+  border-radius: 10rpx;
+   text-align: center;
+   color: #ff9f4d;
+   font-size: 13px;
+   margin: 25rpx auto 60rpx;
+}

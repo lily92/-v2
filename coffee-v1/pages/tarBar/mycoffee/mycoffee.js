@@ -7,7 +7,11 @@ Page({
   data: {
     userinfo:{}
   },
-
+  linkUrl(e){
+    wx.navigateTo({
+      url: e.target.dataset.url,
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */

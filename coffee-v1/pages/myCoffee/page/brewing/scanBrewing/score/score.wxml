@@ -1,0 +1,43 @@
+<!--pages/myCoffee/page/brewing/scanBrewing/score/score.wxml-->
+<view>
+
+  <view class="positionr r-img">
+    <image src="https://gdhflw.com/public/partime/coffeeImg/pingfen-r.png" mode="widthFix" class="w100"></image>
+    <view class="score">
+      <view>
+         <view class="fon50">6分</view>
+         <view class="fon28">良好</view>
+       </view>
+    </view>
+  </view>
+  <view class="w660 flex  ">
+	  <view class="item text-center" wx:for='{{moodList}}' wx:key='index'>
+		  <image src="{{item.icon}}" class="icon-img" mode="widthFix"></image>
+		  <view class="colorf fon28">槽糕</view>
+	  </view>
+	  
+  </view>
+  <view class="positionr echart"  wx:if='{{!showShareImg}}'>
+	  <view class="container">
+	    <ec-canvas id="mychart-dom-line" canvas-id="mychart-line" ec="{{ ec }}"></ec-canvas>
+	  </view>
+  </view>
+  <view class="btn-share" bindtap="showShare" >分享</view>
+</view>
+  
+
+ <view class="master" wx:if='{{showShareImg}}'>
+   <painter  
+    customStyle='margin-left:10rpx'
+    customActionStyle="{{customActionStyle}}"
+    dancePalette="{{template}}"
+    palette="{{paintPallette}}"
+    bind:imgOK="onImgOK" 
+    bind:touchEnd="touchEnd" 
+    action="{{action}}" 
+    />
+     <!-- <view  class="btn-tap"  wx:if='{{showShareImg}}' bindtap="saveImage">长摁图片保存分享给好友</view> -->
+     	<shareImgbtn isshow='{{showShareImg}}'  bind:closeShareImg='closeShareImg'  bind:saveImage='saveImage'></shareImgbtn>
+ </view>
+
+

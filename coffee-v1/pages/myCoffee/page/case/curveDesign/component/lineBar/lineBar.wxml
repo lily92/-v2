@@ -1,0 +1,31 @@
+<!--pages/myCoffee/page/case/curveDesign/component/lineBar/lineBar.wxml-->
+<view class="line-box positionr">
+	<view class="y-line-number">
+		<view wx:for='{{yLineNum}}' class="item" wx:key='index'>{{item}}</view>
+	</view>
+
+
+	<!-- 步骤线条 步骤<=6  -->
+	<view class="step-line" >
+		<view class="line1 positionb" style="left:{{item}}%" wx:if="{{index < isStep-1}}" wx:for='{{timeLine}}' wx:key='index'>
+			<text class="line-time">{{item}}</text>
+			<view class="line-dot" style="left:{{item}}%"></view>
+		</view>
+	</view>
+  <!-- end  步骤线条-->
+
+
+	<view class="slider">
+		<van-slider min='0' max='100' active-color='#fff' inactive-color='#fff' use-button-slot value="{{time}}" bind:change="onChangeSlider" min="0">
+			<view class="custom-button" slot="button">
+				<view class="time-class">{{time}}</view>
+			</view>
+		</van-slider>
+	</view>
+</view>
+
+<view  class="btn-action">
+  <view  class="btn" bindtap="reduce">-</view>
+  <view class="sce">（Sec）</view>
+	<view  class="btn" bindtap="add">+</view>
+</view>

@@ -1,0 +1,8 @@
+<!--pages/myCoffee/page/case/curveDesign/step1/step1.wxml-->
+<time time='{{time}}'>time</time>
+
+<lineBar  bind:ChangeSlider='ChangeSlider' time='{{time}}' timeLine='{{timeLine}}' isStep='{{ 3 }}'></lineBar>
+
+<stepNum stepDesc='{{stepDesc}}' ></stepNum>
+
+<btnGroup bind:next='next' bind:prev='prev' ></btnGroup>

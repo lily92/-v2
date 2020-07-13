@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "van-uploader": "/vant-weapp/dist/uploader/index"
+  },
+  "navigationBarTitleText": "设置标题"
+}

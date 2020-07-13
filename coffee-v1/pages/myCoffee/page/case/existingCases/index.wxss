@@ -1,0 +1,75 @@
+/* pages/myCoffee/page/journal/index/index.wxss */
+.padding-top0{ padding-top: 0;}
+page {
+	background: #f7f7f7;
+}
+
+.edit-height,
+.edit {
+	height: 120rpx;
+}
+
+.edit {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	padding: 15rpx 20rpx;
+	box-sizing: border-box;
+	z-index: 99;
+}
+
+.edit-btn {
+	height: 90rpx;
+	text-align: center;
+	width: 45%;
+	padding-top: 10rpx;
+	box-sizing: border-box;
+	background-image: linear-gradient(-75deg,
+		#2d2d2d 0%,
+		#111111 100%),
+		linear-gradient(#ffffff,
+		#ffffff);
+	background-blend-mode: normal,
+		normal;
+	border-radius: 41rpx;
+}
+.colorf {
+	color: #fff;
+}
+
+.btn-group{ padding-top: 40rpx;}
+.btn{
+	background-image: linear-gradient(-75deg, 
+			#2d2d2d 0%, 
+			#111111 100%), 
+		linear-gradient(
+			#f2f2f2, 
+			#f2f2f2);
+		background-blend-mode: normal, 
+			normal;
+		border-radius: 32px; width: 185rpx; line-height: 64rpx; color: #fff; text-align: center;
+}
+
+
+.van-popup{ border-radius: 20rpx !important; overflow: hidden;}
+.margin0-auto{ margin: 50rpx auto 0;}
+.tip{padding: 20rpx; width:710rpx; box-sizing: border-box;line-height: 1.7; background: #f7f7f7; min-height: 90vh;}
+.tip-30{ min-height: 30vh; width: 680rpx;}
+.case-img{ width: 99rpx; height: 99rpx; border-radius: 10rpx 0 0 10rpx;}
+.case-desc{ width:calc(100% - 99rpx); background: #fff; border-radius:0 10rpx 10rpx 0; height: 99rpx;}
+.desc-icon{ width: 45rpx; height: 45rpx;}
+.select-con{ width: 620rpx}
+.case-desc{ padding: 5rpx 15rpx; box-sizing: border-box;}
+.r-item{ margin-bottom: 20rpx;}
+.desc-tit{ width: calc(100% - 60rpx);}
+.select-height{ height: 75vh;}
+.nowarp{ white-space: nowrap; text-overflow: ellipsis; overflow: hidden;}
+
+/**/
+.confrim-tip{  padding: 40rpx;}
+.tip-icon{  width: 93rpx; display: block; margin: 20rpx auto; height: 107rpx;}
+.colseTip{  font-size: 40rpx; text-align: right; position: absolute; right: 20rpx; top: 0;}
+.w500{ width: 500rpx;}
+.tip-fail-success{ min-height: 20vh; width: 300rpx;}
+.case-add-title{ text-align: center; padding: 20rpx 0;}

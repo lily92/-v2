@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "ec-canvas": "../../../../../../ec-canvas/ec-canvas",
+    "painter":"/components/painter/painter",
+    "shareImgbtn":"/components/shareImgBtn/shareImgBtn"
+  },
+  "navigationBarTitleText": "曲线方案"
+}
+ 

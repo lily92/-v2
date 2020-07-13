@@ -1,0 +1,11 @@
+{
+	"usingComponents": {
+		"my-list": "../index/list/index",
+		"van-popup": "/vant-weapp/dist/popup/index",
+		"van-toast": "/vant-weapp/dist/toast/index",
+		"van-checkbox": "/vant-weapp/dist/checkbox/index",
+		"van-checkbox-group": "/vant-weapp/dist/checkbox-group/index"
+
+	},
+	"navigationBarTitleText": "下载中"
+}

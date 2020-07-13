@@ -1,0 +1,9 @@
+/* pages/myCoffee/page/goldenCup/component/item-detail/itemDetail.wxss */
+.colorf{ color: #fff;}
+.bggreen{ background: #535c46; border-radius: 20rpx;}
+.box1{ min-height: 330rpx; margin-bottom: 20rpx; display: flex; flex-wrap: wrap; }
+.padding20{ padding: 20rpx;}
+.box2{ align-items: flex-start;}
+.w50{ width: 50%; padding: 10rpx 10rpx;  display: flex; align-items: center; box-sizing: border-box;  }
+.fon24{ font-size: 24rpx;}
+.border-b{border-bottom: 2rpx solid  rgba(255, 255, 255, .5); width: 100%; padding-bottom: 20rpx;}

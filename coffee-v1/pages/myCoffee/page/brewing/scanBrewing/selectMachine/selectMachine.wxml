@@ -1,17 +1,16 @@
 <!--pages/myCoffee/page/brewing/scanBrewing/selectMachine/selectMachine.wxml-->
 <view>
-	<scroll-view scroll-y='true' class="machine-list" >
-		<van-radio-group class="list flex w100" value="{{ radio }}" bind:change="onChange">
+  	<scroll-view scroll-y='true' class="machine-list" >
+		<van-radio-group class="list flex w100" value="{{ radioVaule }}" bind:change="onChange">
 			<view class="item" wx:for='{{mList}}' wx:key='index'>
 				<view class="bgf padding20 positionr">
 					<view class='radio'>
 						<van-radio checked-color="#000"  name="{{item.name}}"  bind:click="onClick"/>
 					</view>
-					
 					<view>
 						<image mode="aspectFit" src="https://gdhflw.com/public/partime/coffeeImg/product-detail.jpg" class="item-img w100"></image>
 					</view>
-					<view class="txt text-center fon24">CRM3018意式咖啡机</view>
+					<view class="txt text-center fon24">CRM3018意式咖啡机CRM3018意式咖啡机CRM3018意式咖啡机CRM3018意式咖啡机</view>
 				</view>
 			</view>
 		</van-radio-group>

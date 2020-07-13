@@ -5,7 +5,7 @@ Page({
 	 * 页面的初始数据
 	 */
 	data: {
-		radio: '1',
+		radioVaule: '1',
 		mList: [{
 			'name': '1'
 		}, {
@@ -24,8 +24,9 @@ Page({
 
 	},
 	confirm(){
+		let that = this
 		wx.navigateTo({
-			url: '/pages/myCoffee/page/brewing/scanBrewing/inputPassword/inputPassword',
+			url: '../inputPassword/inputPassword?mid='+that.data.radio,
 		})
 	},
 	/**
@@ -36,17 +37,9 @@ Page({
 	},
 	onChange(event) {
 		this.setData({
-			radio: event.detail,
+			radioVaule: event.detail,
 		});
-	},
-
-	onClick(event) {
-		const {
-			name
-		} = event.currentTarget.dataset;
-		this.setData({
-			radio: name,
-		});
+	
 	},
 
 	/**

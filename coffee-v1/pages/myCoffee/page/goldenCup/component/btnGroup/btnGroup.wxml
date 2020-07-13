@@ -1,0 +1,6 @@
+<!--pages/myCoffee/page/goldenCup/component/btnGroup/btnGroup.wxml-->
+	<view class="btn-group-height"></view>
+	<view class="btn-group  fon28">
+		<view class="btn btn-save" bindtap="save">保存</view>
+		<view class="btn btn-share" bindtap="showShare">分享</view>
+	</view>

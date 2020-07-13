@@ -1,0 +1,8 @@
+<!--pages/myCoffee/page/case/curveDesign/component/stepNum/stepNum.wxml-->
+<view class="stepBox">
+   <view class="setp">{{stepDesc.num}}</view>
+   <view class="desc">
+     <view class='title'>{{stepDesc.title}}</view>
+      <view class='title-sub'>{{ stepDesc.desc}}</view>
+   </view>
+</view>

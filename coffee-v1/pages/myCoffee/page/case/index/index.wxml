@@ -43,19 +43,17 @@
 			<image class="w100" mode="widthFix" src="https://gdhflw.com/public/partime/coffeeImg/syj-setp.png"></image>
 			<view class="flex flex-just btn-group">
 				<view class="btn" bindtap='onCloseStep'>取消</view>
-				<view class="btn">确认</view>
+				<view class="btn" bindtap="upload">确认</view>
 			</view>
 		</view>
 	</van-popup>
 	
 	<van-popup show="{{ showDetail }}" bind:close="onCloseDetail" round='true' custom-class='round'>
 		<view class="tip">
-			<view class="fon24">
+			<view class="fon28 text-just">
 				该曲线设计标准基于格米莱云台网意式咖啡机系统，可设计包含预浸在内四段变压萃取方案，如果您已拥有该标准机器或使用授权，请开启您的私人定制冲泡之旅。
 			</view>
-			<view class="btn margin0-auto">开始</view>
-
-
+			<view class="btn margin0-auto" bindtap="star">开始</view>
 		</view>
 	</van-popup>
 

@@ -1,7 +1,7 @@
 {
   "usingComponents": {
-    "van-radio": "../../../../../../vant-weapp/dist/radio/index",
-    "van-radio-group": "../../../../../../vant-weapp/dist/radio-group/index"
+    "van-radio": "/vant-weapp/dist/radio/index",
+    "van-radio-group": "/vant-weapp/dist/radio-group/index"
   },
   "navigationBarTitleText": "选择设备"
 }

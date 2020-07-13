@@ -1,0 +1,73 @@
+/* pages/myCoffee/page/goldenCup/detail/detail.wxss */
+page{ background: #000;}
+.positionr{ position: relative;}
+.padding20{ padding: 20rpx;}
+.bggreen{ background: #535c46; border-radius: 20rpx;}
+.box1{ margin-bottom: 20rpx;}
+.container {
+  position: absolute;
+  top: 20rpx;
+  right: 20rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+   width: 300rpx;
+   height:290rpx;
+} 
+ec-canvas,.canvas-img {
+  width: 100%;
+  height:290rpx;
+}
+
+
+/* star content */
+.title {
+	width: 100%;
+	height: 100px;
+	background-color: #ffffff;
+	border-radius: 10px;
+}
+.colorf{ color: #fff;}
+
+.textarea{ width: 100%; height: 100%; box-sizing: border-box;}
+.box3{ height: 210rpx; min-height:  auto;}
+.input-title {
+	width: 100%;
+	height: 100rpx;
+	background-color: #ffffff;
+  border-radius: 10px;
+  padding: 10rpx 15rpx; box-sizing: border-box;
+   font-size: 28rpx;
+   text-align: center;
+    margin-bottom: 20rpx;
+}
+.top{ font-size: 28rpx; margin-bottom: 20rpx;}
+.flex-center{ align-items: center;}
+.type{ margin: 0 20rpx; position: relative;}
+.type::before{ display: block; width:16rpx; height: 16rpx; border-radius: 50%; content: ''; position: absolute;  left: -20rpx; top: 15rpx;}
+.type.color1::before{background: #697657;}
+.type.color2::before{background: #b5a18f;}
+.type.color3::before{background: #ff9b44;}
+.share-title{ width: 464rpx;}
+
+/* end star content */
+
+.fix-save{ position: fixed; left: 0; top: 0; right: 0; bottom: 0; width: 100%; z-index: 101; bottom: 0; background: rgba(0, 0, 0, .6); display: flex;  justify-content: center; flex-wrap: wrap;}
+
+.btn-save-img {
+	width: 680rpx;
+	line-height: 80rpx;
+	background-image: linear-gradient(-75deg, 
+		#2d2d2d 0%, 
+		#111111 100%), 
+	linear-gradient(
+		#000000, 
+		#000000);
+	background-blend-mode: normal, 
+		normal;
+  border-radius: 10rpx;
+  text-align: center; color: #fff;
+   margin: 20rpx auto;
+}

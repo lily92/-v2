@@ -1,0 +1,14 @@
+<!--pages/myCoffee/page/case/curveDesign/setTitle/setTitle.wxml-->
+<view class="padding30 flex">
+ <van-uploader file-list="{{ fileList }}"  max-count="1" bind:after-read="afterRead" deletable="{{ false }}" />
+ <view  class="title  ">
+   <view  class="title-one w100 margin-b10">
+     <input type="text" value="{{title}}" placeholder="请输入标题（最多输入8字符）" class="fon30" bindinput='confirmTitle'></input>
+   </view>
+   <view  class="title-one">
+     <input type="text" value="{{subTitle}}" placeholder="请输入副标题（最多输入12个字符）" class="fon24" bindinput='confirmSubTitle'></input>
+   </view>
+ </view>
+</view>
+
+<view class="btn" bindtap="save">保存</view>

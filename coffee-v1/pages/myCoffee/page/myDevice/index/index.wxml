@@ -36,12 +36,12 @@
   closeable  round custom-class='kou-ling'>
 	<view class="fon28 color9 txt-center">修改口令</view>
 	<view class="flex flex-just edit-box">
-		<input  type="number" class="txt" />
-		<input  type="number" class="txt" />
-		<input  type="number" class="txt" />
-		<input  type="number" class="txt" />
-		<input  type="number" class="txt" />
-		<input  type="number" class="txt" />
+		<input  type="number" class="txt" auto-focus="" />
+		<input  type="number" class="txt" auto-focus="" />
+		<input  type="number" class="txt" auto-focus=""  />
+		<input  type="number" class="txt" auto-focus=""  />
+		<input  type="number" class="txt" auto-focus=""  />
+		<input  type="number" class="txt" auto-focus=""  />
 	</view>
 	<view class="flex btn-group flex-just">
 		<view class="btn btn-cancel color9"  bindtap="onClose" >取消</view>

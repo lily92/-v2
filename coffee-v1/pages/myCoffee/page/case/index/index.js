@@ -9,7 +9,7 @@ Page({
 
 	/**
 	 * 页面的初始数据
-	 */
+	 */ 
 	data: {
 		show: false,
 		type: 1,
@@ -153,6 +153,16 @@ Page({
 			]
 		}]
 	},
+	star(){
+		wx.redirectTo({
+			url: '../curveDesign/step1/step1',
+		})
+	},
+	upload(){
+		wx.navigateTo({
+			url: '../../case/findMachine/findMachine',
+		})
+	},
 
 	/**
 	 * 生命周期函数--监听页面加载
@@ -172,7 +182,7 @@ Page({
 	},	
 	onCloseStep(){
 		this.setData({
-			showStep: false
+			showStep: false 
 		});
 	},
 	showDetailbox(){

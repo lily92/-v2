@@ -1,0 +1,60 @@
+<!--pages/myCoffee/page/goldenCup/detail/detail.wxml-->
+<view class="padding20 ">
+	<view class="colorf text-center top flex flex-center">
+		<text class="type color1">茶</text>
+		<text class="type color2">手冲</text>
+		<text class="type color3">意式</text>
+	</view>
+	<view>
+		<view class="">
+			<input class="input-title" placeholder="请填写标题" />
+		</view>
+		<view class=" bggreen positionr box1" style="height:330rpx">
+			<!-- <view class="detail-box1 colorf fon26 padding20">
+				<view class="flex flex-just flex-al-center rate-item" wx:for='{{rateList}}' wx:key='index'>
+					<view>{{item.name}}</view>
+					<view class="star flex flex-al-center">
+						<van-rate size='15' color='#ff9b44' void-color='#9f9f9f' value="{{ item.value }}" bind:change="onChange" readonly />
+					</view>
+					<view class="score">{{item.score}}分</view>
+				</view>
+			</view> -->
+			<view class="container "  wx:if='{{show}}' >
+				<ec-canvas id="mychart-dom-graph" canvas-id="mychart-graph" ec="{{ ec }}"></ec-canvas>
+			</view>
+		  	<view class="container "  wx:if='{{!show}}' >
+				<image class="canvas-img" src="{{file}}" ></image>
+				</view>
+		</view>
+		
+		<item-detail descList='{{descList}}'></item-detail>
+
+		<view class=" bggreen  padding20 color box3">
+			<textarea class="fon24 colorf textarea" placeholder-class='colorf' placeholder="认真写下此刻的想法，能收获更多的互动哦！"></textarea>
+		</view> 
+	</view>
+
+   <btn-group bind:share='showShare' bind:save='save'></btn-group>
+
+    <view class="fix-save" wx:if='{{showShareImg == true}}' bindtap="closeShareImg">
+		     <painter  
+    customStyle='margin-top:20rpx'
+    customActionStyle="{{customActionStyle}}"
+    dancePalette="{{template}}"
+    palette="{{paintPallette}}"
+    bind:imgOK="onImgOK" 
+    bind:touchEnd="touchEnd" 
+    action="{{action}}" 
+    />
+			 <view  bindtap="saveImage" class="btn-save-img" wx:if='{{showShareImg == true}}'>长摁图片保存分享给好友</view> 
+		</view>
+
+
+
+
+
+
+
+
+
+</view>

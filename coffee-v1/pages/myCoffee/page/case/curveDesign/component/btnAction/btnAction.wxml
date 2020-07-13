@@ -1,0 +1,6 @@
+<!--pages/myCoffee/page/case/curveDesign/component/btnAction/btnAction.wxml-->
+<view  class="btn-action">
+  <view  class="btn" bindtap="add">+</view>
+  <view class="sce">（Sec）</view>
+  <view  class="btn" bindtap="reduce">-</view>
+</view>

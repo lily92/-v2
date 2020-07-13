@@ -24,11 +24,12 @@
 			"disablePlugins": [],
 			"outputPath": ""
 		},
+		"useIsolateContext": true,
 		"useCompilerModule": false,
 		"userConfirmedUseCompilerModuleSwitch": false
 	},
 	"compileType": "miniprogram",
-	"libVersion": "2.9.0",
+	"libVersion": "2.10.4",
 	"appid": "wx5ef616327383ee57",
 	"projectname": "%E5%92%96%E5%95%A1%E5%86%B2%E6%B3%A1v1",
 	"debugOptions": {
@@ -384,8 +385,8 @@
 					"scene": null
 				},
 				{
-					"id": -1,
-					"name": "曲线方案",
+					"id": 46,
+					"name": "曲线方案-详情",
 					"pathName": "pages/myCoffee/page/brewing/scanBrewing/curveScheme/curveScheme",
 					"query": "",
 					"scene": null
@@ -461,9 +462,93 @@
 					"scene": null
 				},
 				{
-					"id": -1,
+					"id": 57,
 					"name": "金杯详情",
 					"pathName": "pages/myCoffee/page/goldenCup/detail/detail",
+					"query": "type=1&id=3",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "评分",
+					"pathName": "pages/myCoffee/page/brewing/scanBrewing/score/score",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "趣味金杯计算",
+					"pathName": "pages/myCoffee/page/goldenCup/calculation/calculation",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "下载中-已有方案",
+					"pathName": "pages/myCoffee/page/case/existingCases/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "曲线设计",
+					"pathName": "pages/myCoffee/page/case/curveDesign/step1/step1",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "步骤2",
+					"pathName": "pages/myCoffee/page/case/curveDesign/step2/step2",
+					"query": "time=18",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "步骤1",
+					"pathName": "pages/myCoffee/page/case/curveDesign/step1/step1",
+					"query": "time=18",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "步骤7bar",
+					"pathName": "pages/myCoffee/page/case/curveDesign/step7/step7",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 65,
+					"name": "步骤11",
+					"pathName": "pages/myCoffee/page/case/curveDesign/step11/step11",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 66,
+					"name": "步骤12",
+					"pathName": "pages/myCoffee/page/case/curveDesign/step12/step12",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "设置曲线标题",
+					"pathName": "pages/myCoffee/page/case/curveDesign/setTitle/setTitle",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 68,
+					"name": "冲泡-查找机器",
+					"pathName": "pages/myCoffee/page/brewing/scanBrewing/findMachine/findMachine",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "曲线对比图",
+					"pathName": "pages/myCoffee/page/brewing/scanBrewing/contrast/contrast",
 					"scene": null
 				}
 			]

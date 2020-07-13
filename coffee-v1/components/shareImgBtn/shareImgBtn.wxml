@@ -1,0 +1,5 @@
+<!--components/shareImgBtn/shareImgBtn.wxml-->
+<view class="share-btn" wx:if='{{isshow}}'>
+			<view class="btn-save-img" bindtap="closeShareImg">取消</view>
+			<view class="btn-save-img" bindtap="saveImage" >保存</view>
+</view>

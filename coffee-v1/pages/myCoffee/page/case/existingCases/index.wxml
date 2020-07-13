@@ -1,0 +1,89 @@
+<!--pages/myCoffee/page/journal/index/index.wxml-->
+<view class="">
+	<view class="padding30 padding-top0">
+		<my-list articleList="{{articleList}}" data-isshow='true'></my-list>
+	</view>
+
+
+	<view class="flex flex-center loading-txt">
+		<van-loading size="5" wx:if='{{isloadding}}'>加载中...</van-loading>
+		<view wx:if='{{!isloadding}}' class="color9 fon24">—— 我是有底线的 ——</view>
+	</view>
+
+	<view class="edit-height"></view>
+	<view class="edit bgf flex  flex-just">
+		<view class="edit-btn" bindtap="showDetailbox">
+			<text class="fon28 colorf ">添加方案</text>
+			<view class="fon20 color9">可选6个方案</view>
+		</view>
+		<view class="edit-btn">
+			<text class="fon28 colorf ">上载方案</text>
+			<view class="fon20 color9">已选择{{selectNum}}个方案</view>
+		</view>
+	</view>
+
+	<van-popup show="{{ showDetail }}" bind:close="onCloseDetail" round='true' custom-class='round'>
+		<view class="tip">
+			<view class="fon28 case-add-title">添加方案</view>
+			<scroll-view scroll-y="{{true}}" class="select-height">
+				<van-checkbox-group value="{{ result }}" bind:change="onChangeCheckbox">
+					<view wx:for='{{selectList}}' wx:key='index' class='flex flex-al-center w100 r-item flex-just '>
+						<van-checkbox name="{{item.value}}" checked-color="#000">
+						</van-checkbox>
+						<view class="flex flex-al-center select-con">
+							<image class="case-img" src="https://gdhflw.com/public/partime/coffeeImg/cp-icon.png" mode="widthFix"></image>
+							<view class="case-desc flex flex-al-center flex-just">
+								<image src="https://gdhflw.com/public/partime/coffeeImg/icon-cup.png" class="desc-icon" mode="widthFix"></image>
+								<view class="desc-tit">
+									<view class="nowarp  fon24">
+										安溪茶农冲泡铁观
+									</view>
+									<view class="fon20 color9">时间：3：45</view>
+								</view>
+							</view>
+						</view>
+					</view>
+
+				</van-checkbox-group>
+			</scroll-view>
+
+			<view class="flex flex-just">
+				<view class="btn margin0-auto" bindtap="onCloseDetail">取消</view>
+				<view class="btn margin0-auto" bindtap="comfrim">确认</view>
+			</view>
+		</view>
+	</van-popup>
+
+
+	<!-- 是否上传 -->
+	<van-popup show="{{ isUpload }}" round='true' custom-class='round'>
+		<view class="tip tip-30 w500">
+			<view class="fon28 text-just text-center confrim-tip">
+				<view> 您已选择{{selectNum}}个方案</view>
+				<view>请确认是否上传</view>
+			</view>
+			<view class="btn margin0-auto" bindtap="comfrimUpload">确认上传</view>
+		</view>
+	</van-popup>
+
+	<van-popup closeable show="{{ UploadFinish }}" round='true' custom-class='round'>
+		<view class="tip tip-fail-success positionr">
+			<view class="colseTip " bindtap="colseTip">×</view>
+			<view class="fon24 text-just text-center confrim-tip">
+				<view wx:if="{{UploadFinish == -1}}">
+					<image class="tip-icon" src="https://gdhflw.com/public/partime/coffeeImg/upload-fail.png"></image>
+					<view>上传失败！</view>
+					<view>最多还可上传5个方案</view>
+				</view>
+
+				<view wx:if="{{UploadFinish == 1}}">
+					<image class="tip-icon" src="https://gdhflw.com/public/partime/coffeeImg/upload-success.png"></image>
+					<view>上传成功！</view>
+				</view>
+			</view>
+		</view>
+	</van-popup>
+
+	<van-toast id="custom-selector" />
+
+</view>
