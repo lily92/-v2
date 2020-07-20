@@ -1,7 +1,7 @@
 <!--pages/myCoffee/page/myDevice/bindingDevice/bindingDevice.wxml-->
 <view class="padding20">
 	<view class="bgf box">
-		<image class="add-img" src="https://gdhflw.com/public/partime/coffeeImg/icon-banding.png" mode="widthFix"></image>
+		<image class="add-img" src="http://jikelianmeng.tanghan.cn/static/images/icon-banding.png" mode="widthFix"></image>
 		<view class="btn  fon28">扫描产品二维码</view>
 
 		<form class="form">

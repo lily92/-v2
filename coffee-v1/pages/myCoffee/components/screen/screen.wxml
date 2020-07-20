@@ -16,7 +16,7 @@
 
 		</scroll-view>
 		<view class="btn-groups">
-			<button class="btn" hover-class="op5">重置</button>
-			<button class="btn" hover-class="op5">确认</button>
+			<button class="btn" hover-class="op5" bindtap="reset">重置</button>
+			<button class="btn" hover-class="op5" bindtap="confrim">确认</button>
 		</view>
 	</van-popup>

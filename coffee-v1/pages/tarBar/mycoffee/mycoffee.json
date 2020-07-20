@@ -1,5 +1,7 @@
 {
   "usingComponents": {
-    "my-top":"/components/myTop/myTop"
+    "my-top": "/components/myTop/myTop",
+    "myDevice":"/components/myDevice/myDevice",
+    "myOrder":"/components/myOrder/myOrder"
   }
 }

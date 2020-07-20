@@ -42,7 +42,7 @@ App({
     integral:10,
 	Network:true,
     base_url:'https://hhh.10huisp.com/api/app/',
-	static_url:"https://gdhflw.com/public/partime/coffeeImg/"
+	static_url:"http://jikelianmeng.tanghan.cn/static/images/"
   },
   showDownLoad(){
 		let precent = 0

@@ -1,17 +1,15 @@
 <!--pages/myCoffee/page/journal/index/index.wxml-->
 <view class="">
 	<view class="padding30">
-		<view class="tab flex ">
-			<view class="item {{type==1?'active':''}}" bindtap='getList' data-type='1'>个人</view>
-			<view class="item {{type==2?'active':''}}" bindtap='getList' data-type='2'>
-				收藏
-
-			</view>
-			<view class="item" bindtap='showPopup'>筛选</view>
-		</view>
+		<van-tabs bind:disabled="showPopup" swipe-threshold='{{number}}' swipeable color='#000' custom-class='tab' active="{{ active }}" bind:change="onChange">
+			<van-tab title="{{item.name}}" data-id='{{item.id}}' wx:for='{{typeList}}'>
+				<my-list articleList="{{articleList}}" data-isshow='true'></my-list>
+			</van-tab>
+			<van-tab title='筛选' disabled></van-tab>
+		</van-tabs>
 	</view>
 
-	<my-list class='list-con' articleList="{{articleList}}" types='{{type}}' bind:showAction="showAction" data-isshow='true'></my-list>
+
 	<view class="flex flex-center loading-txt">
 		<van-loading size="5" wx:if='{{isloadding}}'>加载中...</van-loading>
 		<view wx:if='{{!isloadding}}' class="color9 fon24">—— 我是有底线的 ——</view>
@@ -28,17 +26,17 @@
 	</view>
 
 	<!-- 筛选 -->
-	<screen shaixuanList='{{shaixuanList}}' show='{{show}}'></screen>
+	<screen shaixuanList='{{shaixuanList}}' show='{{show}}' bind:confrim='confrim' bind:reset='reset'></screen>
 	<!-- end筛选 -->
 
 	<view class="btn-down flex flex-center" bindtap="showStepbox">
-		<image class="w100" src="https://gdhflw.com/public/partime/coffeeImg/cp-icon2.png" mode="widthFix"></image>
+		<image class="w100" src="http://jikelianmeng.tanghan.cn/static/images/cp-icon2.png" mode="widthFix"></image>
 	</view>
 
 	<!-- 弹窗 -->
 	<van-popup show="{{ showStep }}" bind:close="onCloseStep" round='true' custom-class='round'>
 		<view class="setp-img">
-			<image class="w100" mode="widthFix" src="https://gdhflw.com/public/partime/coffeeImg/syj-setp.png"></image>
+			<image class="w100" mode="widthFix" src="http://jikelianmeng.tanghan.cn/static/images/syj-setp.png"></image>
 			<view class="flex flex-just btn-group">
 				<view class="btn" bindtap='onCloseStep'>取消</view>
 				<view class="btn">确认</view>
@@ -47,7 +45,7 @@
 	</van-popup>
 
 	<!-- 选择曲线 -->
-	<select-curve showDetail='{{showDetail}}' selectList='{{selectList}}' bind:comfrim='comfrim'></select-curve>
+	<select-curve showDetail='{{showDetail}}' selectList='{{selectList}}' bind:comfrim='selectConfrim'></select-curve>
 	<!-- end 选择曲线 -->
 
 </view>

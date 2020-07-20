@@ -1,0 +1,32 @@
+/* components/myDevice/myDevice.wxss */
+.bgf{ background: #fafafa;}
+.text-center{ text-align: center;}
+.positionr{ position: relative;}
+.add-btn{ width: 193rpx; line-height: 52rpx;border-radius: 26px; margin: 0 auto;
+	border: solid 2rpx #7d7d7d ;text-align: center;}
+.add-item{ padding:54rpx;}
+.no-data{ padding: 50rpx 0;}
+.no-data-img{ width: 82rpx; display: block; margin:0 auto 0;}
+.tip{ color: #eaeaea; font-size: 20rpx;}
+.device-img{ width: 96rpx; height: 96rpx; background: #ccc;}
+.device-item{ width: 50%; box-sizing: border-box;  padding:0 15rpx; margin-top: 30rpx;}
+.device-con{ width: calc(100% - 120rpx);}
+.box{ padding: 20rpx;}
+.fon20{ font-size: 20rpx;}
+.fon24{ font-size: 12px;}
+.fon28{ font-size: 14px;}
+.txt-center{ text-align: center;}
+.flex{ display: flex; flex-wrap: wrap;}
+.flex-al-center{ align-items: center;}
+.flex-just{ justify-content: space-between;}
+.device-list{ margin-left: -15rpx; margin-right: -15rpx; margin-bottom: 30rpx; }
+.btn-edit{ width: 22px; height: 20px; background: url('http://jikelianmeng.tanghan.cn/static/images/icon-edit.png') no-repeat center; background-size: 22rpx; right: 0; bottom: 0; position: absolute; z-index: 99;}
+.kou-ling{ width: 600rpx; padding: 60rpx 0 0 0;  overflow: hidden; border-radius: 20rpx;}
+.van-popup{border-radius: 20rpx !important;}
+.edit-box{ padding: 60rpx 30rpx;}
+.txt{ width: 70rpx;  line-height: 70rpx; height: 70rpx; border-radius: 20rpx;
+	border: solid 1px #000000; text-align: center;  box-sizing: border-box; display: block;}
+	.btn{ line-height: 70rpx; width: 32%; text-align: center;  border-radius: 40rpx; border: 1px solid #000000; background: #000; color: #fff;}
+	.btn-cancel{ border: 1px solid #ccc; background: #ccc;  }
+	.btn-group{ justify-content: space-around; padding-bottom: 30rpx;  }
+.text{ width: 60%; border-bottom: 1px solid #ccc; display: block; margin: 0 auto;}

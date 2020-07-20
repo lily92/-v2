@@ -21,8 +21,8 @@
    text-align: center;
    box-sizing: border-box;
 }
-.btn-save{ background: url('https://gdhflw.com/public/partime/coffeeImg/icon-save.png') no-repeat 70%  center #222; background-size: 24rpx;}
-.btn-share{ background: url('https://gdhflw.com/public/partime/coffeeImg/icon-shage.png') no-repeat 70%  center #222; background-size: 24rpx;}
+.btn-save{ background: url('http://jikelianmeng.tanghan.cn/static/images/icon-save.png') no-repeat 70%  center #222; background-size: 24rpx;}
+.btn-share{ background: url('http://jikelianmeng.tanghan.cn/static/images/icon-shage.png') no-repeat 70%  center #222; background-size: 24rpx;}
 
 .fix-save{ background: #000; left: 0; top: 0; bottom: 0; top: 0; position: fixed; width: 100%; z-index: 1;}
 .btn-save-img{

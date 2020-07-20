@@ -16,7 +16,7 @@
 	<!-- list -->
 	<view class="course-list">
 		<view class="list-item" wx:for="{{itemList}}" wx:key="*this">
-			<image src="{{item.img}}" class="w100 item-img" mode="widthFix"  ></image>
+			<image src="{{item.img}}" class="w100 item-img"  ></image>
 			<view class="bgf padding20">
 				<view class="fon26">EHS咖啡老板课程</view>
 				<view class="color6 fon24 desc line2">咖啡基础知识、意式浓缩制作、咖啡拉花、出品流程、单品、创意、开店管理。</view>

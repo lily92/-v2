@@ -7,11 +7,11 @@ Page({
 	 */
 	data: {
 		swiperImg: [{
-			'url': 'https://gdhflw.com/public/partime/coffeeImg/product-detail.jpg'
+			'url': 'http://jikelianmeng.tanghan.cn/static/images/product-detail.jpg'
 		}, {
-			'url': 'https://gdhflw.com/public/partime/coffeeImg/product-detail.jpg'
+			'url': 'http://jikelianmeng.tanghan.cn/static/images/product-detail.jpg'
 		}, {
-			'url': 'https://gdhflw.com/public/partime/coffeeImg/product-detail.jpg'
+			'url': 'http://jikelianmeng.tanghan.cn/static/images/product-detail.jpg'
 		}],
 		productD: "XX产品详情",
 		show: false,

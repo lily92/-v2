@@ -2,7 +2,7 @@
  <include src="/components/common/common" wx:if='{{nonetWork}}' />
 <view class="padding30">
 	<view  class="case-top flex flex-just flex-al-center">
-	  <image src="https://gdhflw.com/public/partime/coffeeImg/cp-icon.png" class="case-img" mode="widthFix">
+	  <image src="http://jikelianmeng.tanghan.cn/static/images/cp-icon.png" class="case-img" mode="widthFix">
 		  
 	  </image>
 	  <view class="case-desc">
@@ -18,14 +18,21 @@
 		<view class="padding20">
 			<view class="list-txt fon26 flex  " wx:for='{{caseDescList}}' wx:key='index'>
 				<text class="left ">{{item.name}}</text>
-				<text class="right ">{{item.desc}}</text>
+				<view class="right ">
+
+				  <input wx:if='{{item.dataKey !="date"}}' type="text" placeholder="" value="{{item.desc}}" name='{{item.dataKey}}'>
+					</input>
+					<picker  wx:else mode="date" value="{{item.desc}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange">
+						<view class="left {{date == '请选择日期'?'gray':'white'}}">
+							{{item.desc}}
+						</view>
+					</picker>
+				</view>
 			</view>
 		</view>
 		<view  class="padding30">
 			<view class="fon28 colorf">感官记录：</view>
-			<view class="desc-jilu fon26">
-				在意大利特浓咖啡的基础上，加一层厚厚的气泡牛奶，就成了卡布奇诺，牛奶和泡沫是决定卡布奇诺的重要因素...
-			</view>
+			<textarea class="desc-jilu fon26 w100">在意大利特浓咖啡的基础上，加一层厚厚的气泡牛奶，就成了卡布奇诺，牛奶和泡沫是决定卡布奇诺的重要因素...</textarea>
 		</view>
 		<!-- end content -->
 	</view>

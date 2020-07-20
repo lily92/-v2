@@ -22,8 +22,8 @@
   display: flex;
  
 }
-.deliver-owner-after{ display: block; content: ''; width: 100%; height:10rpx; background: url('https://gdhflw.com/public/partime/coffeeImg/line-bg.png') repeat-x;  }
-.wc-icon{ padding: 60rpx 0 60rpx 80rpx;background: url('https://gdhflw.com/public/partime/coffeeImg/icon-wancheng.png') no-repeat left center ; background-size: 55rpx;}
+.deliver-owner-after{ display: block; content: ''; width: 100%; height:10rpx; background: url('http://jikelianmeng.tanghan.cn/static/images/line-bg.png') repeat-x;  }
+.wc-icon{ padding: 60rpx 0 60rpx 80rpx;background: url('http://jikelianmeng.tanghan.cn/static/images/icon-wancheng.png') no-repeat left center ; background-size: 55rpx;}
 
 .locate-icon-wrapper {
   position: relative;
@@ -41,7 +41,7 @@
   font-size: 32rpx;
   color: #333;
   padding-left: 70rpx;
-  background: url('https://gdhflw.com/public/partime/coffeeImg/icon-kd.png') no-repeat left center;
+  background: url('http://jikelianmeng.tanghan.cn/static/images/icon-kd.png') no-repeat left center;
   background-size: 52rpx;
 }
 .w29{ width: 29rpx;}

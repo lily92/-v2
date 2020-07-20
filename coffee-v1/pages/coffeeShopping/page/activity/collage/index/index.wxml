@@ -1,7 +1,7 @@
 <!--pages/coffeeShopping/page/activity/collage/index/index.wxml-->
 <view >
 	<view class="pm-banner">
-		<image src="https://gdhflw.com/public/partime/coffeeImg/pt-banner.jpg" class="w100" mode="widthFix"></image>
+		<image src="http://jikelianmeng.tanghan.cn/static/images/pt-banner.jpg" class="w100" mode="widthFix"></image>
 	</view>
 	<!--star 拍卖 -->
 	<view class="pm-list">

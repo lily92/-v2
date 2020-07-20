@@ -31,7 +31,7 @@ Page({
 	  },
 	  get_goods:[
 		  {
-			  'images_url':'https://gdhflw.com/public/partime/coffeeImg/product-detail.jpg',
+			  'images_url':'http://jikelianmeng.tanghan.cn/static/images/product-detail.jpg',
 			  'name':'产品名称',
 			  'suk_name':'xxx',
 			  'num':2,

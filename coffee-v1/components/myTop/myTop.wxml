@@ -6,11 +6,11 @@
 				<view class="fon32">{{userinfo.nickName}}</view>
 				<view class="fon26">ID:88888</view>
 			</view>
-			<view class="scan"></view>
+			<!-- <view class="scan"></view> -->
 		</view>
 		<view class="nav ">
-			    	<view class="flex-1 {{active==0?'active':''}}" bindtap="goCoffee" >我的咖啡</view>
-						<navigator url="/pages/myCoffee/page/myDevice/index/index" class="flex-1  border {{active==1?'active':''}}">我的设备</navigator>
-						<navigator url="/pages/home/order/index" class="flex-1 {{active==2?'active':''}}">我的订单</navigator>
+			    	<view class="flex-1 {{active==0?'active':''}}" bindtap="link" data-aid='0' >我的咖啡</view>
+						<view  class="flex-1  border {{active==1?'active':''}}"  bindtap="link"  data-aid='1'>我的设备</view>
+						<view  class="flex-1 {{active==2?'active':''}}"  bindtap="link" data-aid='2'>我的订单</view>
 		</view>
 	</view>

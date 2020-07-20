@@ -37,7 +37,7 @@ Page({
           'name':"商品名称",
           "num":12,
           "price":'125',
-          "images_url":"https://gdhflw.com/public/partime/coffeeImg/product-detail.jpg"
+          "images_url":"http://jikelianmeng.tanghan.cn/static/images/product-detail.jpg"
         },
         status:1
       },     {
@@ -46,7 +46,7 @@ Page({
           'name':"商品名称",
           "num":12,
           "price":'125',
-          "images_url":"https://gdhflw.com/public/partime/coffeeImg/product-detail.jpg"
+          "images_url":"http://jikelianmeng.tanghan.cn/static/images/product-detail.jpg"
         },
         status:2
       },     {
@@ -55,7 +55,7 @@ Page({
           'name':"商品名称",
           "num":12,
           "price":'125',
-          "images_url":"https://gdhflw.com/public/partime/coffeeImg/product-detail.jpg"
+          "images_url":"http://jikelianmeng.tanghan.cn/static/images/product-detail.jpg"
         },
         status:3
       },     {
@@ -64,7 +64,7 @@ Page({
           'name':"商品名称",
           "num":12,
           "price":'125',
-          "images_url":"https://gdhflw.com/public/partime/coffeeImg/product-detail.jpg"
+          "images_url":"http://jikelianmeng.tanghan.cn/static/images/product-detail.jpg"
         },
         status:4
       },
@@ -74,7 +74,7 @@ Page({
 	      'name':"商品名称",
 	      "num":12,
 	      "price":'125',
-	      "images_url":"https://gdhflw.com/public/partime/coffeeImg/product-detail.jpg"
+	      "images_url":"http://jikelianmeng.tanghan.cn/static/images/product-detail.jpg"
 	    },
 	    status:5
 	  },     {
@@ -83,7 +83,7 @@ Page({
 	      'name':"商品名称",
 	      "num":12,
 	      "price":'125',
-	      "images_url":"https://gdhflw.com/public/partime/coffeeImg/product-detail.jpg"
+	      "images_url":"http://jikelianmeng.tanghan.cn/static/images/product-detail.jpg"
 	    },
 	    status:6
 	  },     {
@@ -92,7 +92,7 @@ Page({
 	      'name':"商品名称",
 	      "num":12,
 	      "price":'125',
-	      "images_url":"https://gdhflw.com/public/partime/coffeeImg/product-detail.jpg"
+	      "images_url":"http://jikelianmeng.tanghan.cn/static/images/product-detail.jpg"
 	    },
 	    status:7
 	  },     {
@@ -101,7 +101,7 @@ Page({
 	      'name':"商品名称",
 	      "num":12,
 	      "price":'125',
-	      "images_url":"https://gdhflw.com/public/partime/coffeeImg/product-detail.jpg"
+	      "images_url":"http://jikelianmeng.tanghan.cn/static/images/product-detail.jpg"
 	    },
 	    status:8
 	  },

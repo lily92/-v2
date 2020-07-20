@@ -20,41 +20,52 @@ Page({
 			page: 1
 		},
 		isloadding: false,
+		number:3,
+		typeList: [{
+			'name': '个人',
+			'id': 0
+		}, {
+			'name': '收藏',
+			'id': 1
+		}],
 		articleList: [{
+			'type':1,
 			'id': 9,
 			'create_time': '2020-06-06',
 			'view': 0,
 			'like': 0,
 			'imgUrl': [{
-				'images_url': "https://gdhflw.com/public/partime/coffeeImg/blog-img.jpg"
+				'images_url': "http://jikelianmeng.tanghan.cn/static/images/blog-img.jpg"
 			}, {
-				'images_url': "https://gdhflw.com/public/partime/coffeeImg/blog-img.jpg"
+				'images_url': "http://jikelianmeng.tanghan.cn/static/images/blog-img.jpg"
 			}, {
-				'images_url': "https://gdhflw.com/public/partime/coffeeImg/blog-img.jpg"
+				'images_url': "http://jikelianmeng.tanghan.cn/static/images/blog-img.jpg"
 			}]
 		}, {
+			'type':2,
 			'id': 9,
 			'create_time': '2020-06-06',
 			'view': 0,
 			'like': 0,
 			'imgUrl': [{
-				'images_url': "https://gdhflw.com/public/partime/coffeeImg/blog-img.jpg"
+				'images_url': "http://jikelianmeng.tanghan.cn/static/images/blog-img.jpg"
 			}, {
-				'images_url': "https://gdhflw.com/public/partime/coffeeImg/blog-img.jpg"
+				'images_url': "http://jikelianmeng.tanghan.cn/static/images/blog-img.jpg"
 			}, {
-				'images_url': "https://gdhflw.com/public/partime/coffeeImg/blog-img.jpg"
+				'images_url': "http://jikelianmeng.tanghan.cn/static/images/blog-img.jpg"
 			}]
 		}, {
+			'type':3,
 			'id': 9,
 			'create_time': '2020-06-06',
 			'view': 0,
 			'like': 0,
 			'imgUrl': [{
-				'images_url': "https://gdhflw.com/public/partime/coffeeImg/blog-img.jpg"
+				'images_url': "http://jikelianmeng.tanghan.cn/static/images/blog-img.jpg"
 			}, {
-				'images_url': "https://gdhflw.com/public/partime/coffeeImg/blog-img.jpg"
+				'images_url': "http://jikelianmeng.tanghan.cn/static/images/blog-img.jpg"
 			}, {
-				'images_url': "https://gdhflw.com/public/partime/coffeeImg/blog-img.jpg"
+				'images_url': "http://jikelianmeng.tanghan.cn/static/images/blog-img.jpg"
 			}]
 		}],
 		showActions:false,
@@ -140,6 +151,7 @@ Page({
 				]
 			}
 		],
+
 		showDetail:false,
 		selectList: [{
 			value: 1
@@ -197,11 +209,25 @@ Page({
 			showDetail:true
 		})
 	},
-	comfrim(){
+	//选择曲线进行冲泡
+	selectConfrim(){
 		console.log('选择曲线，确认冲泡')
 		wx.navigateTo({
 			url: '../scanBrewing/curveScheme/curveScheme',
 		})
+	},
+	onChange(event) {
+		console.log(event)
+		wx.showToast({
+			title: `切换到标签 ${event.detail.title}`,
+			icon: 'none',
+		});
+	},
+	confrim(){
+		console.log('--confrim--')
+	},
+	reset(){
+		console.log('--reset--')
 	},
 
 	/**

@@ -5,9 +5,16 @@ Page({
    * 页面的初始数据
    */
   data: {
-    userinfo:{}
+    userinfo: {},
+    deviceList: [{}, {}, {}],
+    active: 0
   },
-  linkUrl(e){
+  link(e) {
+    this.setData({
+      active: e.detail
+    })
+  },
+  linkUrl(e) {
     wx.navigateTo({
       url: e.target.dataset.url,
     })

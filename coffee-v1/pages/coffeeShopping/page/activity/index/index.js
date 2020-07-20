@@ -6,13 +6,13 @@ Page({
 	 */
 	data: {
 		activityList: [{
-			'img': "https://gdhflw.com/public/partime/coffeeImg/active-1.png",
+			'img': "http://jikelianmeng.tanghan.cn/static/images/active-1.png",
 			'url': '/pages/coffeeShopping/page/activity/auction/index/index'
 		}, {
-			'img': "https://gdhflw.com/public/partime/coffeeImg/active-2.png",
+			'img': "http://jikelianmeng.tanghan.cn/static/images/active-2.png",
 			'url': '/pages/coffeeShopping/page/activity/collage/index/index'
 		}, {
-			'img': "https://gdhflw.com/public/partime/coffeeImg/active-3.png",
+			'img': "http://jikelianmeng.tanghan.cn/static/images/active-3.png",
 			'url': '/pages/coffeeShopping/page/activity/crowdFunding/index/index'
 		}]
 	},

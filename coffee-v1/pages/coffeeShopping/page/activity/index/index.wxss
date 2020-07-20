@@ -1,2 +1,3 @@
 /* pages/coffeeShopping/page/activity/index/index.wxss */
 .active-item{ width: 690rpx; margin: 0 auto 30rpx; height: 310rpx;  border-radius: 20rpx; overflow: hidden;}
+.active-img{ height: 310rpx;}

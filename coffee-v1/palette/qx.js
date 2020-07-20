@@ -37,7 +37,7 @@
     },
     {
       "type": "image",
-      "url": "https://gdhflw.com/public/partime/coffeeImg/cp-icon.png",
+      "url": "http://jikelianmeng.tanghan.cn/static/images/cp-icon.png",
       "css": {
         "width": "90rpx",
         "height": "90rpx",
@@ -105,7 +105,7 @@
     },
     {
       "type": "image",
-      "url": "https://gdhflw.com/public/partime/coffeeImg/cp-icon.png",
+      "url": "http://jikelianmeng.tanghan.cn/static/images/cp-icon.png",
       "css": {
         "width": "90rpx",
         "height": "90rpx",
@@ -121,7 +121,7 @@
     },
     {
       "type": "image",
-      "url": "https://gdhflw.com/public/partime/coffeeImg/share-img.jpg",
+      "url": "http://jikelianmeng.tanghan.cn/static/images/share-img.jpg",
       "css": {
         "width": "676rpx",
         "height": "444rpx",
@@ -455,7 +455,7 @@
     },
     {
       "type": "image",
-      "url": "https://gdhflw.com/public/partime/coffeeImg/wechat-img.png",
+      "url": "http://jikelianmeng.tanghan.cn/static/images/wechat-img.png",
       "css": {
         "width": "150rpx",
         "height": "150rpx",

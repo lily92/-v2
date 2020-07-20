@@ -8,7 +8,7 @@
 			</van-tab>
 			<van-tab title='筛选' disabled></van-tab>
 		</van-tabs>
-	</view>
+	</view> 
 
 
 	<view class="flex flex-center loading-txt">
@@ -30,17 +30,17 @@
 	</view>
 
 	<!-- 筛选 -->
-	<screen shaixuanList='{{shaixuanList}}' show='{{show}}'></screen>
+	<screen shaixuanList='{{shaixuanList}}' show='{{show}}' bind:confrim='confrim' bind:reset='reset'></screen>
 	<!-- end筛选 -->
 
 	<view class="btn-down flex flex-center" bindtap="showStepbox">
-		<image class="w100" src="https://gdhflw.com/public/partime/coffeeImg/icon-upload.png" mode="widthFix"></image>
+		<image class="w100" src="http://jikelianmeng.tanghan.cn/static/images/icon-upload.png" mode="widthFix"></image>
 	</view>
 
 	<!-- 弹窗 -->
 	<van-popup show="{{ showStep }}" bind:close="onCloseStep" round='true' custom-class='round'>
 		<view class="setp-img">
-			<image class="w100" mode="widthFix" src="https://gdhflw.com/public/partime/coffeeImg/syj-setp.png"></image>
+			<image class="w100" mode="widthFix" src="http://jikelianmeng.tanghan.cn/static/images/syj-setp.png"></image>
 			<view class="flex flex-just btn-group">
 				<view class="btn" bindtap='onCloseStep'>取消</view>
 				<view class="btn" bindtap="upload">确认</view>

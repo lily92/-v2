@@ -154,7 +154,7 @@ Page({
 		this.setData({
 			title:options.title,
 			subTitle:options.subTitle,
-			fileImg:options.file
+			fileImg:options.file 
 		})
 
 	},
@@ -181,16 +181,12 @@ Page({
       //  template.views[3].text = '标题-自定义'
       //  template.views[5].text= '分享标题花要追溯到二战时期，那时意式\n咖啡逐渐进入了人们的视线，被很多人拥簇。'
        let view =template.views
-      //  console.log(that.data.type)
-      //  if(that.data.type == '3'){
-      //    console.log('3')
-      //    view = view.map(i => {
-      //     if(i.url == 'https://gdhflw.com/public/partime/coffeeImg/star1.png'){
-      //       i.url = 'https://gdhflw.com/public/partime/coffeeImg/star0.png'
-      //     }
-      //    return i
-      //  })
-      //  }
+       view = view.map(i => {
+				if(i.text == '1'){
+					i.text = '获取烘焙师的input文字'
+				}
+			 return i
+		 })
        template.views = view
        console.log(template)
        that.setData({
@@ -274,7 +270,12 @@ Page({
     if (this.isSave) {
       this.saveImage(this.imagePath);
     }
-  }, 
+	}, 
+	//保存表单信息
+	submitSave(event){
+		// event.detail = {value : {'name': 'value'} , formId: ''}
+		console.log(event.detail)
+	},
 
 
 });

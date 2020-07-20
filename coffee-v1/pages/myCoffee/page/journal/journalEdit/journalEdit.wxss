@@ -1,7 +1,8 @@
 /* pages/myCoffee/page/journal/journalEdit/journalEdit.wxss */
 page{ background: #f7f7f7;}
 .box{ padding: 26rpx; border-radius: 10rpx; margin-bottom: 20rpx;}
-.van-uploader__upload{ width:640rpx !important;  margin-bottom: 0 !important; height: 250rpx !important;}
+/* height: 250rpx !important; width:640rpx !important;  */
+.van-uploader__upload{ margin-bottom: 0 !important; }
 .txt{ padding: 20rpx 0;}
 .arrow{ transition: .3s linear all; padding: 0 20rpx; margin-right: -20rpx; }
 .arrow.active{ transform: rotate(45deg);}
@@ -19,6 +20,6 @@ page{ background: #f7f7f7;}
 		normal;
 	border-radius: 41rpx;}
 	.colorf{ color: #fff;}
-	.icon{ background: url('https://gdhflw.com/public/partime/coffeeImg/edit-icon-save.png') no-repeat right center; padding-right:35rpx ; background-size: 26rpx;}
-	.icon-send{ background: url('https://gdhflw.com/public/partime/coffeeImg/edit-icon-send.png') no-repeat right center; padding-right:35rpx ; background-size: 26rpx;}
+	.icon{ background: url('http://jikelianmeng.tanghan.cn/static/images/edit-icon-save.png') no-repeat right center; padding-right:35rpx ; background-size: 26rpx;}
+	.icon-send{ background: url('http://jikelianmeng.tanghan.cn/static/images/edit-icon-send.png') no-repeat right center; padding-right:35rpx ; background-size: 26rpx;}
 	.edit-btn{ text-align: center;}

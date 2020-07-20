@@ -12,4 +12,5 @@
 .fon24{font-size: 12px;}
 .item-top{ margin-bottom: 20rpx;}
 .w100{ width: 100%;}
-.item-img{ border-radius:20rpx 20rpx 0 0;}
+.item-img{ border-radius:20rpx 20rpx 0 0;height: 285rpx;}
+.item-img .w100{ height: 285rpx;  background: #fff;}

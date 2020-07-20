@@ -9,24 +9,24 @@ Page({
 
 	/**
 	 * 页面的初始数据
-	 */ 
+	 */
 	data: {
 		show: false,
 		type: 1,
 		total: 10,
 		active: 0,
-		number:5,
-		showStep:false,
-		showDetail:false,
+		number: 5,
+		showStep: false,
+		showDetail: false,
 		listQuery: {
 			limit: 10,
 			page: 1
 		},
 		isloadding: false,
 		imgUrls: [
-			'https://gdhflw.com/public/partime/coffeeImg/blog-img.jpg',
-			'https://gdhflw.com/public/partime/coffeeImg/blog-img.jpg',
-			'https://gdhflw.com/public/partime/coffeeImg/blog-img.jpg'
+			'http://jikelianmeng.tanghan.cn/static/images/blog-img.jpg',
+			'http://jikelianmeng.tanghan.cn/static/images/blog-img.jpg',
+			'http://jikelianmeng.tanghan.cn/static/images/blog-img.jpg'
 		],
 		typeList: [{
 			'name': '个人',
@@ -36,43 +36,43 @@ Page({
 			'id': 1
 		}],
 		articleList: [{
-			'type':1,
+			'type': 1,
 			'id': 9,
 			'create_time': '2020-06-06',
 			'view': 0,
 			'like': 0,
 			'imgUrl': [{
-				'images_url': "https://gdhflw.com/public/partime/coffeeImg/blog-img.jpg"
+				'images_url': "http://jikelianmeng.tanghan.cn/static/images/blog-img.jpg"
 			}, {
-				'images_url': "https://gdhflw.com/public/partime/coffeeImg/blog-img.jpg"
+				'images_url': "http://jikelianmeng.tanghan.cn/static/images/blog-img.jpg"
 			}, {
-				'images_url': "https://gdhflw.com/public/partime/coffeeImg/blog-img.jpg"
+				'images_url': "http://jikelianmeng.tanghan.cn/static/images/blog-img.jpg"
 			}]
 		}, {
-			'type':2,
+			'type': 2,
 			'id': 9,
 			'create_time': '2020-06-06',
 			'view': 0,
 			'like': 0,
 			'imgUrl': [{
-				'images_url': "https://gdhflw.com/public/partime/coffeeImg/blog-img.jpg"
+				'images_url': "http://jikelianmeng.tanghan.cn/static/images/blog-img.jpg"
 			}, {
-				'images_url': "https://gdhflw.com/public/partime/coffeeImg/blog-img.jpg"
+				'images_url': "http://jikelianmeng.tanghan.cn/static/images/blog-img.jpg"
 			}, {
-				'images_url': "https://gdhflw.com/public/partime/coffeeImg/blog-img.jpg"
+				'images_url': "http://jikelianmeng.tanghan.cn/static/images/blog-img.jpg"
 			}]
 		}, {
-			'type':3,
+			'type': 3,
 			'id': 9,
 			'create_time': '2020-06-06',
 			'view': 0,
 			'like': 0,
 			'imgUrl': [{
-				'images_url': "https://gdhflw.com/public/partime/coffeeImg/blog-img.jpg"
+				'images_url': "http://jikelianmeng.tanghan.cn/static/images/blog-img.jpg"
 			}, {
-				'images_url': "https://gdhflw.com/public/partime/coffeeImg/blog-img.jpg"
+				'images_url': "http://jikelianmeng.tanghan.cn/static/images/blog-img.jpg"
 			}, {
-				'images_url': "https://gdhflw.com/public/partime/coffeeImg/blog-img.jpg"
+				'images_url': "http://jikelianmeng.tanghan.cn/static/images/blog-img.jpg"
 			}]
 		}],
 		showActions: false,
@@ -153,12 +153,12 @@ Page({
 			]
 		}]
 	},
-	star(){
+	star() {
 		wx.redirectTo({
 			url: '../curveDesign/step1/step1',
 		})
 	},
-	upload(){
+	upload() {
 		wx.navigateTo({
 			url: '../../case/findMachine/findMachine',
 		})
@@ -167,7 +167,7 @@ Page({
 	/**
 	 * 生命周期函数--监听页面加载
 	 */
-	onLoad: function(options) {
+	onLoad: function (options) {
 
 	},
 	showPopup() {
@@ -175,22 +175,22 @@ Page({
 			show: true
 		});
 	},
-	showStepbox(){
+	showStepbox() {
 		this.setData({
 			showStep: true
 		});
-	},	
-	onCloseStep(){
+	},
+	onCloseStep() {
 		this.setData({
-			showStep: false 
+			showStep: false
 		});
 	},
-	showDetailbox(){
+	showDetailbox() {
 		this.setData({
 			showDetail: true
 		});
 	},
-	onCloseDetail(){
+	onCloseDetail() {
 		this.setData({
 			showDetail: false
 		});
@@ -202,40 +202,46 @@ Page({
 			icon: 'none',
 		});
 	},
+	confrim() {
+		console.log('--confrim--')
+	},
+	reset() {
+		console.log('--reset--')
+	},
 
 	/**
 	 * 生命周期函数--监听页面初次渲染完成
 	 */
-	onReady: function() {
+	onReady: function () {
 
 	},
 
 	/**
 	 * 生命周期函数--监听页面显示
 	 */
-	onShow: function() {
-	
-	
+	onShow: function () {
+
+
 	},
-	
+
 	/**
 	 * 生命周期函数--监听页面隐藏
 	 */
-	onHide: function() {
+	onHide: function () {
 
 	},
 
 	/**
 	 * 生命周期函数--监听页面卸载
 	 */
-	onUnload: function() {
+	onUnload: function () {
 
 	},
 
 	/**
 	 * 页面相关事件处理函数--监听用户下拉动作
 	 */
-	onPullDownRefresh: function() {
+	onPullDownRefresh: function () {
 
 	},
 
@@ -272,7 +278,7 @@ Page({
 	/**
 	 * 用户点击右上角分享
 	 */
-	onShareAppMessage: function() {
+	onShareAppMessage: function () {
 
 	}
 })

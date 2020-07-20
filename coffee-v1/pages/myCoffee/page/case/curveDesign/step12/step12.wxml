@@ -1,5 +1,7 @@
 <!--index.wxml-->
 <include src="/components/common/common" wx:if='{{nonetWork}}' />
+<form bindsubmit='submitSave'>
+
 <view class="padding30">
 	<view class="case-top flex flex-just flex-al-center" wx:if="{{title !=''}}">
 		<image src="{{fileImg}}" class="case-img" mode="aspectFill">
@@ -7,7 +9,7 @@
 		<view class="case-desc">
 			<view class="fon28">{{title}}</view>
 			<view class="color9 fon24">{{subTitle}}</view>
-		</view>
+		</view> 
 	</view>
 	<view class="edit-title fon28" bindtap="setTitle" wx:if="{{title ==''}}">编辑标题</view>
 	<view class="bg2a">
@@ -22,21 +24,20 @@
 			<view class="list-txt fon26 flex  ">
 				<text class="left ">烘焙师：</text>
 				<view class="right ">
-					<input type="text" placeholder="请输入烘焙师名字" class="txt-date"></input>
+					<input type="text" name='bakersName' placeholder="请输入烘焙师名字" class="txt-date"></input>
 				</view>
 			</view>
 			<view class="list-txt fon26 flex  ">
 				<text class="left ">工坊：</text>
 				<view class="right ">
-					<input type="text" placeholder="请输入工坊名称" class="txt-date"></input>
+					<input type="text"  name='gongfang' placeholder="请输入工坊名称" class="txt-date"></input>
 				</view>
 			</view>
 			<view class="list-txt fon26 flex  ">
 				<text class="left ">设计日期：</text>
 				<view class="right">
-					<picker mode="date" value="{{date}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange">
+					<picker mode="date" name='date' value="{{date}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange">
 						<view class="left {{date == '请选择日期'?'gray':'white'}}">
-							<!-- <text>请选择日期</text> -->
 							{{date}}
 						</view>
 					</picker>
@@ -45,26 +46,26 @@
 			<view class="list-txt fon26 flex  ">
 				<text class="left ">豆种：</text>
 				<view class="right ">
-					<input type="text" placeholder="请输入豆种" class="txt-date"></input>
+					<input type="text" placeholder="请输入豆种" name='type' class="txt-date"></input>
 				</view>
 			</view>
 			<view class="list-txt fon26 flex  ">
 				<text class="left ">处理方式：</text>
 				<view class="right ">
-					<input type="text" placeholder="请输入处理方式" class="txt-date"></input>
+					<input type="text" name='deal' placeholder="请输入处理方式" class="txt-date"></input>
 				</view>
 			</view>
 			<view class="list-txt fon26 flex  ">
 				<text class="left ">产地：</text>
 				<view class="right ">
-					<input type="text" placeholder="请输入产地" class="txt-date"></input>
+					<input type="text" name='placeOrigin' placeholder="请输入产地" class="txt-date"></input>
 				</view>
 			</view>
 		</view>
 		<view class="padding30">
 			<view class="fon28 colorf">感官记录：</view>
 			<view class="desc-jilu fon26">
-				<textarea class="" placeholder="请输入感官记录" class="w100 textarea"></textarea>
+				<textarea class="" name='record' placeholder="请输入感官记录" class="w100 textarea"></textarea>
 			</view>
 		</view>
 		<!-- end content -->
@@ -84,7 +85,8 @@
 <view wx:if='{{showShareImg == false}}'>
 	<view class="footer-height"></view>
 	<view class="footer-btn flex  flex-just ">
-		<button class="btn-group fon26" hover-class="op5">保存</button>
+		<button class="btn-group fon26" hover-class="op5" form-type='submit'>保存</button>
 		<button class="btn-group fon26" hover-class="op5" bindtap="showShare">分享</button>
 	</view>
 </view>
+</form>

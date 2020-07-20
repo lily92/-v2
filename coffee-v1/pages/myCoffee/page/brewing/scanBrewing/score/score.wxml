@@ -2,7 +2,7 @@
 <view>
 
   <view class="positionr r-img">
-    <image src="https://gdhflw.com/public/partime/coffeeImg/pingfen-r.png" mode="widthFix" class="w100"></image>
+    <image src="http://jikelianmeng.tanghan.cn/static/images/pingfen-r.png" mode="widthFix" class="w100"></image>
     <view class="score">
       <view>
          <view class="fon50">6分</view>
@@ -13,7 +13,7 @@
   <view class="w660 flex  ">
 	  <view class="item text-center" wx:for='{{moodList}}' wx:key='index'>
 		  <image src="{{item.icon}}" class="icon-img" mode="widthFix"></image>
-		  <view class="colorf fon28">槽糕</view>
+		  <view class="colorf fon28">{{item.name}}</view>
 	  </view>
 	  
   </view>

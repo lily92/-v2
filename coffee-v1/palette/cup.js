@@ -77,7 +77,7 @@
     },
     {
       "type": "image",
-      "url": "https://gdhflw.com/public/partime/coffeeImg/leida-img.png",
+      "url": "http://jikelianmeng.tanghan.cn/static/images/leida-img.png",
       "css": {
         "width": "298rpx",
         "height": "276rpx",
@@ -146,7 +146,7 @@
     },
     {
       "type": "image",
-      "url": "https://gdhflw.com/public/partime/coffeeImg/star0.png",
+      "url": "http://jikelianmeng.tanghan.cn/static/images/star0.png",
       "css": {
         "width": "24rpx",
         "height": "22rpx",
@@ -162,7 +162,7 @@
     },
     {
       "type": "image",
-      "url": "https://gdhflw.com/public/partime/coffeeImg/star1.png",
+      "url": "http://jikelianmeng.tanghan.cn/static/images/star1.png",
       "css": {
         "width": "24rpx",
         "height": "22rpx",
@@ -178,7 +178,7 @@
     },
     {
       "type": "image",
-      "url": "https://gdhflw.com/public/partime/coffeeImg/star1.png",
+      "url": "http://jikelianmeng.tanghan.cn/static/images/star1.png",
       "css": {
         "width": "24rpx",
         "height": "22rpx",
@@ -194,7 +194,7 @@
     },
     {
       "type": "image",
-      "url": "https://gdhflw.com/public/partime/coffeeImg/star1.png",
+      "url": "http://jikelianmeng.tanghan.cn/static/images/star1.png",
       "css": {
         "width": "24rpx",
         "height": "22rpx",
@@ -340,7 +340,7 @@
     },
     {
       "type": "image",
-      "url": "https://gdhflw.com/public/partime/coffeeImg/star1.png",
+      "url": "http://jikelianmeng.tanghan.cn/static/images/star1.png",
       "css": {
         "width": "24rpx",
         "height": "22rpx",
@@ -356,7 +356,7 @@
     },
     {
       "type": "image",
-      "url": "https://gdhflw.com/public/partime/coffeeImg/star1.png",
+      "url": "http://jikelianmeng.tanghan.cn/static/images/star1.png",
       "css": {
         "width": "24rpx",
         "height": "22rpx",
@@ -372,7 +372,7 @@
     },
     {
       "type": "image",
-      "url": "https://gdhflw.com/public/partime/coffeeImg/star1.png",
+      "url": "http://jikelianmeng.tanghan.cn/static/images/star1.png",
       "css": {
         "width": "24rpx",
         "height": "22rpx",
@@ -388,7 +388,7 @@
     },
     {
       "type": "image",
-      "url": "https://gdhflw.com/public/partime/coffeeImg/star1.png",
+      "url": "http://jikelianmeng.tanghan.cn/static/images/star1.png",
       "css": {
         "width": "24rpx",
         "height": "22rpx",
@@ -404,7 +404,7 @@
     },
     {
       "type": "image",
-      "url": "https://gdhflw.com/public/partime/coffeeImg/star1.png",
+      "url": "http://jikelianmeng.tanghan.cn/static/images/star1.png",
       "css": {
         "width": "24rpx",
         "height": "22rpx",
@@ -420,7 +420,7 @@
     },
     {
       "type": "image",
-      "url": "https://gdhflw.com/public/partime/coffeeImg/star1.png",
+      "url": "http://jikelianmeng.tanghan.cn/static/images/star1.png",
       "css": {
         "width": "24rpx",
         "height": "22rpx",
@@ -436,7 +436,7 @@
     },
     {
       "type": "image",
-      "url": "https://gdhflw.com/public/partime/coffeeImg/star1.png",
+      "url": "http://jikelianmeng.tanghan.cn/static/images/star1.png",
       "css": {
         "width": "24rpx",
         "height": "22rpx",
@@ -452,7 +452,7 @@
     },
     {
       "type": "image",
-      "url": "https://gdhflw.com/public/partime/coffeeImg/star1.png",
+      "url": "http://jikelianmeng.tanghan.cn/static/images/star1.png",
       "css": {
         "width": "24rpx",
         "height": "22rpx",
@@ -468,7 +468,7 @@
     },
     {
       "type": "image",
-      "url": "https://gdhflw.com/public/partime/coffeeImg/star1.png",
+      "url": "http://jikelianmeng.tanghan.cn/static/images/star1.png",
       "css": {
         "width": "24rpx",
         "height": "22rpx",
@@ -484,7 +484,7 @@
     },
     {
       "type": "image",
-      "url": "https://gdhflw.com/public/partime/coffeeImg/star1.png",
+      "url": "http://jikelianmeng.tanghan.cn/static/images/star1.png",
       "css": {
         "width": "24rpx",
         "height": "22rpx",
@@ -500,7 +500,7 @@
     },
     {
       "type": "image",
-      "url": "https://gdhflw.com/public/partime/coffeeImg/star1.png",
+      "url": "http://jikelianmeng.tanghan.cn/static/images/star1.png",
       "css": {
         "width": "24rpx",
         "height": "22rpx",
@@ -568,7 +568,7 @@
     },
     {
       "type": "image",
-      "url": "https://gdhflw.com/public/partime/coffeeImg/star1.png",
+      "url": "http://jikelianmeng.tanghan.cn/static/images/star1.png",
       "css": {
         "width": "24rpx",
         "height": "22rpx",
@@ -584,7 +584,7 @@
     },
     {
       "type": "image",
-      "url": "https://gdhflw.com/public/partime/coffeeImg/star1.png",
+      "url": "http://jikelianmeng.tanghan.cn/static/images/star1.png",
       "css": {
         "width": "24rpx",
         "height": "22rpx",
@@ -600,7 +600,7 @@
     },
     {
       "type": "image",
-      "url": "https://gdhflw.com/public/partime/coffeeImg/star1.png",
+      "url": "http://jikelianmeng.tanghan.cn/static/images/star1.png",
       "css": {
         "width": "24rpx",
         "height": "22rpx",
@@ -616,7 +616,7 @@
     },
     {
       "type": "image",
-      "url": "https://gdhflw.com/public/partime/coffeeImg/star2.png",
+      "url": "http://jikelianmeng.tanghan.cn/static/images/star2.png",
       "css": {
         "width": "24rpx",
         "height": "22rpx",
@@ -632,7 +632,7 @@
     },
     {
       "type": "image",
-      "url": "https://gdhflw.com/public/partime/coffeeImg/star1.png",
+      "url": "http://jikelianmeng.tanghan.cn/static/images/star1.png",
       "css": {
         "width": "24rpx",
         "height": "22rpx",
@@ -648,7 +648,7 @@
     },
     {
       "type": "image",
-      "url": "https://gdhflw.com/public/partime/coffeeImg/star1.png",
+      "url": "http://jikelianmeng.tanghan.cn/static/images/star1.png",
       "css": {
         "width": "24rpx",
         "height": "22rpx",
@@ -664,7 +664,7 @@
     },
     {
       "type": "image",
-      "url": "https://gdhflw.com/public/partime/coffeeImg/star1.png",
+      "url": "http://jikelianmeng.tanghan.cn/static/images/star1.png",
       "css": {
         "width": "24rpx",
         "height": "22rpx",
@@ -680,7 +680,7 @@
     },
     {
       "type": "image",
-      "url": "https://gdhflw.com/public/partime/coffeeImg/star1.png",
+      "url": "http://jikelianmeng.tanghan.cn/static/images/star1.png",
       "css": {
         "width": "24rpx",
         "height": "22rpx",
@@ -696,7 +696,7 @@
     },
     {
       "type": "image",
-      "url": "https://gdhflw.com/public/partime/coffeeImg/star1.png",
+      "url": "http://jikelianmeng.tanghan.cn/static/images/star1.png",
       "css": {
         "width": "24rpx",
         "height": "22rpx",
@@ -712,7 +712,7 @@
     },
     {
       "type": "image",
-      "url": "https://gdhflw.com/public/partime/coffeeImg/star1.png",
+      "url": "http://jikelianmeng.tanghan.cn/static/images/star1.png",
       "css": {
         "width": "24rpx",
         "height": "22rpx",
@@ -806,7 +806,7 @@
     },
     {
       "type": "image",
-      "url": "https://gdhflw.com/public/partime/coffeeImg/star1.png",
+      "url": "http://jikelianmeng.tanghan.cn/static/images/star1.png",
       "css": {
         "width": "24rpx",
         "height": "22rpx",
@@ -822,7 +822,7 @@
     },
     {
       "type": "image",
-      "url": "https://gdhflw.com/public/partime/coffeeImg/star1.png",
+      "url": "http://jikelianmeng.tanghan.cn/static/images/star1.png",
       "css": {
         "width": "24rpx",
         "height": "22rpx",
@@ -838,7 +838,7 @@
     },
     {
       "type": "image",
-      "url": "https://gdhflw.com/public/partime/coffeeImg/star1.png",
+      "url": "http://jikelianmeng.tanghan.cn/static/images/star1.png",
       "css": {
         "width": "24rpx",
         "height": "22rpx",
@@ -854,7 +854,7 @@
     },
     {
       "type": "image",
-      "url": "https://gdhflw.com/public/partime/coffeeImg/star1.png",
+      "url": "http://jikelianmeng.tanghan.cn/static/images/star1.png",
       "css": {
         "width": "24rpx",
         "height": "22rpx",
@@ -870,7 +870,7 @@
     },
     {
       "type": "image",
-      "url": "https://gdhflw.com/public/partime/coffeeImg/star1.png",
+      "url": "http://jikelianmeng.tanghan.cn/static/images/star1.png",
       "css": {
         "width": "24rpx",
         "height": "22rpx",
@@ -1528,7 +1528,7 @@
     {
       "type": "rect",
       "css": {
-         "background":"rgba(255,255,255,.5)",
+         "background":"rgba(255,255,255,.5)",
         "width": "307rpx",
         "height": "1rpx",
         "top": "555rpx",
@@ -1542,7 +1542,7 @@
     {
       "type": "rect",
       "css": {
-         "background":"rgba(255,255,255,.5)",
+         "background":"rgba(255,255,255,.5)",
         "width": "307rpx",
         "height": "1rpx",
         "top": "610rpx",
@@ -1556,7 +1556,7 @@
     {
       "type": "rect",
       "css": {
-         "background":"rgba(255,255,255,.5)",
+         "background":"rgba(255,255,255,.5)",
         "width": "307rpx",
         "height": "1rpx",
         "top": "610rpx",
@@ -1570,7 +1570,7 @@
     {
       "type": "rect",
       "css": {
-         "background":"rgba(255,255,255,.5)",
+         "background":"rgba(255,255,255,.5)",
         "width": "307rpx",
         "height": "1rpx",
         "top": "670rpx",
@@ -1584,7 +1584,7 @@
     {
       "type": "rect",
       "css": {
-         "background":"rgba(255,255,255,.5)",
+         "background":"rgba(255,255,255,.5)",
         "width": "307rpx",
         "height": "1rpx",
         "top": "732rpx",
@@ -1598,7 +1598,7 @@
     {
       "type": "rect",
       "css": {
-         "background":"rgba(255,255,255,.5)",
+         "background":"rgba(255,255,255,.5)",
         "width": "307rpx",
         "height": "1rpx",
         "top": "790rpx",
@@ -1612,7 +1612,7 @@
     {
       "type": "rect",
       "css": {
-         "background":"rgba(255,255,255,.5)",
+         "background":"rgba(255,255,255,.5)",
         "width": "307rpx",
         "height": "1rpx",
         "top": "850rpx",
@@ -1626,7 +1626,7 @@
     {
       "type": "rect",
       "css": {
-         "background":"rgba(255,255,255,.5)",
+         "background":"rgba(255,255,255,.5)",
         "width": "307rpx",
         "height": "1rpx",
         "top": "791rpx",
@@ -1640,7 +1640,7 @@
    
     {
       "type": "image",
-      "url": "https://gdhflw.com/public/partime/coffeeImg/wechat-img.png",
+      "url": "http://jikelianmeng.tanghan.cn/static/images/wechat-img.png",
       "css": {
         "width": "150rpx",
         "height": "150rpx",

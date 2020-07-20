@@ -14,7 +14,7 @@ ec-canvas {
 .list-txt{ color: #fff; line-height: 1.5; padding:20rpx 0; border-bottom: 1px solid rgba(255,255,255,.5);}
 .left{ width: 200rpx;display: block;}
 .right{ width: calc(100% -230rpx); display: block;}
-.desc-jilu{ color: #c8c8c8; padding-top: 20rpx;}
+.desc-jilu{ color: #c8c8c8; padding-top: 20rpx; height:  auto;}
 .colorf{ color: #fff;}
 
 .footer-height{ padding-bottom:60rpx; height: 130rpx; padding: 15rpx ;}

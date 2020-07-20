@@ -17,6 +17,12 @@ Page({
   data: {
 
   },
+  onShow() {
+    let userinfo = wx.getStorageSync('userinfo')
+    this.setData({
+      userinfo
+    })
+  },
   goCoffee(){
     wx.switchTab({
 			url: '/pages/tarBar/mycoffee/mycoffee',
@@ -26,12 +32,6 @@ Page({
   goIntegral() {
     wx.navigateTo({
       url: './score/index',
-    })
-  },
-  onShow() {
-    let userinfo = wx.getStorageSync('userinfo')
-    this.setData({
-      userinfo
     })
   },
   // 前往分销中心

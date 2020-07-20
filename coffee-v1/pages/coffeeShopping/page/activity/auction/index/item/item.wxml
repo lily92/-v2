@@ -1,11 +1,11 @@
 <!--pages/coffeeShopping/page/activity/crowdFunding/index/item/item.wxml-->
 <navigator url="/pages/coffeeShopping/page/activity/auction/detail/detail?id=10" class="item flex flex-just" wx:for='{{list}}' wx:key='index'>
 	<view  class="item-img flex flex-center">
-		<image src="https://gdhflw.com/public/partime/coffeeImg/pm-img.jpg" mode="widthFix" class="w100"></image>
+		<image src="http://jikelianmeng.tanghan.cn/static/images/pm-img.jpg"  class="item-img"></image>
 	</view>
 	<view class="item-desc flex">
 		<view class="line2 w100 color3">
-			格米莱CRM3200C咖啡机格米莱CRM3200C咖啡机
+			格米莱CRM3200C咖啡机格米莱CRM3200C咖啡机
 		</view>
 		 <view class="w100 color0">
 			 <view class="qp-price">

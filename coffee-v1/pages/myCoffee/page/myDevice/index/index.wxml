@@ -4,7 +4,7 @@
 	<view class="list ">
 		<!-- 没有数据 -->
 		<view class="no-data bgf" wx:if='{{deviceList.length <=0}}' >
-			<image class="no-data-img" src="https://gdhflw.com/public/partime/coffeeImg/c-icon.png" mode="widthFix"></image>
+			<image class="no-data-img" src="http://jikelianmeng.tanghan.cn/static/images/c-icon.png" mode="widthFix"></image>
 			<view class="fon20 tip text-center ">暂无绑定设备</view>
 		</view>
 		<!-- end 没有数据 -->
@@ -29,7 +29,6 @@
 			
 		</view>
 	</view>
-
 </view>
 
 <van-popup show="{{ showKl }}" bind:close="onClose" 

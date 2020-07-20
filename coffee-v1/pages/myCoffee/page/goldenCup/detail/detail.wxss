@@ -59,5 +59,5 @@ ec-canvas,.canvas-img {
 
 /* end star content */
 
-.scroll{ display: flex; justify-content: center; width: auto;}
+.scroll{ display: flex; justify-content: center; width: auto; height: 100%;}
 .fix-save{ position: fixed; left: 0; top: 0; right: 0; bottom: 0; width: 100%; z-index: 101; bottom: 0; background: rgba(0, 0, 0, .6); display: flex;  justify-content: center; flex-wrap: wrap;}

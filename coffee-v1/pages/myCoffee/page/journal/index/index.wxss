@@ -52,5 +52,5 @@ page{  background: #f7f7f7;}
 		normal;
 	border-radius: 41rpx;}
 	.colorf{ color: #fff;}
-	.icon{ background: url('https://gdhflw.com/public/partime/coffeeImg/icon-edit-rizhi.png') no-repeat right center; padding-right:30rpx ; background-size: 26rpx;}
+	.icon{ background: url('http://jikelianmeng.tanghan.cn/static/images/icon-edit-rizhi.png') no-repeat right center; padding-right:30rpx ; background-size: 26rpx;}
 	.edit-btn{ text-align: center;}

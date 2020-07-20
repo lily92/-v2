@@ -11,24 +11,24 @@ Page({
 				name:'曲线设计',
 				active:true,
 				fileList:[],
-				uploadIcon:"https://gdhflw.com/public/partime/coffeeImg/edit-icon2.png"
+				uploadIcon:"http://jikelianmeng.tanghan.cn/static/images/edit-icon2.png"
 				
 			},{
 				name:'风味雷达',
 				active:false,
 				fileList:[],
-				uploadIcon:"https://gdhflw.com/public/partime/coffeeImg/edit-icon2.png"
+				uploadIcon:"http://jikelianmeng.tanghan.cn/static/images/edit-icon2.png"
 				
 			},{
 				name:'金杯计算',
 				active:false,
 				fileList:[],
-				uploadIcon:"https://gdhflw.com/public/partime/coffeeImg/edit-icon2.png"
+				uploadIcon:"http://jikelianmeng.tanghan.cn/static/images/edit-icon2.png"
 			},{
 				name:'曲线对比',
 				active:false,
 				fileList:[],
-				uploadIcon:"https://gdhflw.com/public/partime/coffeeImg/edit-icon2.png"
+				uploadIcon:"http://jikelianmeng.tanghan.cn/static/images/edit-icon2.png"
 			}
 		]
 	},
@@ -47,6 +47,7 @@ Page({
 		
 	},
 	afterRead(event) {
+		let that = this
 		const {
 			file
 		} = event.detail;
@@ -71,7 +72,13 @@ Page({
 				});
 			},
 			fail(res){
-				console.log(res)
+				that.setData({
+					fileList:[
+						{
+							"url":file.path
+						}
+					]
+				});
 			}
 		});
 	},

@@ -9,7 +9,7 @@
   "views": [
     {
       "type": "image",
-      "url": "https://gdhflw.com/public/partime/coffeeImg/pingfen-r.png",
+      "url": "http://jikelianmeng.tanghan.cn/static/images/pingfen-r.png",
       "css": {
         "width": "383rpx",
         "height": "380rpx",
@@ -77,7 +77,7 @@
     },
     {
       "type": "image",
-      "url": "https://gdhflw.com/public/partime/coffeeImg/s-1.png",
+      "url": "http://jikelianmeng.tanghan.cn/static/images/s-1.png",
       "css": {
         "width": "64rpx",
         "height": "64rpx",
@@ -93,7 +93,7 @@
     },
     {
       "type": "image",
-      "url": "https://gdhflw.com/public/partime/coffeeImg/s-5.png",
+      "url": "http://jikelianmeng.tanghan.cn/static/images/s-5.png",
       "css": {
         "width": "64rpx",
         "height": "64rpx",
@@ -109,7 +109,7 @@
     },
     {
       "type": "image",
-      "url": "https://gdhflw.com/public/partime/coffeeImg/s-2.png",
+      "url": "http://jikelianmeng.tanghan.cn/static/images/s-2.png",
       "css": {
         "width": "64rpx",
         "height": "64rpx",
@@ -125,7 +125,7 @@
     },
     {
       "type": "image",
-      "url": "https://gdhflw.com/public/partime/coffeeImg/s-3.png",
+      "url": "http://jikelianmeng.tanghan.cn/static/images/s-3.png",
       "css": {
         "width": "64rpx",
         "height": "64rpx",
@@ -141,7 +141,7 @@
     },
     {
       "type": "image",
-      "url": "https://gdhflw.com/public/partime/coffeeImg/s-4.png",
+      "url": "http://jikelianmeng.tanghan.cn/static/images/s-4.png",
       "css": {
         "width": "64rpx",
         "height": "64rpx",
@@ -301,7 +301,7 @@
     },
     {
       "type": "image",
-      "url": "https://gdhflw.com/public/partime/coffeeImg/share-img.png",
+      "url": "http://jikelianmeng.tanghan.cn/static/images/share-img.png",
       "css": {
         "width": "645rpx",
         "height": "419rpx",
@@ -369,7 +369,7 @@
     },
     {
       "type": "image",
-      "url": "https://gdhflw.com/public/partime/coffeeImg/wechat-img.png",
+      "url": "http://jikelianmeng.tanghan.cn/static/images/wechat-img.png",
       "css": {
         "width": "150rpx",
         "height": "150rpx",

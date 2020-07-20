@@ -31,9 +31,9 @@
 						<van-checkbox name="{{item.value}}" checked-color="#000">
 						</van-checkbox>
 						<view class="flex flex-al-center select-con">
-							<image class="case-img" src="https://gdhflw.com/public/partime/coffeeImg/cp-icon.png" mode="widthFix"></image>
+							<image class="case-img" src="http://jikelianmeng.tanghan.cn/static/images/cp-icon.png" mode="widthFix"></image>
 							<view class="case-desc flex flex-al-center flex-just">
-								<image src="https://gdhflw.com/public/partime/coffeeImg/icon-cup.png" class="desc-icon" mode="widthFix"></image>
+								<image src="http://jikelianmeng.tanghan.cn/static/images/icon-cup.png" class="desc-icon" mode="widthFix"></image>
 								<view class="desc-tit">
 									<view class="nowarp  fon24">
 										安溪茶农冲泡铁观
@@ -71,13 +71,13 @@
 			<view class="colseTip " bindtap="colseTip">×</view>
 			<view class="fon24 text-just text-center confrim-tip">
 				<view wx:if="{{UploadFinish == -1}}">
-					<image class="tip-icon" src="https://gdhflw.com/public/partime/coffeeImg/upload-fail.png"></image>
+					<image class="tip-icon" src="http://jikelianmeng.tanghan.cn/static/images/upload-fail.png"></image>
 					<view>上传失败！</view>
 					<view>最多还可上传5个方案</view>
 				</view>
 
 				<view wx:if="{{UploadFinish == 1}}">
-					<image class="tip-icon" src="https://gdhflw.com/public/partime/coffeeImg/upload-success.png"></image>
+					<image class="tip-icon" src="http://jikelianmeng.tanghan.cn/static/images/upload-success.png"></image>
 					<view>上传成功！</view>
 				</view>
 			</view>

@@ -1,7 +1,7 @@
 <!--pages/myCoffee/page/journal/journalTab/item/item.wxml-->
 <view class="item" wx:for='{{list}}'>
 	<view class="user-icon">
-		<image src="https://gdhflw.com/public/partime/coffeeImg/logo-black.png" mode="widthFix" class="user-icon-img"></image>
+		<image src="http://jikelianmeng.tanghan.cn/static/images/logo-black.png" mode="widthFix" class="user-icon-img"></image>
 	</view>
 	<view class="j-desc" wx:if='{{types ==1}}' >
 		来自科学怪人星球 赞了我的日志
@@ -14,6 +14,6 @@
 	</view>
 	
 	<view class="j-img">
-		<image src="https://gdhflw.com/public/partime/coffeeImg/pm-img.jpg" mode="widthFix" class="j-imgs"></image>
+		<image src="http://jikelianmeng.tanghan.cn/static/images/pm-img.jpg" mode="widthFix" class="j-imgs"></image>
 	</view>
 </view>

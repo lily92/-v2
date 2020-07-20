@@ -5,8 +5,10 @@
 	<!-- 拍卖详情 -->
 	<view class="flex flex-just flex-al-center">
 		<view class="left">拍卖中</view>
-		<view class="right color0">
-			剩余时间：01 天21 时28 分56 秒
+		<view class="right color0 flex flex-al-center">
+	   	<text>	剩余时间：</text>
+			<van-count-down class='cut-down' time="{{ time }}" format="DD 天 HH 时 mm 分 ss 秒" />
+			
 		</view>
 	</view>
 
@@ -17,10 +19,6 @@
 				<text class="fon42">￥1000.00</text></view>
 			<text class="color9 fon24">3人已出价</text>
 		</view>
-	</view>
-	<view class="padding30 product-desc">
-		<text class="margin-r40">规格</text>
-		<text>银色 CRM3200C</text>
 	</view>
 	<view class="padding30 product-desc fon24 flex">
 		<view class="w50">

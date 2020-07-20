@@ -1,7 +1,7 @@
 <!--pages/coffeeShopping/page/activity/crowdFunding/index/item/item.wxml-->
 
 <navigator url='/pages/coffeeShopping/page/activity/crowdFunding/detail/detail?id={{item.id}}' class="item" wx:for='{{list}}' wx:key='index'>
-	<image mode="widthFix" src="https://gdhflw.com/public/partime/coffeeImg/zc-img.jpg" class="w100"></image>
+	<image mode="widthFix" src="http://jikelianmeng.tanghan.cn/static/images/zc-img.jpg" class="w100"></image>
 	<view class="padding30">
 		<view class="color9">格米莱</view>
 		<view>CRM3200C咖啡机</view>

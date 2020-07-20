@@ -28,7 +28,7 @@ Page({
       fail(){
         that.setData({ 
           fileList:[{
-            "url":"https://gdhflw.com/public/partime/coffeeImg/cBanner.jpg"
+            "url":"http://jikelianmeng.tanghan.cn/static/images/cBanner.jpg"
           }]
          });
       }

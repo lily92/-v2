@@ -50,7 +50,7 @@ page {
 }
 
 .icon {
-	background: url('https://gdhflw.com/public/partime/coffeeImg/icon-edit-rizhi.png') no-repeat right center;
+	background: url('http://jikelianmeng.tanghan.cn/static/images/icon-edit-rizhi.png') no-repeat right center;
 	background-size: 37rpx;
 	padding: 10rpx 50rpx 10rpx 0;
 }
@@ -86,7 +86,7 @@ page {
 			normal;
 		border-radius: 32px; width: 185rpx; line-height: 64rpx; color: #fff; text-align: center;
 }
-.setp-img{ padding: 50rpx; width: 585rpx; box-sizing: border-box; background: url('https://gdhflw.com/public/partime/coffeeImg/cp-bz-bg-1.png') repeat;}
+.setp-img{ padding: 50rpx; width: 585rpx; box-sizing: border-box; background: url('http://jikelianmeng.tanghan.cn/static/images/cp-bz-bg-1.png') repeat;}
 .van-popup{ border-radius: 20rpx !important; overflow: hidden;}
 .margin0-auto{ margin: 50rpx auto 0;}
 .tip{padding: 50rpx; width: 520rpx; box-sizing: border-box;line-height: 1.7;}

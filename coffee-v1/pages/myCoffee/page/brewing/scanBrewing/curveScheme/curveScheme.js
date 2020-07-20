@@ -1,4 +1,4 @@
-import * as echarts from '../../../../../../ec-canvas/echarts';
+import * as echarts from '../../../../ec-canvas/echarts';
 
 const app = getApp();
 
@@ -100,7 +100,7 @@ function initChart(canvas, width, height, dpr) {
 					},
 					invisible: true,
 					draggable: true,
-					ondrag: echarts.util.curry(onPointDragging, dataIndex),
+					// ondrag: echarts.util.curry(onPointDragging, dataIndex),
 					// onmousemove: echarts.util.curry(showTooltip, dataIndex),
 					// onmouseout: echarts.util.curry(hideTooltip, dataIndex),
 					z: 100
@@ -138,26 +138,32 @@ Page({
 		},
 		caseDescList: [{
 				'name': '烘培师',
-				'desc': '阿拉姆'
+				'desc': '阿拉姆',
+				'dataKey':'baker'
 			},
 			{
 				'name': '工坊：',
-				'desc': '萃取精灵'
+				'desc': '萃取精灵',
+				'dataKey':'gongfang'
 			}, {
 				'name': '设计日期：',
-				'desc': '2020-2-21'
+				'desc': '2020-2-21',
+				'dataKey':'date'
 			},
 			{
 				'name': '豆种',
-				'desc': '旧街场白咖啡'
+				'desc': '旧街场白咖啡',
+				'dataKey':'type'
 			},
 			{
 				'name': '处理方式：',
-				'desc': '水洗'
+				'desc': '水洗',
+				'dataKey':'deal'
 			},
 			{
 				'name': '产地：',
-				'desc': '阿拉比卡种'
+				'desc': '阿拉比卡种',
+				'dataKey':'placeOrigin'
 			}
 		]
 
@@ -175,5 +181,14 @@ Page({
 		wx.navigateTo({
 			url: '../findMachine/findMachine',
 		})
-	}
+	},
+	bindDateChange: function (e) {
+		console.log('picker发送选择改变，携带值为', e.detail.value)
+		let that = this
+		let caseDescList = that.data.caseDescList
+		caseDescList[2].desc = e.detail.value
+    this.setData({
+      caseDescList: caseDescList
+    })
+  },
 });

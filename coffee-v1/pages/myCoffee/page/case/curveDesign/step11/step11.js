@@ -1,5 +1,5 @@
 // pages/myCoffee/page/case/curveDesign/step1/step1.js
-import * as echarts from '../../../../../../ec-canvas/echarts';
+import * as echarts from '../../../../ec-canvas/echarts';
 var data = [
   [0, 4],
   [10, 4],

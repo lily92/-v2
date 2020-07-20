@@ -1,7 +1,7 @@
 <!--pages/coffeeShopping/page/coupon/item/item.wxml-->
 <view class="list-item w100 positionr" wx:for="{{couponList}}" wx:for-index="idx" wx:for-item="item" wx:key='idx'
  >
-	<image src="https://gdhflw.com/public/partime/coffeeImg/cart-bg.png"  mode="widthFix" class="item-img-bg"></image>
+	<image src="http://jikelianmeng.tanghan.cn/static/images/cart-bg.png"  mode="widthFix" class="item-img-bg"></image>
 	<view class="positionb">
 		<view class="item-top  flex flex-al-center">
 			<view class="item-left colorf op5">

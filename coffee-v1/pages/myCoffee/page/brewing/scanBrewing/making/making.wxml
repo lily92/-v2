@@ -2,7 +2,7 @@
 <include src="/components/common/common" wx:if='{{nonetWork}}' />
 <view class="padding30">
 	<view  class="case-top flex flex-just flex-al-center">
-	  <image src="https://gdhflw.com/public/partime/coffeeImg/cp-icon.png" class="case-img" mode="widthFix">
+	  <image src="http://jikelianmeng.tanghan.cn/static/images/cp-icon.png" class="case-img" mode="widthFix">
 		  
 	  </image>
 	  <view class="case-desc">

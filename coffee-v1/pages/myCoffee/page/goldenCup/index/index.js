@@ -22,9 +22,9 @@ Page({
 		},
 		isloadding: false,
 		imgUrls: [
-			'https://gdhflw.com/public/partime/coffeeImg/blog-img.jpg',
-			'https://gdhflw.com/public/partime/coffeeImg/blog-img.jpg',
-			'https://gdhflw.com/public/partime/coffeeImg/blog-img.jpg'
+			'http://jikelianmeng.tanghan.cn/static/images/blog-img.jpg',
+			'http://jikelianmeng.tanghan.cn/static/images/blog-img.jpg',
+			'http://jikelianmeng.tanghan.cn/static/images/blog-img.jpg'
 		],
 		typeList: [{
 			'name': '全部',
@@ -46,11 +46,11 @@ Page({
 			'view': 0,
 			'like': 0,
 			'imgUrl': [{
-				'images_url': "https://gdhflw.com/public/partime/coffeeImg/blog-img.jpg"
+				'images_url': "http://jikelianmeng.tanghan.cn/static/images/blog-img.jpg"
 			}, {
-				'images_url': "https://gdhflw.com/public/partime/coffeeImg/blog-img.jpg"
+				'images_url': "http://jikelianmeng.tanghan.cn/static/images/blog-img.jpg"
 			}, {
-				'images_url': "https://gdhflw.com/public/partime/coffeeImg/blog-img.jpg"
+				'images_url': "http://jikelianmeng.tanghan.cn/static/images/blog-img.jpg"
 			}]
 		}, {
 			'type':2,
@@ -59,11 +59,11 @@ Page({
 			'view': 0,
 			'like': 0,
 			'imgUrl': [{
-				'images_url': "https://gdhflw.com/public/partime/coffeeImg/blog-img.jpg"
+				'images_url': "http://jikelianmeng.tanghan.cn/static/images/blog-img.jpg"
 			}, {
-				'images_url': "https://gdhflw.com/public/partime/coffeeImg/blog-img.jpg"
+				'images_url': "http://jikelianmeng.tanghan.cn/static/images/blog-img.jpg"
 			}, {
-				'images_url': "https://gdhflw.com/public/partime/coffeeImg/blog-img.jpg"
+				'images_url': "http://jikelianmeng.tanghan.cn/static/images/blog-img.jpg"
 			}]
 		}, {
 			'type':3,
@@ -72,11 +72,11 @@ Page({
 			'view': 0,
 			'like': 0,
 			'imgUrl': [{
-				'images_url': "https://gdhflw.com/public/partime/coffeeImg/blog-img.jpg"
+				'images_url': "http://jikelianmeng.tanghan.cn/static/images/blog-img.jpg"
 			}, {
-				'images_url': "https://gdhflw.com/public/partime/coffeeImg/blog-img.jpg"
+				'images_url': "http://jikelianmeng.tanghan.cn/static/images/blog-img.jpg"
 			}, {
-				'images_url': "https://gdhflw.com/public/partime/coffeeImg/blog-img.jpg"
+				'images_url': "http://jikelianmeng.tanghan.cn/static/images/blog-img.jpg"
 			}]
 		}],
 		showActions: false,

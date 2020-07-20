@@ -8,7 +8,7 @@ Component({
     //   type:Object
     // },
     active:{
-      type:String
+      type:Number
     }
   },
 
@@ -29,10 +29,8 @@ Component({
       url: '/pages/home/profile/index'
     })
   },
-  goCoffee(){
-    wx.switchTab({
-			url: '/pages/tarBar/mycoffee/mycoffee',
-		})
-  }
+  link(e){
+    this.triggerEvent('link',e.currentTarget.dataset.aid)
+  },
   }
 })

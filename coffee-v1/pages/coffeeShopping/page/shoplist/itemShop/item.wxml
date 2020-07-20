@@ -1,13 +1,13 @@
 <!--pages/coffeeShopping/page/product/item/item.wxml-->
 <view class="padding20 bgf item" wx:for='{{list}}' wx:key='index'>
 	<view class="flex flex-al-center flex-just item-top">
-		<image src="https://gdhflw.com/public/partime/coffeeImg/logo-black.png" mode="widthFix" class="logo"></image>
+		<image src="http://jikelianmeng.tanghan.cn/static/images/logo-black.png" mode="widthFix" class="logo"></image>
 		<view class="desc">
 			<view class="fon26">顺德极客店</view>
 			<view class="color9 fon24">距您1.6km</view>
 		</view>
 	</view>
 	<view class="item-img">
-		<image src="https://gdhflw.com/public/partime/coffeeImg/hp-img.jpg" class="w100" mode="widthFix"></image>
+		<image src="http://jikelianmeng.tanghan.cn/static/images/hp-img.jpg" class="w100" mode="aspectFit"></image>
 	</view>
 </view>

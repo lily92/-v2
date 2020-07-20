@@ -147,6 +147,19 @@ Page({
         'value':'1320km'
       }
     ],
+    descContent:{
+      date:'2020-06-06',
+      deal:"水洗",
+      weather:"晴朗",
+      Powderquantity:"300g",
+      coffeeBean:"猫屎咖啡豆",
+      grind:"30%",
+      type:"猫屎咖啡",
+      waterpowderRatio:"1：4",
+      placeOfOrigin:"云南",
+      temperature:"40°",
+      altitude:"300km"
+    },
     template: {},
     customActionStyle: {
       border: {
@@ -219,7 +232,8 @@ Page({
         }
         ]
       }]
-    }
+    },
+    title:''
   },
     // 获取数据后初始化图表
     init () {
@@ -283,6 +297,12 @@ Page({
       this.setData({
         isDisposed: true
       });
+    },
+    inputTitle(e){
+      this.setData({
+        title:e.detail.value
+      })
+      
     },
 
   onImgOK(e) {
@@ -428,15 +448,15 @@ Page({
        template.views[1].css.color = that.data.bgcolor
        template.views[2].css.color = that.data.bgcolor
        template.views[4].url = that.data.file //图表img
-       template.views[3].text = '标题'
+       template.views[3].text = that.data.title
        template.views[5].text= '分享标题花要追溯到二战时期，那时意式\n咖啡逐渐进入了人们的视线，被很多人拥簇。'
        let view =template.views
        console.log(that.data.type)
        if(that.data.type == '3'){
          console.log('3')
          view = view.map(i => {
-          if(i.url == 'https://gdhflw.com/public/partime/coffeeImg/star1.png'){
-            i.url = 'https://gdhflw.com/public/partime/coffeeImg/star0.png'
+          if(i.url == 'http://jikelianmeng.tanghan.cn/static/images/star1.png'){
+            i.url = 'http://jikelianmeng.tanghan.cn/static/images/star0.png'
           }
          return i
        })

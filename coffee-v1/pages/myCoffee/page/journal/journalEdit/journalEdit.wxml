@@ -4,7 +4,7 @@
 		<textarea placeholder="填写段落文字" class="w100" ></textarea>
 	</view>
 	<view class="box bgf">
-		<van-uploader class='w100' upload-text='上传图片' upload-icon='https://gdhflw.com/public/partime/coffeeImg/edit-icon1.png' file-list="{{ fileList }}" bind:after-read="afterRead" preview-size='300' />
+		<van-uploader   upload-text='上传图片' upload-icon='http://jikelianmeng.tanghan.cn/static/images/edit-icon1.png' file-list="{{ fileList }}" bind:after-read="afterRead"  deletable='{{ true}}'  />
 	</view>
 	
 	<view class="box bgf" wx:for='{{editList}}' wx:key='index'>
@@ -18,7 +18,7 @@
 			<view class="fon24 color9 txt">
 				编辑曲线设计
 			</view>
-			<van-uploader class='w100' upload-text='上传图片' upload-icon='{{item.uploadIcon}}' file-list="{{ item.fileList }}" bind:after-read="afterRead" preview-size='300' />
+			<van-uploader class='w100' upload-text='上传图片' upload-icon='{{item.uploadIcon}}' file-list="{{ item.fileList }}" bind:after-read="afterRead" preview-size='300' deletable='{{ true}}' />
 		</view>
 		
 	</view>

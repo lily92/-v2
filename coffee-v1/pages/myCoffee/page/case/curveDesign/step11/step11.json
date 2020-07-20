@@ -2,7 +2,7 @@
   "usingComponents": {
     "stepNum":"../component/stepNum/stepNum",
     "btnGroup":"../component/btnGroup/btnGroup",
-    "ec-canvas": "/ec-canvas/ec-canvas"
+    "ec-canvas": "/pages/myCoffee/ec-canvas/ec-canvas"
     
   }
 }

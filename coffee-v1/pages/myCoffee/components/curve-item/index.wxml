@@ -5,11 +5,11 @@
   bind:close="onClose" >
  	<view class="a-item flex flex-just" >
 		<view class="img">
-			<image class="w100  img" mode="aspectFit" src="https://gdhflw.com/public/partime/coffeeImg/cp-icon.png"></image>
+			<image class="w100  img" mode="aspectFit" src="http://jikelianmeng.tanghan.cn/static/images/cp-icon.png"></image>
 		</view>
 		<view class="con ">
 			<view class="icon-img">
-			<image class="tea-img w100" src="https://gdhflw.com/public/partime/coffeeImg/icon-cup.png" mode="widthFix"></image>
+			<image class="tea-img w100" src="http://jikelianmeng.tanghan.cn/static/images/icon-cup.png" mode="widthFix"></image>
 			</view>
 			<view class="con-desc">
 				<view class="fon26">安溪茶农冲泡铁观</view>

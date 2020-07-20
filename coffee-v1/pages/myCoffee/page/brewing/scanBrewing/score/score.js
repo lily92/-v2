@@ -1,5 +1,5 @@
 // pages/myCoffee/page/brewing/scanBrewing/score/score.js
-import * as echarts from '../../../../../../ec-canvas/echarts';
+import * as echarts from '../../../../ec-canvas/echarts';
 import Card from '../../../../../../palette/score';
 const app = getApp();
 
@@ -167,19 +167,19 @@ Page({
 	  },
 	  moodList:[
 		  {
-			  'icon':"https://gdhflw.com/public/partime/coffeeImg/s-1.png",
+			  'icon':"http://jikelianmeng.tanghan.cn/static/images/s-1.png",
 			  'name':'槽糕'
 		  }, {
-			  'icon':"https://gdhflw.com/public/partime/coffeeImg/s-2.png",
+			  'icon':"http://jikelianmeng.tanghan.cn/static/images/s-2.png",
 			  'name':'一般'
 		  }, {
-			  'icon':"https://gdhflw.com/public/partime/coffeeImg/s-3.png",
+			  'icon':"http://jikelianmeng.tanghan.cn/static/images/s-3.png",
 			  'name':'良好'
 		  }, {
-			  'icon':"https://gdhflw.com/public/partime/coffeeImg/s-4.png",
+			  'icon':"http://jikelianmeng.tanghan.cn/static/images/s-4.png",
 			  'name':'满意'
 		  }, {
-			  'icon':"https://gdhflw.com/public/partime/coffeeImg/s-5.png",
+			  'icon':"http://jikelianmeng.tanghan.cn/static/images/s-5.png",
 			  'name':'极好'
 		  }
 		], 

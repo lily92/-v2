@@ -2,8 +2,8 @@
 
 <cover-view  class="connection" >
 <cover-view class="bgf main-tip">
-	<cover-image  bindtap='closeTip' src="https://gdhflw.com/public/partime/coffeeImg/icon-close.png" class="colse-btn"></cover-image>
-	<cover-image class="connect-img" mode="widthFix" src="https://gdhflw.com/public/partime/coffeeImg/icon-duankai-lianjie.png"></cover-image>
+	<cover-image  bindtap='closeTip' src="http://jikelianmeng.tanghan.cn/static/images/icon-close.png" class="colse-btn"></cover-image>
+	<cover-image class="connect-img" mode="widthFix" src="http://jikelianmeng.tanghan.cn/static/images/icon-duankai-lianjie.png"></cover-image>
 	<cover-view class="fon28 text-center">
 		<cover-view>未连接设备！</cover-view>
 		<cover-view>您可以通过以下两种方式连接到设备</cover-view>
@@ -11,7 +11,7 @@
 	<cover-view class="tip-items">
 		<cover-view class="tip-item flex flex-al-center">
 			<cover-view class="tip-img">
-				<cover-image class="w100" mode="widthFix" src="https://gdhflw.com/public/partime/coffeeImg/icon-wifi.png"></cover-image>
+				<cover-image class="w100" mode="widthFix" src="http://jikelianmeng.tanghan.cn/static/images/icon-wifi.png"></cover-image>
 			</cover-view>
 			<cover-view class="w310 fon26">
 				您可以打开手机WIFI同机器
@@ -20,7 +20,7 @@
 		</cover-view>
 		<cover-view class="tip-item flex flex-al-center">
 			<cover-view class="tip-bule ">
-				<cover-image class="w100" mode="widthFix" src="https://gdhflw.com/public/partime/coffeeImg/icon-ly.png"></cover-image>
+				<cover-image class="w100" mode="widthFix" src="http://jikelianmeng.tanghan.cn/static/images/icon-ly.png"></cover-image>
 			</cover-view>
 			<cover-view class="w310 fon26">
 				您可以打开手机设置开启蓝

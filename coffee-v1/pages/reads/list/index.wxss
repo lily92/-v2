@@ -1,6 +1,6 @@
 /* pages/reads/list/index.wxss */
 .article-user-img{ width: 95rpx; height: 95rpx; border-radius: 50%; background: #ccc;}
-.icon-share{ background: url('https://gdhflw.com/public/partime/coffeeImg/icon-share.png') no-repeat left center; background-size: 30rpx; padding: 10rpx 0 10rpx 40rpx; color: #999;}
-.icon-comment{ background: url('https://gdhflw.com/public/partime/coffeeImg/icon-c.png') no-repeat left center; background-size: 30rpx; padding: 10rpx 0 10rpx 40rpx; color: #999;}
-.icon-like{ background: url('https://gdhflw.com/public/partime/coffeeImg/icon-xin.png') no-repeat left center; background-size: 30rpx; padding: 10rpx 0 10rpx 40rpx; color: #999;}
-.icon-like.active{background: url('https://gdhflw.com/public/partime/coffeeImg/icon-xinxin.png') no-repeat left center; background-size: 30rpx; }
+.icon-share{ background: url('http://jikelianmeng.tanghan.cn/static/images/icon-share.png') no-repeat left center; background-size: 30rpx; padding: 10rpx 0 10rpx 40rpx; color: #999;}
+.icon-comment{ background: url('http://jikelianmeng.tanghan.cn/static/images/icon-c.png') no-repeat left center; background-size: 30rpx; padding: 10rpx 0 10rpx 40rpx; color: #999;}
+.icon-like{ background: url('http://jikelianmeng.tanghan.cn/static/images/icon-xin.png') no-repeat left center; background-size: 30rpx; padding: 10rpx 0 10rpx 40rpx; color: #999;}
+.icon-like.active{background: url('http://jikelianmeng.tanghan.cn/static/images/icon-xinxin.png') no-repeat left center; background-size: 30rpx; }

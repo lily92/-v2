@@ -17,9 +17,9 @@ Page({
     },
 	isloadding:false,
     imgUrls: [
-      'https://gdhflw.com/public/partime/coffeeImg/blog-img.jpg',
-      'https://gdhflw.com/public/partime/coffeeImg/blog-img.jpg',
-      'https://gdhflw.com/public/partime/coffeeImg/blog-img.jpg'
+      'http://jikelianmeng.tanghan.cn/static/images/blog-img.jpg',
+      'http://jikelianmeng.tanghan.cn/static/images/blog-img.jpg',
+      'http://jikelianmeng.tanghan.cn/static/images/blog-img.jpg'
     ],
     articleList:[
      

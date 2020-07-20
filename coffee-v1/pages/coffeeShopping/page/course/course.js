@@ -12,17 +12,17 @@ indicatorDots: true,
     duration: 500,
 	colorf:'#fff',
 	cBannerList:[
-		'https://gdhflw.com/public/partime/coffeeImg/cBanner.jpg',
-		'https://gdhflw.com/public/partime/coffeeImg/cBanner.jpg',
-		'https://gdhflw.com/public/partime/coffeeImg/cBanner.jpg'
+		'http://jikelianmeng.tanghan.cn/static/images/cBanner.jpg',
+		'http://jikelianmeng.tanghan.cn/static/images/cBanner.jpg',
+		'http://jikelianmeng.tanghan.cn/static/images/cBanner.jpg'
 	],
 	itemList:[
 		{
-			'img':'https://gdhflw.com/public/partime/coffeeImg/course-img.jpg'
+			'img':'http://jikelianmeng.tanghan.cn/static/images/course-img.jpg'
 		},{
-			'img':'https://gdhflw.com/public/partime/coffeeImg/course-img.jpg'
+			'img':'http://jikelianmeng.tanghan.cn/static/images/course-img.jpg'
 		},{
-			'img':'https://gdhflw.com/public/partime/coffeeImg/course-img.jpg'
+			'img':'http://jikelianmeng.tanghan.cn/static/images/course-img.jpg'
 		}
 	]
   },

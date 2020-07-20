@@ -36,5 +36,13 @@ Component({
         show: false
       });
     },
+    reset(){
+      console.log('reset')
+      this.triggerEvent('reset')
+    },
+    confrim(){
+      console.log('confrim')
+      this.triggerEvent('confrim')
+    },
   }
 })

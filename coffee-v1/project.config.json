@@ -19,6 +19,7 @@
 		"checkInvalidKey": true,
 		"checkSiteMap": true,
 		"uploadWithSourceMap": true,
+		"compileHotReLoad": false,
 		"babelSetting": {
 			"ignore": [],
 			"disablePlugins": [],
@@ -262,7 +263,7 @@
 					"id": 28,
 					"name": "竞拍结果",
 					"pathName": "pages/coffeeShopping/page/activity/auction/results/results",
-					"query": "type=1",
+					"query": "type=0",
 					"scene": null
 				},
 				{
@@ -549,6 +550,7 @@
 					"id": -1,
 					"name": "曲线对比图",
 					"pathName": "pages/myCoffee/page/brewing/scanBrewing/contrast/contrast",
+					"query": "",
 					"scene": null
 				}
 			]

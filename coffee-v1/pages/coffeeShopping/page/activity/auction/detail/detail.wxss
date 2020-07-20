@@ -24,4 +24,4 @@
 .van-radio{ display: flex;  background: #fff; padding:  30rpx; margin-bottom: 20rpx;}
 .content-height .van-radio__icon{ margin-top: 10rpx;}
 
-.yiwen{ padding: 5rpx 30rpx 5rpx 0; background: url('https://gdhflw.com/public/partime/coffeeImg/icon-yiwen.png') no-repeat right center; background-size: 22rpx;}
+.yiwen{ padding: 5rpx 30rpx 5rpx 0; background: url('http://jikelianmeng.tanghan.cn/static/images/icon-yiwen.png') no-repeat right center; background-size: 22rpx;}

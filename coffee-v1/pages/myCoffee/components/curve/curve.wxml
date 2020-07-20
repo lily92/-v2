@@ -9,9 +9,9 @@
 						<van-radio name="{{item.value}}" checked-color="#000">
 						</van-radio>
 						<view class="flex flex-al-center select-con">
-							<image class="case-img" src="https://gdhflw.com/public/partime/coffeeImg/cp-icon.png" mode="widthFix"></image>
+							<image class="case-img" src="http://jikelianmeng.tanghan.cn/static/images/cp-icon.png" mode="widthFix"></image>
 							<view class="case-desc flex flex-al-center flex-just">
-								<image src="https://gdhflw.com/public/partime/coffeeImg/icon-cup.png" class="desc-icon" mode="widthFix"></image>
+								<image src="http://jikelianmeng.tanghan.cn/static/images/icon-cup.png" class="desc-icon" mode="widthFix"></image>
 								<view class="desc-tit">
 									<view class="nowarp  fon24">
 										安溪茶农冲泡铁观

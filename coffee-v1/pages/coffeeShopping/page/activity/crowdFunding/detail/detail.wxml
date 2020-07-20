@@ -52,7 +52,7 @@
 			</view>
 			<view class="flex flex-just">
 				<view class="pro-img">
-					<image src="https://gdhflw.com/public/partime/coffeeImg/product-detail.jpg" mode="widthFix" class="w100"></image>
+					<image src="http://jikelianmeng.tanghan.cn/static/images/product-detail.jpg" mode="widthFix" class="w100"></image>
 				</view>
 				<view class="pro-con flex">
 					<view>

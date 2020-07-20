@@ -7,7 +7,7 @@
 	</view> 
 	<view>
 		<view class="">
-			<input class="input-title" placeholder="请填写标题" />
+			<input class="input-title" placeholder="请填写标题" bindinput="inputTitle" />
 		</view>
 		<view class=" bggreen positionr box1" style="background:{{bgcolor}}">
 			<view class="detail-box1 colorf fon26 padding20">
@@ -27,7 +27,7 @@
 			</view>
 		</view>
 		-
-		<item-detail descList='{{descList}}' bgcolor='{{bgcolor}}'></item-detail>
+		<item-detail descContent='{{descContent}}' bgcolor='{{bgcolor}}'></item-detail>
 
 		<view class=" bggreen  padding20 color box3" style="background:{{bgcolor}}">
 			<textarea class="fon24 colorf textarea" placeholder-class='colorf' placeholder="认真写下此刻的想法，能收获更多的互动哦！"></textarea>

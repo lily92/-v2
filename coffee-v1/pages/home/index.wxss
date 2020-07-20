@@ -110,9 +110,9 @@ page{ background: #f7f7f7;}
 
 .more-order{ padding: 20rpx 0}
 .m-icon{ width: 60rpx; height: 60rpx;  margin:0 auto 20rpx;}
-.m-icon-1{ background: url('https://gdhflw.com/public/partime/coffeeImg/icon-p.png') no-repeat center; background-size: 60rpx;}
-.m-icon-2{ background: url('https://gdhflw.com/public/partime/coffeeImg/icon-pm.png') no-repeat center; background-size: 60rpx;}
-.m-icon-3{ background: url('https://gdhflw.com/public/partime/coffeeImg/icon-zc.png') no-repeat center; background-size: 60rpx;}
+.m-icon-1{ background: url('http://jikelianmeng.tanghan.cn/static/images/icon-p.png') no-repeat center; background-size: 60rpx;}
+.m-icon-2{ background: url('http://jikelianmeng.tanghan.cn/static/images/icon-pm.png') no-repeat center; background-size: 60rpx;}
+.m-icon-3{ background: url('http://jikelianmeng.tanghan.cn/static/images/icon-zc.png') no-repeat center; background-size: 60rpx;}
 .pay-title {
   font-size: 24rpx;
   color: #333;
