@@ -14,7 +14,7 @@
 				<view class="flex flex-just flex-al-center rate-item" wx:for='{{rateList}}' wx:key='index'>
 					<view>{{item.name}}</view>
 					<view class="star flex flex-al-center">
-						<van-rate size='15' color='{{starColor}}' void-color='{{starColorVoid}}' value="{{ item.value }}" bind:change="onChange" readonly />
+						<van-rate size='15' color='{{starColor}}' void-color='{{starColorVoid}}' value="{{ item.value }}" bind:change="onChange" data-index='{{index}}'  />
 					</view>
 					<view class="score">{{item.score}}分</view>
 				</view>

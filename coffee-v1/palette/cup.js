@@ -146,7 +146,8 @@
     },
     {
       "type": "image",
-      "url": "http://jikelianmeng.tanghan.cn/static/images/star0.png",
+      "rate":"xiangqi",
+      "url": "http://jikelianmeng.tanghan.cn/static/images/star1.png",
       "css": {
         "width": "24rpx",
         "height": "22rpx",
@@ -162,6 +163,7 @@
     },
     {
       "type": "image",
+      "rate":"xiangqi",
       "url": "http://jikelianmeng.tanghan.cn/static/images/star1.png",
       "css": {
         "width": "24rpx",
@@ -178,6 +180,7 @@
     },
     {
       "type": "image",
+      "rate":"xiangqi",
       "url": "http://jikelianmeng.tanghan.cn/static/images/star1.png",
       "css": {
         "width": "24rpx",
@@ -194,6 +197,7 @@
     },
     {
       "type": "image",
+      "rate":"xiangqi",
       "url": "http://jikelianmeng.tanghan.cn/static/images/star1.png",
       "css": {
         "width": "24rpx",
@@ -211,6 +215,7 @@
     {
       "type": "text",
       "text": "风味",
+      
       "css": {
         "color": "#fff",
         "background": "rgba(0,0,0,0)",
@@ -616,7 +621,7 @@
     },
     {
       "type": "image",
-      "url": "http://jikelianmeng.tanghan.cn/static/images/star2.png",
+      "url": "http://jikelianmeng.tanghan.cn/static/images/star1.png",
       "css": {
         "width": "24rpx",
         "height": "22rpx",
